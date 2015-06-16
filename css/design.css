@@ -14,25 +14,21 @@ html * {
 }
 
 ::selection {
-    background-color: #3A539B;
+    background-color: lightblue;
     color: #fff;
 }
 
 body {
     font-size: 100%;
-    font-family: 'Oxygen', sans-serif;
-    color: #3d3536;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: #000;
     background-color: white;
 }
 
 body, html {
     /* important */
     height: 100%;
-}
-
-a {
-    color: #b4d7a8;
-    text-decoration: none;
 }
 
 /* ----------------------------- */
@@ -239,6 +235,10 @@ a {
     z-index: 2;
 }
 
+.scrolling-footer a {
+	text-decoration:none;
+}
+
 .footer-color {
     text-align: center;
     background-color: #000;
@@ -295,20 +295,25 @@ a {
     background-color: #1F3A93;
 }
 
+.general-stats-area {
+    text-align: center;
+}
+
 .general-stats-box {
 	width:200px;
 	height:75px;
-	background-color:#1F3A93;
+	background-color:#000;
 	float:left;
 	margin-left:7.5%;
-	margin-top:50px;
-	border-radius:10px;
+	margin-top:4%;
+	border-radius:5px;
 }
 
 .general-stats-box h2 {
 	text-align:center;
 	margin-top:12%;
 	font-size:150%;
+    font-family: 'Raleway', sans-serif;
 }
 
 .general-stats-box span {
@@ -322,12 +327,13 @@ a {
 	float:left;
 	margin-left:6.2%;
 	margin-top:50px;
-	border-radius:10px;
+	border-radius:5px;
 }
 
 .comps-stats-box h2 {
 	text-align:center;
 	font-size:200%;
+    font-family: 'Raleway', sans-serif;
 }
 
 .comps-stats-box span {
@@ -340,8 +346,8 @@ a {
 	height:75px;
 	background-color:#000;
 	padding-top:6%;
-	border-top-left-radius:10px;
-	border-top-right-radius:10px;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
 }
 
 .comps-body {
@@ -359,6 +365,7 @@ a {
 .comps-body span {
 	text-decoration:none;
 	font-weight:bold;
+    font-family: 'Raleway', sans-serif;
 	color:black;
 }
 
@@ -388,11 +395,11 @@ a {
 	margin-left:27px;
 	margin-top:50px;
 	float:left;
-	border: 5px solid black;
+	border: 5px solid #1F3A93;
 }
 
 .officer-boxes:hover {
-	border: 5px solid #1F3A93;
+	border: 5px solid black;
 }
 
 
@@ -427,6 +434,13 @@ a {
 	padding-left:15px;
 	padding-right:15px;
 	background-color:#B2E0FF;
+	padding-top: 10px;
+    padding-bottom: 5px;
+	line-height: 30px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color:#4791FF;
+    color: #fff;
 }
 
 .below-bio-boxes {
@@ -440,6 +454,6 @@ a {
 }
 
 .fixed-width {
-	width:1300px;
+	width:1280px;
 	margin:0 auto;
 }
