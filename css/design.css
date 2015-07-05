@@ -277,8 +277,9 @@ body, html {
     background-position: 0px -90px
 }
 #icdc {
-    background-image: url("../img/lace.jpg");
+    background-image: url("../img/conferences-icdc.jpg");
     height:600px;
+    background-position: 0px -200px;
 }
 
 .conference-info {
