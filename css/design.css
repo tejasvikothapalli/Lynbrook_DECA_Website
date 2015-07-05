@@ -23,6 +23,7 @@ body {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     color: #000;
+/*    background-color: white;*/
 }
 
 body, html {
@@ -84,6 +85,10 @@ body, html {
 	font-weight:none;
 	font-size:95%;
 	font-family: 'Raleway', sans-serif;
+/*
+	padding-left:15px;
+	padding-right:15px;
+*/
 	padding-top:28px;
 	height:29px;
 	float:left;
@@ -193,7 +198,7 @@ body, html {
     padding-bottom: 3%;
     padding-left: 6%;
     padding-right: 6%;
-    font-size: 48px;
+    font-size: 100%;
     font-weight: 300;
 }
 
@@ -237,19 +242,21 @@ body, html {
 }
 
 .conferences p {
-    float:left;
-    color:whitesmoke;
+    color:black;
     font-weight:none;
     font-size: 150%;
     font-family: 'Raleway', sans-serif;
     line-height:125%;
 }
+
 .conference-text {
     width:500px;
     float:right;
     margin-top:-250px;
     margin-right:30px;
-    text-align:right;
+    text-align:center;
+    background-color:rgba(245,245,245,0.6);
+    padding:10px;
 }
 
 .conferences a {
@@ -257,10 +264,6 @@ body, html {
     color:#1F3A93;
 }
 
-.conferences hr {
-    padding-left: 20px;
-    padding-right:20px;
-}
 
 #lace {
     background-image: url("../img/lace.jpg");
@@ -283,7 +286,7 @@ body, html {
 }
 
 .conference-info {
-    background-color:#1F3A93;
+    background-color:#002E72;
     height:200px;
     width: 100%;
     position: absolute; 
@@ -398,6 +401,21 @@ button:hover {
 }
 .background-5 {
     background-image: url("../img/cd-background-5.jpg");
+}
+
+@media only screen and (min-width: 768px) {
+    .fixed-background h1, .fixed-background h2 {
+        font-size: 36px;
+    }
+}
+@media only screen and (min-width: 1170px) {
+    .fixed-background {
+        background-attachment: fixed;
+    }
+    .fixed-background h1, .fixed-background h2 {
+        font-size: 48px;
+        font-weight: 300;
+    }
 }
 
 .scrolling-footer {
