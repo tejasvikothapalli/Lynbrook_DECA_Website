@@ -265,14 +265,16 @@ body, html {
 #lace {
     background-image: url("../img/lace.jpg");
     height:600px;
+
 }
 #svcdc {
     background-image: url("../img/lace.jpg");
     height:600px;
 }
 #scdc {
-    background-image: url("../img/lace.jpg");
+    background-image: url("../img/conferences-states.png");
     height:600px;
+    background-position: 0px -90px
 }
 #icdc {
     background-image: url("../img/lace.jpg");
