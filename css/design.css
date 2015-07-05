@@ -135,6 +135,15 @@ body, html {
     z-index: 1;
 }
 
+.fixed-background-conferences {
+    position: relative;
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 1;
+}
+
 .fixed-background-about-top {
 	height:350px;
 	background-size:1500px;
@@ -145,6 +154,18 @@ body, html {
 	background-image: url("../img/about-top.jpg");
 	background-color:#000;
 }
+
+.fixed-background-conferences-top {
+    height:350px;
+    background-size:1500px;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center -195px;
+    clear:both;
+    background-image: url("../img/conferences-top.jpg");
+    background-color:#000;
+}
+
 
 .fixed-background h1, .fixed-background h2 {
     position: absolute;
@@ -177,7 +198,7 @@ body, html {
     font-weight: 300;
 }
 
-.fixed-background-about-top h1, .fixed-background-about-top h2 {
+.fixed-background-top h1, .fixed-background-top h2 {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -195,7 +216,7 @@ body, html {
     margin-top:-120px;
 }
 
-.fixed-background-about-top h1 span, .fixed-background-about-top h2 span {
+.fixed-background-top h1 span, .fixed-background-top h2 span {
     box-shadow: 0 0 50px rgba(0, 0, 0, 2.5);
     background-color: #fff;
     opacity: 0.8;
@@ -206,6 +227,56 @@ body, html {
     font-size: 300%;
     font-weight: 300;
 }
+
+.conferences h2 {
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+    font-size: 350%;
+    padding-left: 80px;
+    padding-top: 50px;
+    font-weight: bold;
+}
+
+.conferences p {
+    float:left;
+    color:whitesmoke;
+    font-weight:none;
+    font-size: 150%;
+    font-family:'Oxygen', sans-serif;
+    line-height:125%;
+}
+.conference-text {
+    width:500px;
+    float:right;
+    margin-top:-250px;
+    margin-right:15px;
+}
+
+.conferences a {
+    text-decoration: none;
+    color:#1F3A93;
+}
+
+.conferences hr {
+    padding-left: 20px;
+    padding-right:20px;
+}
+
+#lace {
+    background-image: url("../img/lace.jpg");
+    height:600px;
+}
+
+.conference-info {
+    background-color:#1F3A93;
+    height:200px;
+    width: 100%;
+    position: absolute; 
+    bottom: 0;
+}
+
+
+
 
 .background-1 {
     background-image: url("../img/cd-background-main2.jpg");
@@ -302,6 +373,7 @@ body, html {
 
 .line-color {
     background-color: #1F3A93;
+
 }
 
 .general-stats-area {
