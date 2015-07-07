@@ -84,7 +84,7 @@ section:last-child {
 .nav .nav .active:focus a {
   font-weight: bold;
   padding-left: 30px;
-  border-left: 5px solid whitesmoke;
+  border-left: 5px solid #CDCDCD;
 }
 
 .nav .nav .active span,
@@ -207,7 +207,7 @@ footer p {
     height:35px;
     font-family: 'Raleway', sans-serif;
     font-size:95%;
-    border:1.5px solid #8282FF;
+    border:1.5px solid #4960A8;
     padding:1px;
     margin-top:18px;
     margin-left:19px;
@@ -219,17 +219,21 @@ footer p {
     height:35px;
     font-family: 'Raleway', sans-serif;
     font-size:95%;
-    border:1.5px solid #5CD65C;
+    border:1.5px solid #27AE60;
     padding:1px;
     margin-left:15px;
 }
 
 .login-button:hover {
-    background-color:#8282FF;
+    background-color:#4960A8;
+    color:white;
+    font-weight:400;
 }
 
 .signup-button:hover {
-    background-color:#5CD65C;
+    background-color:#27AE60;
+    color:white;
+    font-weight:400;
 }
 
 .fixed-background {
@@ -320,12 +324,12 @@ footer p {
     box-shadow: 0 0 50px rgba(0, 0, 0, 2.5);
     background-color: #fff;
     opacity: 0.8;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
     padding-left: 6%;
     padding-right: 6%;
-    font-size: 130%;
-    font-weight: 300;
+    font-size: 200%;
+    font-weight: 200;
 }
 
 .main-content {

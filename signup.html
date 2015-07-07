@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+
+    <!--Stylesheets-->
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/design.css"> <!-- Resource style -->
+    
+    <!--Script-->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>Lynbrook DECA</title>
+    
+    <link rel="icon" href="img/favico.png"></link>
+</head>
+
+<body style="background-color:whitesmoke">
+	<header class="header">
+		
+		<div id="navbarlogo">
+            <a href="home.html"><img src="img/favico.png" height="30px" /></a>
+        </div>
+        
+        <div id="lynbrookdeca">
+        	<p><a href="home.html">Lynbrook DECA</a></p> 
+        </div>
+        
+        <nav class="navbar">
+			<ul>
+				<li><a href="home.html">HOME</a></li>
+				<li><a href="about.html">ABOUT</a></li>
+				<li><a href="calendar.html">CALENDAR</a></li>
+				<li><a href="events.html">EVENTS</a></li>
+                <li><a href="conferences.html" style="border-right:1px solid black">CONFERENCES</a></li>
+                <button class="login-button" onclick="window.location='http://www.example.com';">LOG IN</button>
+                <button class="signup-button" onclick="window.location='http://www.example.com';">SIGN UP</button>
+			</ul>
+		</nav>
+		
+	</header>
+	
+	<main class="main-content" style="margin-bottom:0">
+		
+		<div class="title-up">
+			<h1>
+                <span>Sign Up</span>
+            </h1>
+		</div>
+
+		<form id="msform">
+			<!-- progressbar -->
+			<ul id="progressbar">
+				<li class="active">Step 1</li>
+				<li>Step 2</li>
+				<li>Step 3</li>
+			</ul>
+
+			<!-- fieldsets -->
+			<fieldset>
+				<h2 class="fs-title">What's your name?</h2>
+				<h3 class="fs-subtitle">Tell us who you are (we will check to make sure you go to Lynbrook, so please include your real name)</h3>
+				<input type="text" name="firstname" placeholder="First Name" />
+				<input type="text" name="lastname" placeholder="Last Name" />
+				<input type="button" name="next" class="next action-button" value="Next" />
+			</fieldset>
+			<fieldset>
+				<h2 class="fs-title">Account Details</h2>
+				<h3 class="fs-subtitle">How you will sign in</h3>
+				<input type="text" name="email" placeholder="Email" />
+				<input type="password" name="password" placeholder="Password" />
+				<input type="password" name="cpassword" placeholder="Confirm Password" />
+				<input type="button" name="previous" class="previous action-button" value="Previous" />
+				<input type="button" name="next" class="next action-button" value="Next" />
+			</fieldset>
+			<fieldset>
+				<h2 class="fs-title">Personal Information</h2>
+				<h3 class="fs-subtitle">We promise not to sell it</h3>
+				<input type="tel" name="homephone" placeholder="Home Phone" />
+				<input type="tel" name="cellname" placeholder="Cell Phone" />
+				<input type="number" name="grade" placeholder="Current grade" />
+				<input type="button" name="previous" class="previous action-button" value="Previous" />
+				<input type="submit" name="submit" class="submit action-button" value="Submit" />
+			</fieldset>
+		</form>
+		<p style="text-align:center;margin-top:-45px;margin-bottom:50px;font-size:125%">Already a member? <span style="color:#1F3A93">Log in!</span></p>
+
+		<script src="http://thecodeplayer.com/uploads/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+		<script src="http://thecodeplayer.com/uploads/js/jquery.easing.min.js" type="text/javascript"></script>
+		<script src="js/form.js"></script>
+
+	    <div class="scrolling-line line-color"></div>
+		
+		<!-- Footer w/Sitemap -->
+        <div class="scrolling-footer footer-color">
+            <h3>Sitemap</h3>
+            <p>
+                <a href="home.html">Home</a> | 
+                <a href="about.html">About</a> | 
+                <a href="calendar.html">Calendar</a> | 
+                <a href="events.html">Events</a> | 
+                <a href="conferences.html">Conferences</a>
+            </p>
+			<div class="container">
+				<p>&copy 2015 Lynbrook DECA</p>
+			</div>
+		</div>
+		
+	</main>
+</body>
