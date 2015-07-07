@@ -113,7 +113,6 @@ body, html {
     font-family: 'Raleway', sans-serif;
     font-size:95%;
     border:1.5px solid #8282FF;
-    border-radius:10%;
     padding:1px;
     margin-top:18px;
     margin-left:19px;
@@ -126,7 +125,6 @@ body, html {
     font-family: 'Raleway', sans-serif;
     font-size:95%;
     border:1.5px solid #5CD65C;
-    border-radius:10%;
     padding:1px;
     margin-left:15px;
 }
@@ -390,7 +388,7 @@ body, html {
     margin-top:33px;
     width:200px;
     height:50px;
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 button:hover {
@@ -409,7 +407,7 @@ button:hover {
     margin-top:33px;
     width:200px;
     height:50px;
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 
@@ -500,7 +498,7 @@ button:hover {
 
 .scrolling-line {
     position: relative;
-    min-height: 1%;
+    min-height: 0.75%;
 }
 
 .line-color {
@@ -799,107 +797,4 @@ button:hover {
    padding: 40px 40px 0px 20px;
    text-align: center;
    line-height: 125%;
-}
-
-section {
-  padding: 40px 0;
-  border-bottom: 1px solid #c1e1ec;
-}
-
-#web-development,
-#mobile-development {
-  padding-bottom: 0;
-}
-
-section:last-child {
-  border-bottom: none;
-}
-
-.nav {
-  background: #4baac8;
-  margin-top:337px;
-}
-
-.nav a {
-  color: black;
-  font-style: italic;
-}
-
-.nav li a:hover,
-.nav li a:focus {
-  background: #86c5da;
-}
-
-.nav .active {
-  font-weight: bold;
-  background: #72bcd4;
-}
-
-.nav .nav {
-  display: none;
-}
-
-.nav .active .nav {
-  display: block;
-}
-
-.nav .nav a {
-  font-weight: normal;
-  font-size: .85em;
-}
-
-.nav .nav span {
-  margin: 0 5px 0 2px;
-}
-
-.nav .nav .active a,
-.nav .nav .active:hover a,
-.nav .nav .active:focus a {
-  font-weight: bold;
-  padding-left: 30px;
-  border-left: 5px solid black;
-}
-
-.nav .nav .active span,
-.nav .nav .active:hover span,
-.nav .nav .active:focus span {
-  display: none;
-}
-
-.application {
-  border-top: 1px solid #c1e1ec;
-}
-
-.affix-top {
-  position: relative;
-}
-
-.affix {
-  top: 20px;
-}
-
-.affix, 
-.affix-bottom {
-    width: 213px;
-}
-
-.affix-bottom {
-  position: absolute;
-}
-
-footer {
-  border-top: 1px solid #c1e1ec;
-  height: 50px;
-}
-
-footer p {
-  line-height: 50px;
-  margin-bottom: 0;
-}
-
-@media (min-width:1200px) {
-  .affix, 
-  .affix-bottom {
-    width: 263px;
-  }
 }

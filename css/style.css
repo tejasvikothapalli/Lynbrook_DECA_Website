@@ -10,6 +10,7 @@
 .line-color {
     background-color: #1F3A93;
 }
+
 body {
   background: white;
   position: relative;
@@ -26,8 +27,12 @@ h3 span {
 }
 
 section {
-  padding: 55px 0;
+  padding: 60px 0 30px 0;
   border-bottom: 1px solid #c1e1ec;
+}
+section p {
+  font-size:120%;
+  text-align:justify;
 }
 
 #web-development,
@@ -40,22 +45,21 @@ section:last-child {
 }
 
 .nav {
-  background: #4baac8;
+  background: #1F3A93;
 }
 
 .nav a {
-  color: black;
-  font-style: italic;
+  color: whitesmoke;
 }
 
 .nav li a:hover,
 .nav li a:focus {
-  background: #86c5da;
+  background: #3366FF;
 }
 
 .nav .active {
   font-weight: bold;
-  background: #72bcd4;
+  background: #2E5CE6;
 }
 
 .nav .nav {
@@ -80,7 +84,7 @@ section:last-child {
 .nav .nav .active:focus a {
   font-weight: bold;
   padding-left: 30px;
-  border-left: 5px solid black;
+  border-left: 5px solid whitesmoke;
 }
 
 .nav .nav .active span,
@@ -204,7 +208,6 @@ footer p {
     font-family: 'Raleway', sans-serif;
     font-size:95%;
     border:1.5px solid #8282FF;
-    border-radius:10%;
     padding:1px;
     margin-top:18px;
     margin-left:19px;
@@ -217,7 +220,6 @@ footer p {
     font-family: 'Raleway', sans-serif;
     font-size:95%;
     border:1.5px solid #5CD65C;
-    border-radius:10%;
     padding:1px;
     margin-left:15px;
 }
@@ -331,4 +333,36 @@ footer p {
     height: 100%;
     position: relative;
     z-index: 1;
+}
+
+.scrolling-footer {
+    position: relative;
+    height: 25%;
+    z-index: 2;
+}
+
+.scrolling-footer a {
+  text-decoration:none;
+}
+
+.footer-color {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    padding: 2.5%;
+}
+
+.footer-color p {
+    padding: 1%;
+}
+
+.footer-color a {
+    color: #fff;
+}
+
+.footer-color a:hover {
+    color: #1F3A93;
 }
