@@ -40,8 +40,30 @@
 				<li><a href="calendar.html">CALENDAR</a></li>
 				<li><a href="events.html">EVENTS</a></li>
                 <li><a href="conferences.html" style="border-right:1px solid black">CONFERENCES</a></li>
-                <button class="login-button" onclick="window.location='http://www.example.com';">LOG IN</button>
+                <button class="login-button" id="loginform">LOG IN</button>
                 <button class="signup-button" onclick="window.location='signup.html';">SIGN UP</button>
+
+                <div id="wrap">
+						  <div id="regbar">
+						    <div id="navthing">
+						    <div class="login">
+						      <div class="arrow-up"></div>
+						      <div class="formholder">
+						        <div class="randompad">
+						           <fieldset>
+						             <label name="email">Email</label>
+						             <input type="email" placeholder="example@example.com" />
+						             <label name="password">Password</label>
+						             <input type="password" />
+						             <input type="submit" value="Login" />
+						 
+						           </fieldset>
+						        </div>
+						      </div>
+						    </div>
+						    </div>
+						  </div>
+						</div>
 			</ul>
 		</nav>
 		
@@ -160,4 +182,7 @@
 		</div>
 
 	</main>
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="js/modernizr.js"></script>
 </body>
