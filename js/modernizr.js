@@ -30,7 +30,7 @@ $('input[type="submit"]').mouseup(function(){
 });
 
 $('#loginform').click(function(){
-  $('.login').fadeToggle('slow');
+  $('.login').fadeToggle('fast');
   $(this).toggleClass('green');
 });
 
