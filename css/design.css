@@ -82,7 +82,7 @@ fieldset {
 }
 .formholder input[type="email"], .formholder input[type="password"] {
   padding: 7px 5px;
-  margin: 10px 0;
+  margin: 15px 0 10px 0;
   width: 96%;
   display: block;
   font-size: 18px;
@@ -113,6 +113,11 @@ fieldset {
 
 .randompad {
   padding: 10px;
+}
+
+.randompad label {
+    font-size:90%;
+    font-weight:600;
 }
 
 .green {
