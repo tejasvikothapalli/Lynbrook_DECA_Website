@@ -923,7 +923,7 @@ button:hover {
 }
 
 #msform {
-  width: 600px;
+  width: 700px;
   height:500px;
   margin: 60px auto;
   text-align: center;
@@ -996,7 +996,7 @@ button:hover {
   color: black;
   text-transform: uppercase;
   font-size: 18px;
-  width: 33.33%;
+  width: 25%;
   float: left;
   position: relative;
 }
