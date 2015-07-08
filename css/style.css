@@ -50,6 +50,7 @@ section:last-child {
 
 .nav a {
   color: whitesmoke;
+  font-size:125%;
 }
 
 .nav li a:hover,
@@ -72,7 +73,7 @@ section:last-child {
 
 .nav .nav a {
   font-weight: normal;
-  font-size: .85em;
+  font-size: 1em;
 }
 
 .nav .nav span {
