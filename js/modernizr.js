@@ -23,10 +23,10 @@
  */
 
 $('input[type="submit"]').mousedown(function(){
-  $(this).css('background', '#2ecc71');
+  $(this).css('background', '#1C3484');
 });
 $('input[type="submit"]').mouseup(function(){
-  $(this).css('background', '#1abc9c');
+  $(this).css('background', '#1F3A93');
 });
 
 $('#loginform').click(function(){
