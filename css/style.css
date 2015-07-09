@@ -10,11 +10,6 @@
   margin: 0 auto 30px;
 }
 
-/*#regbar {
-  height: 67px;
-  background: #34495e;
-}*/
-
 #navthing {
   margin-left:255px;
   margin-top: 10px;
@@ -397,7 +392,7 @@ footer p {
 .fixed-background-top h1, .fixed-background-top h2 {
     position: absolute;
     left: 50%;
-    top: 4.8%;
+    top: 3.3%;
     -webkit-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
     -ms-transform translateX(-50%) translateY(-50%);
@@ -461,4 +456,21 @@ footer p {
 
 .footer-color a:hover {
     color: #1F3A93;
+}
+
+.shifted-bullet {
+    margin-left:40px;
+    font-size:120%;
+}
+
+.event-table {
+    width:100%;
+    margin-top:15px;
+}
+
+.event-table table,td,th {
+    border: 1.5px solid black;
+    border-collapse:collapse;
+    padding:5px;
+    padding-bottom:0;
 }
