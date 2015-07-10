@@ -392,7 +392,7 @@ footer p {
 .fixed-background-top h1, .fixed-background-top h2 {
     position: absolute;
     left: 50%;
-    top: 3.3%;
+    top: 2.55%;
     -webkit-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
     -ms-transform translateX(-50%) translateY(-50%);
@@ -473,4 +473,13 @@ footer p {
     border-collapse:collapse;
     padding:5px;
     padding-bottom:0;
+}
+
+.container button {
+    background-color:#1F3A93;
+    border:none;
+}
+
+.container button:hover {
+    background-color:#192E76;
 }
