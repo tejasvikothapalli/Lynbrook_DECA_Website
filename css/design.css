@@ -37,6 +37,30 @@ body, html {
 }
 
 
+
+.center {
+  
+   /* Firefox */
+    display:-moz-box;
+    -moz-box-pack:center;
+    -moz-box-align:center;
+
+    /* Safari and Chrome */
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+
+    /* W3C */
+    display:box;
+    box-pack:center;
+    box-align:center;
+
+    margin-top: 70px;
+    margin-bottom:120px;
+
+}
+
+
 #wrap {
   margin: 0 auto 30px;
 }
@@ -69,7 +93,7 @@ fieldset {
 
 .formholder {
   background: #ecf0f1;
-  width: 350px;
+  width: 380px;
   border-radius: 5px;
   padding-top: 5px;
 }
@@ -110,8 +134,19 @@ fieldset {
 }
 
 .randompad label {
-    font-size:90%;
-    font-weight:600;
+    font-size:120%;
+    font-weight:500;
+}
+
+.forgot-pass p {
+  text-align: center;
+  padding-bottom:10px;
+}
+
+.forgot-pass p:hover {
+    color: blue;
+    cursor:pointer;
+    text-decoration: underline;
 }
 
 a {
@@ -582,6 +617,7 @@ button:hover {
     font-weight: 300;
     font-size: 20px;
     padding: 2.5%;
+  
 }
 
 .footer-color p {
