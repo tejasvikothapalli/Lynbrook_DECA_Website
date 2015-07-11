@@ -931,6 +931,7 @@ button:hover {
   text-align: center;
   position: relative;
   font-family: 'Raleway', arial, verdana;
+  margin-bottom:85px;
 }
 
 #msform fieldset {
@@ -1034,4 +1035,8 @@ button:hover {
 #progressbar li.active:before,  #progressbar li.active:after{
   background: #27AE60;
   color: white;
+}
+
+.errormessages {
+    color:red;
 }
