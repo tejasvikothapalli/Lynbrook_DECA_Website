@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-	<script src="//www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+	<script src="https://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
     <!--Fonts-->
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
@@ -17,13 +17,13 @@
 	<link rel="stylesheet" href="css/design.css"> <!-- Resource style -->
     
     <!--Script-->
-	<script src="js/modernizr.js">
-		Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydkGcxGCLfZndbw3H6dQSUHgr");
-
-	</script> <!-- Modernizr -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   	
 	<title>Lynbrook DECA</title>
     <link rel="icon" href="img/favico.png"></link>
+    <script > 
+    	Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydkGcxGCLfZndbw3H6dQSUHgr");
+    </script>
     
 </head>
 
@@ -166,6 +166,7 @@
 		
 	</main>
  <script>
+ 	
 	var TestObject = Parse.Object.extend("TestObject");
 	var testObject = new TestObject();
 	testObject.save({foo: "bar"}).then(function(object) {
