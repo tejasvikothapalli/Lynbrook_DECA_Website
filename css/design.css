@@ -225,7 +225,7 @@ a:hover {
 
 .navbar a:hover {
 	  background-color: #1F3A93;
-    color: #fff;
+    color: #fff !important;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 28px;
