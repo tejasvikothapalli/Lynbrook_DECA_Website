@@ -26,6 +26,13 @@
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Start WOWSlider.com HEAD section -->
+	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+	<script type="text/javascript" src="engine1/jquery.js"></script>
+	<!-- End WOWSlider.com HEAD section -->
+
+	<link rel="stylesheet" type="text/css" href="ws-bg.css" />
     
 </head>
 
@@ -80,11 +87,25 @@
 	
 	<main class="main-content">
 		
-		<div class="fixed-background background-1">
-            <h1>
+		<!-- Start WOWSlider.com BODY section -->
+		<div id="wowslider-container1">
+			<h2>
                 <span>Welcome to Lynbrook DECA!</span>
-            </h1>
-		</div>
+            </h2>
+			<div class="ws_images">
+				<ul>
+					<li><img src="data1/images/cdbackgroundmain2.jpg" alt="" title="" id="wows1_0"/></li>
+					<li><img src="data1/images/cdbackground5.jpg" alt="" title="" id="wows1_1"/></li>
+					<li><img src="data1/images/culture.jpg" alt="" title="" id="wows1_2"/></li>
+					<li><img src="data1/images/cdbackgroundmain.jpg" alt="joomla slideshow" id="wows1_3"/></li>
+					<li><img src="data1/images/conferencesicdc.jpg" alt="" title="" id="wows1_4"/></li>
+				</ul>
+			</div>
+		</div>	
+
+		<script type="text/javascript" src="engine1/wowslider.js"></script>
+		<script type="text/javascript" src="engine1/script.js"></script>
+		<!-- End WOWSlider.com BODY section -->
 		
 		<div class="scrolling-line line-color"></div>
         
@@ -167,27 +188,7 @@
 		</div>
 		
 	</main>
- <script>
 
-
-
-		//Array of images which you want to show: Use path you want.
-		var images=new Array('img/cd-background-main2.jpg','img/cd-background-2.jpg','img/cd-background-main.jpg');
-		var nextimage=0;
-		doSlideshow();
-
-		function doSlideshow(){
-		    if(nextimage>=images.length){nextimage=0;}
-		    $('.background-1')
-		    .css('background-image','url("'+images[nextimage++]+'")')
-		    .fadeIn(5000,function(){
-		        setTimeout(doSlideshow,2000);
-		    });
-		}
-		
-	
-	
-</script>
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <script src="js/modernizr.js"></script>
