@@ -34,7 +34,20 @@ $('#loginform').click(function(){
   $(this).toggleClass('green');
 });
 
-
+$('#loginbutton').click(function(){
+    var username = $("#loginuser").val();
+    var password = $("#loginpass").val();
+    Parse.User.logIn(username, password, {
+     success: function(user) {
+       // Do stuff after successful login.
+       alert("success logging in");
+     },
+     error: function(user, error) {
+       // The login failed. Check error to see why.
+       alert("no success logging in")
+     }
+});
+});
 
 $(document).mouseup(function (e)
 {

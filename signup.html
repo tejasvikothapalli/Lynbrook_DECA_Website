@@ -319,7 +319,7 @@
 				}
 			});
 
-			$("#msform").submit(function(event) {
+			$("#signupsubmit").click(function(event) {
 				event.preventDefault();
 				error4="";
 				clubpasswordok=false;
@@ -328,7 +328,7 @@
 					error4+="That isn't the club password.<br>";
 				} else {
 					clubpasswordok=true;
-					alert("hello1");
+					// alert("hello1");
 					signupfunction();
 				}
 				if (!clubpasswordok) {
@@ -414,7 +414,7 @@
 
 		if (clubpasswordok)
 		{
-			alert("signupfunction submitted");
+			// alert("signupfunction submitted");
 
 			var firstname = $("#fname").val();
 
@@ -432,7 +432,7 @@
 
 
 
-			alert(email + lastname + firstname + email + currentgrade);
+			// alert(email + lastname + firstname + email + currentgrade);
 			var user = new Parse.User();
 			
 			
