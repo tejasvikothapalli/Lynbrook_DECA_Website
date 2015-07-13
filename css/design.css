@@ -585,8 +585,9 @@ button:hover {
     box-shadow: 0 0 0 2.5px #002E72, 0 0 0 4.5px #000058;
 }
 
-.background-1 {
+.background-1{
     background-image: url("../img/cd-background-main2.jpg");
+    transition:opacity 3s ease-in-out;
 }
 .background-2 {
     background-image: url("../img/cd-background-2.jpg");
