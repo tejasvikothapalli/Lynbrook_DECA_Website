@@ -243,6 +243,7 @@ a:hover {
     padding:1px;
     margin-top:18px;
     margin-left:19px;
+    outline: none;
 }
 
 .signup-button {
@@ -254,6 +255,7 @@ a:hover {
     border:1.5px solid #27AE60;
     padding:1px;
     margin-left:15px;
+    outline: none;
 }
 
 .login-button:hover {
