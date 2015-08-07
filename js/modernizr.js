@@ -22,6 +22,15 @@
  * Contributors   Ryan Seddon, Ben Alman
  */
 
+var currentUser = Parse.User.current();
+if (currentUser) {
+    alert("hidden");
+    window.location.href='dashboard.html';
+
+} else {
+    alert("no log");
+}
+
 $('input[type="submit"]').mousedown(function(){
   $(this).css('background', '#1C3484');
 });
@@ -42,6 +51,7 @@ $('#loginbutton').click(function(){
        // Do stuff after successful login.
        // alert("success logging in");
        window.location.href='dashboard.html';
+
      },
      error: function(user, error) {
        // The login failed. Check error to see why.
@@ -61,8 +71,11 @@ $(document).mouseup(function (e)
     if (!container.is(e.target) // if the target of the click isn't the container...
         && container.has(e.target).length === 0) // ... nor a descendant of the container
     {
+
         container.fadeOut("fast");
         $('#loginform').removeClass('green');
+        $("#login-error-message").html("");
+
     }
 });
 
