@@ -2,11 +2,12 @@
 <html >
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Lynbrook DECA</title>
 
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+     
+    <script src="https://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
 
     <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
     <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css'>
@@ -19,7 +20,12 @@
     <link rel="stylesheet" href="css/style.css">
 
 
-
+    
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script > 
+      Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydkGcxGCLfZndbw3H6dQSUHgr");
+    </script>
     
  
   </head>
@@ -47,7 +53,7 @@
         <li><a href="conferences.html" style="position:relative;padding-right:15.2px;padding-left:15.2px;font-size:98%;top:-3px;padding-bottom:14px;padding-top:18px;border-right:1px solid black;margin-left:-1px">CONFERENCES</a></li>
         <button class="login-button" style="font-size:107%;position:relative;top:-1px;margin-left:18px;outline:none"  id="loginform">LOG IN</button>
         <button class="signup-button" style="font-size:107%;position:relative;top:-1px; outline:none" onclick="window.location='signup.html';">SIGN UP</button>
-        <div id="wrap">
+           <div id="wrap">
               <div id="regbar">
                 <div id="navthing">
                 <div class="login">
@@ -56,11 +62,12 @@
                     <div class="randompad">
                        <fieldset class = "forgot-pass">
                          <label name="email">Email</label>
-                         <input type="email" placeholder="example@example.com" />
+                         <input type="email" placeholder="example@example.com" id="loginuser" name="loginuser"/>
                          <label name="password">Password</label>
-                         <input type="password" placeholder="password" />
+                         <input type="password" placeholder="password" id = "loginpass" name= "loginpass"/>
+                         <div id="login-error-message" style = "text-align:center; color:red; padding-bottom:5px;" ></div>
                          <p onclick="window.location='forgot-pass.html';" >Forgot Password?</p>
-                         <input type="submit" value="Login" />
+                         <input type="submit" value="Login" id = "loginbutton" />
              
                        </fieldset>
                     </div>
@@ -69,7 +76,7 @@
                 </div>
               </div>
             </div>
-          </div>    
+          </div>
       </ul>
     </nav>
     

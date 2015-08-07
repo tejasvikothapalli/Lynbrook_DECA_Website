@@ -5,6 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+	<script src="https://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
     <!--Fonts-->
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
@@ -18,8 +20,19 @@
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   	
 	<title>Lynbrook DECA</title>
-    
     <link rel="icon" href="img/favico.png"></link>
+    <script > 
+    	Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydkGcxGCLfZndbw3H6dQSUHgr");
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Start WOWSlider.com HEAD section -->
+	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+	<script type="text/javascript" src="engine1/jquery.js"></script>
+	<!-- End WOWSlider.com HEAD section -->
+
+	<link rel="stylesheet" type="text/css" href="ws-bg.css" />
 </head>
 
 <body style="background-color:whitesmoke">
@@ -43,7 +56,7 @@
                 <button class="login-button" id="loginform">LOG IN</button>
                 <button class="signup-button" onclick="window.location='signup.html';">SIGN UP</button>
 
-               <div id="wrap">
+                <div id="wrap">
 						  <div id="regbar">
 						    <div id="navthing">
 						    <div class="login">
@@ -52,11 +65,12 @@
 						        <div class="randompad">
 						           <fieldset class = "forgot-pass">
 						             <label name="email">Email</label>
-						             <input type="email" placeholder="example@example.com" />
+						             <input type="email" placeholder="example@example.com" id="loginuser" name="loginuser"/>
 						             <label name="password">Password</label>
-						             <input type="password" placeholder="password" />
+						             <input type="password" placeholder="password" id = "loginpass" name= "loginpass"/>
+						             <div id="login-error-message" style = "text-align:center; color:red; padding-bottom:5px;" ></div>
 						             <p onclick="window.location='forgot-pass.html';" >Forgot Password?</p>
-						             <input type="submit" value="Login" />
+						             <input type="submit" value="Login" id = "loginbutton" />
 						 
 						           </fieldset>
 						        </div>
@@ -66,7 +80,6 @@
 						  </div>
 						</div>
 					</div>
-			</ul>
 		</nav>
 		
 	</header>

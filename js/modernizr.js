@@ -40,11 +40,16 @@ $('#loginbutton').click(function(){
     Parse.User.logIn(username, password, {
      success: function(user) {
        // Do stuff after successful login.
-       alert("success logging in");
+       // alert("success logging in");
+       window.location.href='dashboard.html';
      },
      error: function(user, error) {
        // The login failed. Check error to see why.
-       alert("no success logging in")
+       // alert("no success logging in");
+
+       $("#login-error-message").html("Login failed! Username or password do not match.");
+       $("#loginuser").val('');
+       $("#loginpass").val('');
      }
 });
 });
