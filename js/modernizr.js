@@ -21,15 +21,31 @@
  * Authors        Faruk Ates, Paul Irish, Alex Sexton
  * Contributors   Ryan Seddon, Ben Alman
  */
+Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydkGcxGCLfZndbw3H6dQSUHgr");
 
-var currentUser = Parse.User.current();
-if (currentUser) {
-    alert("hidden");
-    window.location.href='dashboard.html';
+// var currentUser = Parse.User.current();
+// if (currentUser) {
+//     alert("hidden");
+//     window.location.href='dashboard.html';
 
-} else {
-    alert("no log");
-}
+// } else {
+//     alert("no log");
+// }
+
+// $('#forgot-pass-button').click(function(){
+//   var username = $("#forgot-email").val();
+//   Parse.User.requestPasswordReset(username, {
+//   success: function() {
+//   // Password reset request was sent successfully
+//   alert("success");
+//   },
+//   error: function(error) {
+//     // Show the error message somewhere
+//     alert("fail");
+//     alert("Error: " + error.code + " " + error.message);
+//   }
+// });
+// });
 
 $('input[type="submit"]').mousedown(function(){
   $(this).css('background', '#1C3484');
