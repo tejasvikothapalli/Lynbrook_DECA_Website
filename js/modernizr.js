@@ -66,7 +66,7 @@ $('#loginbutton').click(function(){
      success: function(user) {
        // Do stuff after successful login.
        // alert("success logging in");
-       window.location.href='dashboard.html';
+       window.location.href='dashboard/dashboard.html';
 
      },
      error: function(user, error) {
