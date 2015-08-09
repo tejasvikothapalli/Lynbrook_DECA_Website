@@ -300,7 +300,7 @@ a:hover {
 	background-size:1500px;
 	background-repeat:no-repeat;
 	background-attachment:fixed;
-	background-position:center -195px;
+	background-position:center center;
 	clear:both;
 	background-image: url("../img/officers.jpg");
 	background-color:#000;
