@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lynbrook DECA - Dashboard</title>
+<link rel="icon" href="../img/favico.png"></link>
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/datepicker3.css" rel="stylesheet">
+<link href="css/bootstrap-table.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top dash-header" role="navigation" >
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div id="navbarlogo">
+            	<a href="index.html"><img src="../img/favico.png" height="30px" /></a>
+        		</div>
+        
+		        <div id="lynbrookdeca">
+		        	<p><a href="index.html">Lynbrook DECA</a></p> 
+		        </div>
+        
+				<!-- <a class="navbar-brand" href="dashboard.html"><span>Lynbrook DECA</span> Admin</a> -->
+				<ul class = "dash-hover">
+
+					<li class = "s"><a href="../index.html">HOME</a></li>
+					<li class = "s"><a href="../about.html">ABOUT</a></li>
+					<li class = "s"><a href="../calendar.html">CALENDAR</a></li>
+					<li class = "s"><a href="../events.html">EVENTS</a></li>
+	                <li class = "s"><a href="../conferences.html" style="border-right:1px solid black">CONFERENCES</a></li>
+	                <!-- <button class="login-button" id="loginform">LOG IN</button>
+	                <button class="signup-button" onclick="window.location='signup.html';">SIGN UP</button> -->
+				
+
+				<ul class="user-menu">
+					<li class="dropdown pull-right">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> User <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu" style ="margin-top:20px">
+							<li style ="padding-top:0" ><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+							<li style ="padding-top:0"><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+							<li style ="padding-top:0"><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+						</ul>
+						
+					</li>
+				</ul>
+				</ul>
+			</div>
+							
+		</div><!-- /.container-fluid -->
+	</nav>
+		
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar" style="padding-top: 40px">
+		<ul class="nav menu">
+			<li><a href="dashboard.html"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
+			<li><a href="https://drive.google.com/folderview?id=0Bw48OQ3LltH9blZEUEdhcF8tRW8&usp=drive_web" target="_blank"><span class="glyphicon glyphicon-list-alt"></span> Written Materials</a></li>
+			<li><a href="https://drive.google.com/folderview?id=0Bw48OQ3LltH9TVdjaGdvamc4Rmc&usp=drive_web" target="_blank"><span class="glyphicon glyphicon-briefcase"></span> Roleplay Materials</a></li>
+			<li><a href="https://drive.google.com/folderview?id=0BzzCrg_W88iyWXowWVNUWGl0SHM&usp=drive_web" target="_blank"><span class="glyphicon glyphicon-pencil"></span> Testing Materials</a></li>
+			<li class="active"><a href="points.html"><span class="glyphicon glyphicon-stats"></span> Point System</a></li>
+			<li><a href="contact.html"><span class="glyphicon glyphicon-question-sign"></span> Contact Officer Team</a></li>
+			
+			<li role="presentation" class="divider"></li>
+			
+		</ul>
+	</div><!--/.sidebar-->
+		
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+				<li class="active">Point System</li>
+			</ol>
+		</div><!--/.row-->
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Point System</h1>
+				<hr>
+			</div>
+		</div><!--/.row-->
+				
+		
+		<div class="col-md-6" style ="width:100%">
+				<div class="panel panel-default">
+					<div class="panel-body tabs">
+						<ul class="nav nav-tabs">
+							<li class="active"><a href="#tab1" data-toggle="tab"><span class="glyphicon glyphicon-tag"></span> DECA Diamonds</a></li>
+							<li><a href="#tab2" data-toggle="tab"><span class="glyphicon glyphicon-lock"></span> Cord Points</a></li>
+							
+						</ul>
+		
+						<div class="tab-content">
+							<div class="tab-pane fade in active" id="tab1">
+								<h4 style ="font-size: 300%">DECA Diamonds</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget rutrum purus. Donec hendrerit ante ac metus sagittis elementum. Mauris feugiat nisl sit amet neque luctus, a tincidunt odio auctor. </p>
+								<iframe  src="https://docs.google.com/spreadsheets/d/1FDlI9m4XtE8ztG6D-MJKBYMksR59aAfT6lky8Lyzebc/pubhtml?widget=true&amp;headers=false&gid=0&range=A1:B1&chrome=false" width="100%" height='700' frameborder='10'></iframe>
+							</div>
+							<div class="tab-pane fade" id="tab2">
+								<h4 style ="font-size: 300%">Cord Points</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget rutrum purus. Donec hendrerit ante ac metus sagittis elementum. Mauris feugiat nisl sit amet neque luctus, a tincidunt odio auctor. </p>
+								<iframe src="https://docs.google.com/spreadsheets/d/12jyrKeuUKJdECOWUWGfxBM6p6A4MujmOyfL4eP3XVqY/pubhtml?widget=true&amp;headers=false&gid=0&range=A1:C1&chrome=false" width="100%" height="700" frameborder='10'></iframe>
+							</div>
+							<div class="tab-pane fade" id="tab3">
+								<h4>Tab 3</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget rutrum purus. Donec hendrerit ante ac metus sagittis elementum. Mauris feugiat nisl sit amet neque luctus, a tincidunt odio auctor. </p>
+							</div>
+						</div>
+					</div>
+				</div><!--/.panel-->
+			</div><!--/.col-->
+						<script>
+						    $(function () {
+						        $('#hover, #striped, #condensed').click(function () {
+						            var classes = 'table';
+						
+						            if ($('#hover').prop('checked')) {
+						                classes += ' table-hover';
+						            }
+						            if ($('#condensed').prop('checked')) {
+						                classes += ' table-condensed';
+						            }
+						            $('#table-style').bootstrapTable('destroy')
+						                .bootstrapTable({
+						                    classes: classes,
+						                    striped: $('#striped').prop('checked')
+						                });
+						        });
+						    });
+						
+						    function rowStyle(row, index) {
+						        var classes = ['active', 'success', 'info', 'warning', 'danger'];
+						
+						        if (index % 2 === 0 && index / 2 < classes.length) {
+						            return {
+						                classes: classes[index / 2]
+						            };
+						        }
+						        return {};
+						    }
+						</script>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->	
+		
+		
+	</div><!--/.main-->
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/chart.min.js"></script>
+	<script src="js/chart-data.js"></script>
+	<script src="js/easypiechart.js"></script>
+	<script src="js/easypiechart-data.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/bootstrap-table.js"></script>
+	<script>
+		!function ($) {
+			$(document).on("click","ul.nav li.parent > a > span.icon", function(){		  
+				$(this).find('em:first').toggleClass("glyphicon-minus");	  
+			}); 
+			$(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+		}(window.jQuery);
+
+		$(window).on('resize', function () {
+		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+		})
+		$(window).on('resize', function () {
+		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+		})
+	</script>	
+</body>
+
+</html>
