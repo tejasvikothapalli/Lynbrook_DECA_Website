@@ -47,6 +47,35 @@ Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydk
 // });
 // });
 
+
+var currentUser = Parse.User.current();
+if (currentUser) {
+        $(".login-button").css("display", "none");
+        $(".signup-button").css("display", "none");
+        $(".user-menu").css("display", "block");
+        alert("you are logged in");
+        //window.location.href='dashboard.html';
+
+    } else {
+        $(".user-menu").css("display", "none");
+        alert("not logged in");
+        
+    }
+
+$("#logout-button").click(function(){
+  alert("working");
+
+  Parse.User.logOut();
+
+  var currentUser = Parse.User.current();
+
+  alert("Logged out");
+  location.reload();
+
+  // window.location.href='index.html';
+
+});
+
 $('input[type="submit"]').mousedown(function(){
   $(this).css('background', '#1C3484');
 });

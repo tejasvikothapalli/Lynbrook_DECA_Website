@@ -5,6 +5,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 	<script src="https://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
     <!--Fonts-->
@@ -34,6 +37,7 @@
 
 	<link rel="stylesheet" type="text/css" href="ws-bg.css" />
 
+
 </head>
 
 <body style="background-color:whitesmoke">
@@ -48,12 +52,12 @@
         </div>
         
         <nav class="navbar">
-			<ul>
-				<li><a href="index.html" style="margin-right:-1px">HOME</a></li>
-				<li><a href="about.html">ABOUT</a></li>
-				<li><a href="calendar.html" style="color:white;background-color:#1F3A93;padding-top:28px;padding-bottom:24px">CALENDAR</a></li>
-				<li><a href="events.html">EVENTS</a></li>
-                <li><a href="conferences.html" style="border-right:1px solid black">CONFERENCES</a></li>
+			<ul style ="float:left" class ="s">
+				<li class = "s"><a href="index.html" style="margin-right:-1px">HOME</a></li>
+				<li class = "s"><a href="about.html">ABOUT</a></li>
+				<li class = "s"><a href="calendar.html" style="color:white;background-color:#1F3A93;padding-top:28px;padding-bottom:24px;">CALENDAR</a></li>
+				<li class = "s"><a href="events.html">EVENTS</a></li>
+                <li class = "s"><a href="conferences.html" style="border-right:1px solid black;">CONFERENCES</a></li>
                 <button class="login-button" id="loginform">LOG IN</button>
                 <button class="signup-button" onclick="window.location='signup.html';">SIGN UP</button>
 
@@ -81,7 +85,21 @@
 						  </div>
 						</div>
 					</div>
+
+
+					
 			</ul>
+
+			<ul class="user-menu" style ="float:right;">
+					<li class="dropdown pull-right">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> User <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu" style ="margin-top:20px">
+							<li style ="padding-top:0; padding-left: 25px" ><a href="dashboard/profile.html"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+							<li style ="padding-top:0; padding-left: 25px"><a href="#" id="logout-button"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+							<li style ="padding-top:0; padding-left: 25px"><a href="dashboard/dashboard.html"><span class="glyphicon glyphicon-bookmark"></span> Dashboard</a></li>
+						</ul>
+					</li>
+				</ul>
 		</nav>
 			
 	</header>

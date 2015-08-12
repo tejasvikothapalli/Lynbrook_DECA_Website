@@ -297,13 +297,13 @@ footer p {
     padding-right: 15px;
 }
 
-.navbar a:hover {
-  background-color: #1F3A93;
-    color: #fff;
+.s a:hover {
+    background-color: #1F3A93;
+    color: #fff !important;
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 28px !important;
-    padding-bottom: 24px !important;
+    padding-top: 28px;
+    padding-bottom: 24px;
 }
 
 .login-button {
