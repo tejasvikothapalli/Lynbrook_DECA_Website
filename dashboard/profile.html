@@ -17,6 +17,12 @@
 <script src="js/respond.min.js"></script>
 <![endif]-->
 
+<style>
+	.form-group a:hover {
+		cursor:pointer;
+	}
+</style>
+
 </head>
 
 <body>
@@ -51,7 +57,7 @@
 
 				<ul class="user-menu">
 					<li class="dropdown pull-right">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> User <span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><span class ="user-name"> User </span><span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu" style ="margin-top:20px">
 							<li style ="padding-top:0" ><a href="profile.html"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
 							<li style ="padding-top:0"><a href="#" id="logout-button"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
@@ -109,41 +115,35 @@
 							
 								<div class="form-group">
 									<label>First Name</label>
-									<input class="form-control" placeholder="Placeholder">
+									<input class="form-control" id ="firstname-profile" value="">
 								</div>
 								<div class="form-group">
 									<label>Last Name</label>
-									<input class="form-control" placeholder="Placeholder">
+									<input class="form-control" id ="lastname-profile" value="">
 								</div>
 								<div class="form-group">
 									<label>Cell Phone</label>
-									<input class="form-control" placeholder="Placeholder">
+									<input class="form-control" id ="cellphone-profile" value="">
 								</div>
 
 								<div class="form-group">
 									<label>Current Grade</label>
-									<select class="form-control">
-										<option>9</option>
-										<option>10</option>
-										<option>11</option>
-										<option>12</option>
-									</select>
+									<input class="form-control" id ="currentgrade-profile" value="">
 								</div>
 
 								<div class="form-group">
-									<label>Years in DECA</label>
-									<select class="form-control">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-									</select>
+									<label>Years in Lynbrook DECA</label>
+									<input class="form-control" id ="yearindeca-profile" value="">
 								</div>
-								
-																
+
 								<div class="form-group">
-									<label>Password</label>
-									<input type="password" class="form-control">
+									<label>Email</label>
+									<input class="form-control" id ="email-profile" value="">
+								</div>
+
+								<div class="form-group">
+									<label>To Change Password:</label>
+									<a onclick='reset();'>Click Here to recieve an email giving instructions</a>
 								</div>
 								
 								<div class="form-group checkbox">
@@ -244,8 +244,8 @@
 									</select>
 								</div>
 								
-								<button type="submit" class="btn btn-primary">Submit Button</button>
-								<button type="reset" class="btn btn-default">Reset Button</button>
+								<button type="submit" class="btn btn-primary" id ="save">Save Changes</button>
+								
 							</div>
 						</form>
 					</div>

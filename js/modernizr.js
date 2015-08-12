@@ -53,6 +53,7 @@ if (currentUser) {
         $(".login-button").css("display", "none");
         $(".signup-button").css("display", "none");
         $(".user-menu").css("display", "block");
+        $(".user-name").html(" "+currentUser.get("firstname")+" " + currentUser.get("lastname") +" ");
         alert("you are logged in");
         //window.location.href='dashboard.html';
 
