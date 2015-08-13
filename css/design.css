@@ -240,15 +240,15 @@ a:hover {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 31px;
-    padding-bottom: 22px;
+    padding-bottom: 20px;
     text-decoration: none !important;
 }
 
 .user-menu a:hover{
-  text-decoration: none;
+  text-decoration: none !important;
 }
 .user-menu {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .login-button {
