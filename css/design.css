@@ -315,7 +315,6 @@ a:hover {
 
 .fixed-background-about-top {
 	height:350px;
-	/*background-size:1500px;*/
 	background-repeat:no-repeat;
 	background-attachment:fixed;
 	background-position:center top;
@@ -325,9 +324,21 @@ a:hover {
   background-size:100% auto;
 }
 
+@media only screen and (min-width: 1300px) {
+  .fixed-background-about-top {
+  height:350px;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-position:center center;
+  clear:both;
+  background-image: url("../img/officers.jpg");
+  background-color:#000;
+  background-size:100% auto;
+}
+}
+
 .fixed-background-conferences-top {
     height:350px;
-    /*background-size:1500px;*/
     background-repeat:no-repeat;
     background-attachment:fixed;
     background-position:center top;
