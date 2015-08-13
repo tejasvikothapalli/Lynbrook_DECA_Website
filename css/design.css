@@ -318,7 +318,7 @@ a:hover {
 	background-size:1500px;
 	background-repeat:no-repeat;
 	background-attachment:fixed;
-	background-position:center center;
+	background-position:100% auto;
 	clear:both;
 	background-image: url("../img/officers.jpg");
 	background-color:#000;
@@ -330,11 +330,11 @@ a:hover {
     background-size:1500px;
     background-repeat:no-repeat;
     background-attachment:fixed;
-    background-position:center -195px;
+    background-position:100% auto;
     clear:both;
     background-image: url("../img/conferences-top.jpg");
     background-color:#000;
-    background-size:cover;
+    background-size:contain;
 }
 
 
