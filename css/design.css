@@ -382,7 +382,7 @@ a:hover {
     opacity: 1.0;
     text-shadow: 10 1px 3px rgba(0, 0, 0, 0.3);
     color: #000;
-    margin-top:-120px;
+    margin-top:-12%;
 }
 
 .fixed-background-top h1 span, .fixed-background-top h2 span {
