@@ -373,6 +373,7 @@ footer p {
     clear:both;
     background-image: url("../img/conferences-top.jpg");
     background-color:#000;
+    background-size: cover;
 }
 
 

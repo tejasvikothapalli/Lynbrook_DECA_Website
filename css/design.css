@@ -322,6 +322,7 @@ a:hover {
 	clear:both;
 	background-image: url("../img/officers.jpg");
 	background-color:#000;
+  background-size:cover;
 }
 
 .fixed-background-conferences-top {
@@ -333,6 +334,7 @@ a:hover {
     clear:both;
     background-image: url("../img/conferences-top.jpg");
     background-color:#000;
+    background-size:cover;
 }
 
 
