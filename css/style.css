@@ -369,11 +369,11 @@ footer p {
     background-size:1500px;
     background-repeat:no-repeat;
     background-attachment:fixed;
-    background-position:center -195px;
+    background-position:center top;
     clear:both;
     background-image: url("../img/conferences-top.jpg");
     background-color:#000;
-    background-size: cover;
+    background-size: 100% auto;
 }
 
 
