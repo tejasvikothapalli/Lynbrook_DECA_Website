@@ -314,7 +314,7 @@ a:hover {
 }
 
 .fixed-background-about-top {
-	height:50%;
+	height:350px;
 	background-size:1500px;
 	background-repeat:no-repeat;
 	background-attachment:fixed;
@@ -325,7 +325,7 @@ a:hover {
 }
 
 .fixed-background-conferences-top {
-    height:50%;
+    height:350px;
     background-size:1500px;
     background-repeat:no-repeat;
     background-attachment:fixed;
@@ -370,7 +370,6 @@ a:hover {
 .fixed-background-top h1, .fixed-background-top h2 {
     position: absolute;
     left: 50%;
-    top: 30%;
     -webkit-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
     -ms-transform translateX(-50%) translateY(-50%);
@@ -382,6 +381,7 @@ a:hover {
     opacity: 1.0;
     text-shadow: 10 1px 3px rgba(0, 0, 0, 0.3);
     color: #000;
+    margin-top:215px;
 }
 
 .fixed-background-top h1 span, .fixed-background-top h2 span {
