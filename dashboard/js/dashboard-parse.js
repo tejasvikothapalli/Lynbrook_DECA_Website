@@ -24,6 +24,30 @@ $("#logout-button").click(function(){
 });
 
 //Profile.html Java Script
+currentUser.fetch({
+  success: function(currentUser) {
+    // The object was refreshed successfully.
+  },
+  error: function(currentUser, error) {
+    // The object was not refreshed successfully.
+    // error is a Parse.Error with an error code and message.
+  }
+});
+
+
+currentUser.fetch({
+  success: function(currentUser) {
+    // The object was refreshed successfully.
+  },
+  error: function(currentUser, error) {
+    // The object was not refreshed successfully.
+    // error is a Parse.Error with an error code and message.
+  }
+});
+currentUser.fetch();
+currentUser.fetch();
+currentUser.fetch();currentUser.fetch();currentUser.fetch();currentUser.fetch();
+
 
 $(".profile-name").html(currentUser.get("firstname") +" " + currentUser.get("lastname") +"'s Profile");
 
@@ -43,9 +67,28 @@ $("#save").click(function(){
 	//currentUser.set("firstname",$("#firstname-profile").val());
 	//currentUser.set("email",$("#email-profile").val());
 	//alert($("#email-profile").val());
-	currentUser.set("firstname",$("#firstname-profile").val());
-	currentUser.save();
+	//currentUser.set("firstname",$("#firstname-profile").val());
 
+	var firstname = $("#firstname-profile").val();
+	var lastname = $("#lastname-profile").val();
+	var cellphone = $("#cellphone-profile").val();
+	var currentgrade = $("#currentgrade-profile").val();
+	var yearindeca = $("#yearindeca-profile").val();
+	// var email = $("#email-profile").val();
+
+			// currentUser.setUsername("username", email);
+			// currentUser.setEmail("email", email);
+
+			currentUser.set("firstname", firstname);
+			currentUser.set("lastname", lastname);
+			
+			currentUser.set("phone", cellphone);
+			currentUser.set("currentgrade", currentgrade);
+			currentUser.set("yearindeca", yearindeca);
+
+	currentUser.save();
+	alert("Profile Updated");
+	
 // 	alert($("#firstname-profile").val() );
 // 	//currentUser.save();
 	
@@ -82,7 +125,7 @@ $("#save").click(function(){
 
 // Contact.html javascript
 
-$("#name").val(currentUser.get("firstname") + " " + currentUser.get("lastname"));
+$("#name").val(currentUser.get("firstname") + currentUser.get("lastname"));
 $("#email").val(currentUser.get("username"));
 
 
