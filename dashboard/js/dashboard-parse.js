@@ -25,6 +25,8 @@ $("#logout-button").click(function(){
 
 //Profile.html Java Script
 
+$(".profile-name").html(currentUser.get("firstname") +" " + currentUser.get("lastname") +"'s Profile");
+
 $("#firstname-profile").val(currentUser.get("firstname"));
 $("#lastname-profile").val(currentUser.get("lastname"));
 $("#cellphone-profile").val(currentUser.get("phone"));
@@ -77,5 +79,10 @@ $("#save").click(function(){
   }
 });
 }
+
+// Contact.html javascript
+
+$("#name").val(currentUser.get("firstname") + currentUser.get("lastname"));
+$("#email").val(currentUser.get("username"));
 
 
