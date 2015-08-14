@@ -82,7 +82,7 @@ $("#save").click(function(){
 
 // Contact.html javascript
 
-$("#name").val(currentUser.get("firstname") + currentUser.get("lastname"));
+$("#name").val(currentUser.get("firstname") + " " + currentUser.get("lastname"));
 $("#email").val(currentUser.get("username"));
 
 
