@@ -430,6 +430,7 @@
 
 	function signupfunction() {
 
+
 		if (clubpasswordok)
 		{
 			// alert("signupfunction submitted");
@@ -448,7 +449,11 @@
 
 			var password = $("#password").val();
 
+			var tshirtsize = $("#tshirtsize").val();
 
+			var parentemail = $("#parentemail").val();
+			
+			alert(parentemail);
 
 			// alert(email + lastname + firstname + email + currentgrade);
 			var user = new Parse.User();
@@ -466,7 +471,8 @@
 			user.set("currentgrade", currentgrade);
 			user.set("yearindeca", yearindeca);
 			
-
+			user.set("parentemail", parentemail);
+			user.set("tshirtsize", tshirtsize);
 			
 
 			user.signUp(null, {

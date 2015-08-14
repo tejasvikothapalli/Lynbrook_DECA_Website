@@ -54,23 +54,23 @@ if (currentUser) {
         $(".signup-button").css("display", "none");
         $(".user-menu").css("display", "block");
         $(".user-name").html(" "+currentUser.get("firstname")+" " + currentUser.get("lastname") +" ");
-        alert("you are logged in");
+        // alert("you are logged in");
         //window.location.href='dashboard.html';
 
     } else {
         $(".user-menu").css("display", "none");
-        alert("not logged in");
+        // alert("not logged in");
         
     }
 
 $("#logout-button").click(function(){
-  alert("working");
+  // alert("working");
 
   Parse.User.logOut();
 
   var currentUser = Parse.User.current();
 
-  alert("Logged out");
+  // alert("Logged out");
   location.reload();
 
   // window.location.href='index.html';

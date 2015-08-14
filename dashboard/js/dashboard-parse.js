@@ -2,22 +2,22 @@ Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydk
 
     	var currentUser = Parse.User.current();
 		if (currentUser) {
-		    alert("you are logged in");
+		    // alert("you are logged in");
 		    $(".user-name").html(" "+currentUser.get("firstname")+" " + currentUser.get("lastname") +" ");
 
 		} else {
-		    alert("not logged in");
+		    // alert("not logged in");
 		    window.location.href='../index.html';
 		}
 
 $("#logout-button").click(function(){
-	alert("working");
+	// alert("working");
 
 	Parse.User.logOut();
 
 	var currentUser = Parse.User.current();
 
-	alert("Logged out");
+	// alert("Logged out");
 
 	window.location.href='../index.html';
 
@@ -57,7 +57,8 @@ $("#cellphone-profile").val(currentUser.get("phone"));
 $("#currentgrade-profile").val(currentUser.get("currentgrade"));
 $("#yearindeca-profile").val(currentUser.get("yearindeca"));
 $("#email-profile").val(currentUser.get("username"));
-
+$("#tshirt-profile").val(currentUser.get("tshirtsize"));
+$("#parentemail-profile").val(currentUser.get("parentemail"));
 
 
 
