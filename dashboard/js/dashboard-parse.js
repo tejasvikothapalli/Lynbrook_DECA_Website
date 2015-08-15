@@ -75,6 +75,8 @@ $("#save").click(function(){
 	var cellphone = $("#cellphone-profile").val();
 	var currentgrade = $("#currentgrade-profile").val();
 	var yearindeca = $("#yearindeca-profile").val();
+	var tshirtsize = $("#tshirt-profile").val();
+	var parentemail = $("#parentemail-profile").val();
 	// var email = $("#email-profile").val();
 
 			// currentUser.setUsername("username", email);
@@ -86,6 +88,9 @@ $("#save").click(function(){
 			currentUser.set("phone", cellphone);
 			currentUser.set("currentgrade", currentgrade);
 			currentUser.set("yearindeca", yearindeca);
+
+			currentUser.set("tshirtsize", tshirtsize);
+			currentUser.set("parentemail", parentemail);
 
 	currentUser.save();
 	alert("Profile Updated");
