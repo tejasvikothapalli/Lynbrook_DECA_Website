@@ -77,6 +77,13 @@ $("#logout-button").click(function(){
 
 });
 
+$("#loginpass").keyup(function(event){
+    if(event.keyCode == 13){
+        $("#loginbutton").click();
+
+    }
+});
+
 $('input[type="submit"]').mousedown(function(){
   $(this).css('background', '#1C3484');
 });
@@ -90,6 +97,7 @@ $('#loginform').click(function(){
 });
 
 $('#loginbutton').click(function(){
+    $("#loginbutton").css('background', '#1C3484');
     var username = $("#loginuser").val();
     var password = $("#loginpass").val();
     Parse.User.logIn(username, password, {
@@ -106,6 +114,7 @@ $('#loginbutton').click(function(){
        $("#login-error-message").html("Login failed! Username or password do not match.");
        $("#loginuser").val('');
        $("#loginpass").val('');
+       $("#loginbutton").css('background', '#1F3A93');
      }
 });
 });
