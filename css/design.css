@@ -166,14 +166,8 @@ a:hover {
     background-color: #fff;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     z-index: 2;
-    /*min-width:1150px;*/
-    border-bottom:3px solid #1F3A93;
-}
-
-@media (max-width:1150px) {
-  .header {
     min-width:1150px;
-  }
+    border-bottom:3px solid #1F3A93;
 }
 
 .header #navbarlogo {
@@ -680,13 +674,7 @@ button:hover {
     font-weight: 300;
     line-height: 2;
     z-index: 2;
-/*    min-width:850px;*/
-}
-
-@media (max-width:850px) {
-  .scrolling-background {
     min-width:850px;
-  }
 }
 .color-1 {
     text-align: justify;
