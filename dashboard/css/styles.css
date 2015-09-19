@@ -5,6 +5,15 @@ Version 1.0
 
 
 /*Global Styles*/
+@media (max-width: 1200px) {
+	.col-md-4 {
+	display:none;
+	}
+	.row {
+		width: 100% !important;
+	}
+}
+
 .dash-header {
 	position: fixed;
     top: 0;
