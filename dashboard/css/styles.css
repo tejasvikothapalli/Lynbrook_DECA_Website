@@ -12,6 +12,33 @@ Version 1.0
 	.a100{
 		width: 100% !important;
 	}
+	
+
+}
+.active1 {
+	color:#fff !important;
+	background-color: #30a5ff;
+}
+
+.active1 a:hover {
+	color:#fff !important;
+	background-color: #30a5ff !important;
+}
+@media (max-width: 768px) {
+	
+	.test {
+		display:block !important;
+	}
+
+}
+
+
+@media (max-width: 480px) {
+	.panel-heading {
+		text-align: center !important;
+		font-size: 220% !important; 
+	}
+
 }
 
 .dash-header {
