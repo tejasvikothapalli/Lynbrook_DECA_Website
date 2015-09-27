@@ -10,7 +10,17 @@ Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydk
 		    window.location.href='../index.html';
 		}
 
-$("#logout-button").click(function(){
+        $(window).resize(function() {
+
+
+            if ($(window).width() > 1100)
+            {
+                $(".nav-menu").css("display", "none");
+                
+            }
+        });
+
+$(".logout-button").click(function(){
 	// alert("working");
 
 	Parse.User.logOut();
@@ -21,6 +31,24 @@ $("#logout-button").click(function(){
 
 	window.location.href='../index.html';
 
+});
+
+var isopen = false;
+$("#icon-bar1").click(function()
+{
+
+    if (isopen)
+    {
+        $(".nav-menu").css("display", "none");
+        
+        isopen = !isopen;
+    }
+    else {
+        $(".nav-menu").css("display", "block");
+        
+        isopen = !isopen;
+    }
+    
 });
 
 //Profile.html Java Script

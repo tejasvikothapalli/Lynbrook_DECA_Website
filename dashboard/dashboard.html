@@ -34,15 +34,10 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top dash-header" role="navigation" >
+	<nav class="navbar navbar-inverse navbar-fixed-top dash-header" role="navigation" style = "width:100% !important; vertical-align:top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
+
 				<div id="navbarlogo">
             	<a href="javascript:harlem()"><img src="../img/favico.png" height="30px" /></a>
         		</div>
@@ -50,7 +45,9 @@
 		        <div id="lynbrookdeca">
 		        	<p><a href="../index.html">Lynbrook DECA</a></p> 
 		        </div>
-        
+		        
+        		<span style = "padding-top: 11px; color: #3366FF; display:none; padding-right: 10px;" id= "icon-bar1"class="glyphicon glyphicon-align-justify glyphicon-l"></span>	
+        		
 				<!-- <a class="navbar-brand" href="dashboard.html"><span>Lynbrook DECA</span> Admin</a> -->
 				<ul class = "dash-hover">
 
@@ -69,19 +66,39 @@
 						<ul class="dropdown-menu" role="menu" style ="margin-top:20px">
 							<li style ="padding-top:0"><a href="dashboard.html"><span class="glyphicon glyphicon-bookmark"></span> Dashboard</a></li>
 							<li style ="padding-top:0" ><a href="profile.html"><span class="glyphicon glyphicon-user"></span> Edit My Profile</a></li>
-							<li style ="padding-top:0"><a href="#" id="logout-button"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+							<li style ="padding-top:0"><a href="#" class="logout-button"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 							
 						</ul>
 						
 					</li>
 				</ul>
 				</ul>
+				
 			</div>
 							
 		</div><!-- /.container-fluid -->
+
 	</nav>
+<div id="" class="nav-menu" style="padding-top: 0px; display:none">
+
+		
+		<ul class="nav menu" style = "text-align:center; background-color:whitesmoke;">
+			<li class="active1" ><a href="../index.html" style = "color: white">Home</a></li>
+			<li><a href="../about.html">About</a></li>
+			<li><a href="../calendar.html">Calender</a></li>
+			<li><a href="../events.html">Events</a></li>
+			<li><a href="../conferences.html">Conferences</a></li>
+			<li><a class="logout-button" href = "#">Logout</a></li>
+			
+			
+			
+			<li role="presentation" class="divider"></li>
+			
+		</ul>
+	</div><!--/.sidebar-->
 
 	<div id="" class="test" style="padding-top: 0px; display:none">
+
 		
 		<ul class="nav menu" style = "text-align:center; background-color:white">
 			<li class="active1" ><a href="dashboard.html" style = "color: white"><span id ="test1" class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
@@ -185,6 +202,7 @@
 			<div class="row a100" style ="width:71%; float:right; margin-right: 0px;">
 			<div class="col-lg-12">
 				<div class="panel panel-default"  style ="">
+
 					<div class="panel-heading" style ="font-size: 250%;">Announcements</div>
 					<div class="panel-body">
 						<h1 style="text-align:center"><em style="color:green;font-size:90%" class="glyphicon glyphicon-bullhorn"></em> New Member Workshop </h1> <!-- Title of Announcement -->
@@ -195,6 +213,7 @@
 
 						<hr>
 
+		
 						<h1 style="text-align:center"><em style="color:blue;font-size:90%" class="glyphicon glyphicon-calendar"></em> Friday Meetings </h1> <!-- Title of Announcement -->
 						<h3 style="text-align:right">September 13, 2015</h3> <!-- Date of Announcement -->
 						<p>Thank you to all those who came out to our first meeting in the auditorium last Tuesday. We hope you're all excited for a great year in Lynbrook DECA! From here on out, we will be having our regular meetings on <strong>FRIDAYS AT LUNCH IN ROOM 608</strong>. Our second meeting will be <strong>this Friday (9/18)</strong>, and we recommend that everyone comes to these meetings because we will be covering important information relating to logistics, events, deadlines, and much more. However, we understand that some of you can't make it due to other clubs or commitments. In that case, make sure to read the emails that we send out and contact an officer if you have any further questions. If you have not recieved any Lynbrook DECA emails so far, please email <a href = "mailto:presidents@lynbrookdeca.org">presidents@lynbrookdeca.org</a> and let us know to add you onto our mailing list.</p> <!-- Message of Announcement -->
