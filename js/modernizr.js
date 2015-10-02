@@ -46,7 +46,16 @@ Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydk
 //   }
 // });
 // });
+var currentUser = Parse.User.current();
+function signup_lace () {
+  if (currentUser) {
+         window.open("https://docs.google.com/forms/d/1n_q3cb-ajUU5GQkyqJ__fMJgly8Xm-_7JOPz6iIbG-w/viewform", '_blank');
 
+    } else {
+        alert("Please log in to be able to sign up for LACE");
+        
+    }
+};
 function harlem(){
                 function c() {
                     var e = document.createElement("link");
@@ -186,7 +195,7 @@ function harlem(){
                     }
                 }
             }
-var currentUser = Parse.User.current();
+
 if (currentUser) {
         $(".login-button").css("display", "none");
         $(".signup-button").css("display", "none");
