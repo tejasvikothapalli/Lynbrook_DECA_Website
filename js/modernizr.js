@@ -56,6 +56,16 @@ function signup_lace () {
         
     }
 };
+
+function signup_sv () {
+  if (currentUser) {
+         window.open("https://docs.google.com/forms/d/1N1B0k3sIpZH0j6Pe4JYAGJhnjJa7JaG18XZ8yEmsZtw/viewform", '_blank');
+
+    } else {
+        alert("Please log in to be able to sign up for SVCDC ");
+        
+    }
+};
 function harlem(){
                 function c() {
                     var e = document.createElement("link");

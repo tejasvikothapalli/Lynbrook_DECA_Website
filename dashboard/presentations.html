@@ -5,23 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lynbrook DECA - Dashboard</title>
 <link rel="icon" href="../img/favico.png"></link>
+
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/datepicker3.css" rel="stylesheet">
+<link href="css/bootstrap-table.css" rel="stylesheet">
 <link href="css/styles.css" rel="stylesheet">
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="https://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
-
-
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
 <script src="js/respond.min.js"></script>
 <![endif]-->
-
-<style>
-	.form-group a:hover {
-		cursor:pointer;
-	}
-</style>
 
 </head>
 
@@ -37,7 +31,9 @@
 		        <div id="lynbrookdeca">
 		        	<p><a href="../index.html">Lynbrook DECA</a></p> 
 		        </div>
-          		<span style = "padding-top: 11px; color: #3366FF; display:none; padding-right: 10px;" id= "icon-bar1"class="glyphicon glyphicon-align-justify glyphicon-l"></span>	
+
+		        <span style = "padding-top: 11px; color: #3366FF; display:none; padding-right: 10px;" id= "icon-bar1"class="glyphicon glyphicon-align-justify glyphicon-l"></span>	
+        
 				<!-- <a class="navbar-brand" href="dashboard.html"><span>Lynbrook DECA</span> Admin</a> -->
 				<ul class = "dash-hover">
 
@@ -56,7 +52,8 @@
 						<ul class="dropdown-menu" role="menu" style ="margin-top:20px">
 							<li style ="padding-top:0"><a href="dashboard.html"><span class="glyphicon glyphicon-bookmark"></span> Dashboard</a></li>
 							<li style ="padding-top:0" ><a href="profile.html"><span class="glyphicon glyphicon-user"></span> Edit My Profile</a></li>
-							<li style ="padding-top:0"><a href="#" class="logout-button"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+							<li style ="padding-top:0"><a href="#" id="logout-button"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+							
 						</ul>
 						
 					</li>
@@ -75,7 +72,7 @@
 			<li><a href="../calendar.html">Calender</a></li>
 			<li><a href="../events.html">Events</a></li>
 			<li><a href="../conferences.html">Conferences</a></li>
-			<li class = "active1"><a href="profile.html" style = "color:white">Profile</a></li>
+			<li><a href="profile.html">Profile</a></li>
 			<li><a class="logout-button" href = "#">Logout</a></li>
 			
 			
@@ -83,13 +80,12 @@
 			<li role="presentation" class="divider"></li>
 			
 		</ul>
-	</div><!--/.sidebar-->	
+	</div><!--/.sidebar-->
 	<div id="" class="test" style="padding-top: 0px; display:none">
-
 		
 		<ul class="nav menu" style = "text-align:center; background-color:white">
-			<li><a href="dashboard.html"><span id ="test1" class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
-			<li><a href="points.html"><span class="glyphicon glyphicon-stats"></span> Point System</a></li>
+			<li ><a href="dashboard.html"><span id ="test1" class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
+			<li class="active1"><a href="points.html" style = "color:white"><span class="glyphicon glyphicon-stats"></span> Point System</a></li>
 			<li><a href="https://drive.google.com/folderview?id=0BzzCrg_W88iyfk9qZjc1OWZIZjMxWFBabl9BUmFac1pMU3g1clpjZ1pzTlNxUjlRVjUyQzg&usp=sharing" target="_blank"><span class="glyphicon glyphicon-list-alt"></span> Written Materials</a></li>
 			<li><a href="https://drive.google.com/folderview?id=0BzzCrg_W88iyfjFSamlPMGVsX2llQU1md0ZCSmNEVUxVNUl5Qm83TzVaSWdKbDgxNzkzaUU&usp=sharing" target="_blank"><span class="glyphicon glyphicon-book"></span> Roleplay Materials</a></li>
 			<li><a href="https://drive.google.com/folderview?id=0BzzCrg_W88iyfklJZEFBYlYtTWJxZDIxclBwejVEcGVXeDRvMlpidDdHOTNHU0g2bDR5Z00&usp=sharing" target="_blank"><span class="glyphicon glyphicon-briefcase"></span> Principles Materials</a></li>
@@ -105,7 +101,7 @@
 		
 		<ul class="nav menu">
 			<li><a href="dashboard.html"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
-			<li><a href="points.html"><span class="glyphicon glyphicon-stats"></span> Point System</a></li>
+			<li class="active"><a href="points.html"><span class="glyphicon glyphicon-stats"></span> Point System</a></li>
 			<li><a href="https://drive.google.com/folderview?id=0BzzCrg_W88iyfk9qZjc1OWZIZjMxWFBabl9BUmFac1pMU3g1clpjZ1pzTlNxUjlRVjUyQzg&usp=sharing" target="_blank"><span class="glyphicon glyphicon-list-alt"></span> Written Materials</a></li>
 			<li><a href="https://drive.google.com/folderview?id=0BzzCrg_W88iyfjFSamlPMGVsX2llQU1md0ZCSmNEVUxVNUl5Qm83TzVaSWdKbDgxNzkzaUU&usp=sharing" target="_blank"><span class="glyphicon glyphicon-book"></span> Roleplay Materials</a></li>
 			<li><a href="https://drive.google.com/folderview?id=0BzzCrg_W88iyfklJZEFBYlYtTWJxZDIxclBwejVEcGVXeDRvMlpidDdHOTNHU0g2bDR5Z00&usp=sharing" target="_blank"><span class="glyphicon glyphicon-briefcase"></span> Principles Materials</a></li>
@@ -122,89 +118,81 @@
 		<div class="row">
 			<ol class="breadcrumb">
 				<li><a href="dashboard.html"><span class="glyphicon glyphicon-home"></span></a></li>
-				<li>Profile</li>
+				<li class="active" >Point System</li>
 			</ol>
 		</div><!--/.row-->
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Edit Your Profile</h1>
+				<h1 class="page-header" style = "text-align:center">Presentations</h1>
 				<hr>
 			</div>
-
 		</div><!--/.row-->
-
-
-
-		<div class="row">
-			<div class="col-lg-12">
+				
+		
+		<div class="col-md-6" style = "width:100%">
 				<div class="panel panel-default">
-					<div class="panel-heading profile-name" style ="font-size:200%">Profile</div>
-					<div class="panel-body">
-						<div class="col-md-6">
-							<form role="form">
-							
-								<div class="form-group">
-									<label>First Name</label>
-									<input class="form-control" id ="firstname-profile" value="">
-								</div>
-								<div class="form-group">
-									<label>Last Name</label>
-									<input class="form-control" id ="lastname-profile" value="">
-								</div>
-								<div class="form-group">
-									<label>Cell Phone</label>
-									<input class="form-control" id ="cellphone-profile" value="">
-								</div>
-								<div class="form-group">
-									<label>T-Shirt Size</label>
-									<input class="form-control" id ="tshirt-profile" value="">
-								</div>
-
-								<div class="form-group">
-									<label>To Change Password:</label>
-									<a onclick='reset();'>Click Here to recieve an email giving instructions</a>
-								</div>
-
+					<div class="panel-body tabs">
+					
+						<ul class="nav nav-pills">
+							<li class="active"><a href="#pilltab1" data-toggle="tab">Principles' Lectures</a></li>
+							<li><a href="#pilltab2" data-toggle="tab">Written Presentations</a></li>
+							<li><a href="#pilltab3" data-toggle="tab">Friday Meeting Prezis</a></li>
+						</ul>
+		
+						<div class="tab-content">
+							<div class="tab-pane fade in active" id="pilltab1">
+								<h4>Principles</h4>
+								<p>Principles lectures will be display below to review for future use.</p>
+								<hr>
 							</div>
-
-
-							<div class="col-md-6">
-								
-								<div class="form-group">
-									<label>Current Grade (9-12)</label>
-									<input class="form-control" id ="currentgrade-profile" value="">
-								</div>
-
-								<div class="form-group">
-									<label>Year in Lynbrook DECA (1-4)</label>
-									<input class="form-control" id ="yearindeca-profile" value="">
-								</div>
-								<div class="form-group">
-									<label>Parent Email</label>
-									<input class="form-control" id ="parentemail-profile" value="">
-								</div>
-								<div class="form-group">
-									<label>Email</label>
-									<input class="form-control" id ="email-profile" value="" readonly>
-								</div>
-
-
-								<button type="submit" class="btn btn-primary" id ="save">Save Changes</button>
-								
+							<div class="tab-pane fade" id="pilltab2">
+								<h4>Writtens</h4>
+								<p>Written presentations that are presented by the written captains will be uploaded here.</p>
+								<hr>
 							</div>
-						</form>
+							<div class="tab-pane fade" id="pilltab3">
+								<h4>Friday Meetings</h4>
+								<p>If you have happened to miss one of the friday meetings make sure to check out to look over the prezi in order to stay up to date.</p>
+								<hr>
+								<iframe height = "500px" width = "600px" src="https://prezi.com/5xtqiqt-eqad/present/?follow=mfa6dtf8q5j3&auth_key=8t7355l#75_63739181"></iframe>
+							</div>
+						</div>
 					</div>
-				</div>
+				</div><!--/.panel-->
 			</div><!-- /.col-->
-		</div><!-- /.row -->
 
+		<script>
+		    $(function () {
+		        $('#hover, #striped, #condensed').click(function () {
+		            var classes = 'table';
 		
-	
-	
-								
+		            if ($('#hover').prop('checked')) {
+		                classes += ' table-hover';
+		            }
+		            if ($('#condensed').prop('checked')) {
+		                classes += ' table-condensed';
+		            }
+		            $('#table-style').bootstrapTable('destroy')
+		                .bootstrapTable({
+		                    classes: classes,
+		                    striped: $('#striped').prop('checked')
+		                });
+		        });
+		    });
 		
-	</div>	<!--/.main-->
+		    function rowStyle(row, index) {
+		        var classes = ['active', 'success', 'info', 'warning', 'danger'];
+		
+		        if (index % 2 === 0 && index / 2 < classes.length) {
+		            return {
+		                classes: classes[index / 2]
+		            };
+		        }
+		        return {};
+		    }
+		</script>
+	</div>
 
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src = "js/dashboard-parse.js"></script>
@@ -214,15 +202,13 @@
 	<script src="js/easypiechart.js"></script>
 	<script src="js/easypiechart-data.js"></script>
 	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/bootstrap-table.js"></script>
 	<script>
-		$('#calendar').datepicker({
-		});
-
 		!function ($) {
-		    $(document).on("click","ul.nav li.parent > a > span.icon", function(){          
-		        $(this).find('em:first').toggleClass("glyphicon-minus");      
-		    }); 
-		    $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+			$(document).on("click","ul.nav li.parent > a > span.icon", function(){		  
+				$(this).find('em:first').toggleClass("glyphicon-minus");	  
+			}); 
+			$(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
 		}(window.jQuery);
 
 		$(window).on('resize', function () {
