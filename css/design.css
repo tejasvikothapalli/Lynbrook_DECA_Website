@@ -324,12 +324,12 @@ a:hover {
   background-size:100% auto;
 }
 
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1200px) {
   .fixed-background-about-top {
   height:350px;
   background-repeat:no-repeat;
   background-attachment:fixed;
-  background-position:center center;
+  background-position:center top;
   clear:both;
   background-image: url("../img/officers.jpg");
   background-color:#000;
