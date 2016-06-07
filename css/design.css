@@ -376,8 +376,19 @@ a:hover {
     padding-bottom: 3%;
     padding-left: 6%;
     padding-right: 6%;
-    font-size: 290%;
-    font-weight: 300;
+    
+}
+
+h2 span
+{
+    font-weight: 300 !important;
+    font-size:6vw !important;
+    font-family:'Raleway',sans-serif !important;
+}
+
+.container p
+{
+  font-size:vw !important;
 }
 
 .fixed-background-top h1, .fixed-background-top h2 {
@@ -674,7 +685,7 @@ button:hover {
     font-weight: 300;
     line-height: 2;
     z-index: 2;
-    min-width:850px;
+    /*min-width:850px;*/
 }
 .color-1 {
     text-align: justify;
