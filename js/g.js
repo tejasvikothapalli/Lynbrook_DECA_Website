@@ -69,7 +69,7 @@ function resizeWordBackground() {
 
 
   //resize just happened, pixels changed
-  h = $('#para3').height() + 200;
+  h = $('#para3').height() + 120;
 
   $('.textHolder3').css("height", h);
 }
