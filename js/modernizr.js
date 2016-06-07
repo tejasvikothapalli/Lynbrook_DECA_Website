@@ -46,34 +46,33 @@ Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydk
 //   }
 // });
 // });
+resizeWordBackground();
+$(window).on('resize',resizeWordBackground);
 
-$(window).resize(function() {
+function resizeWordBackground() {
   //resize just happened, pixels changed
   var h = $('#para0').height() + 200;
 
-    $('.textHolder0').css("height", h);
-});
+  $('.textHolder0').css("height", h);
 
-$(window).resize(function() {
+
   //resize just happened, pixels changed
-  var h = $('#para1').height() + 200;
+  h = $('#para1').height() + 200;
 
-    $('.textHolder1').css("height", h);
-});
+  $('.textHolder1').css("height", h);
 
-$(window).resize(function() {
+
   //resize just happened, pixels changed
-  var h = $('#para2').height() + 200;
+  h = $('#para2').height() + 200;
 
-    $('.textHolder2').css("height", h);
-});
+  $('.textHolder2').css("height", h);
 
-$(window).resize(function() {
+
   //resize just happened, pixels changed
-  var h = $('#para3').height() + 200;
+  h = $('#para3').height() + 200;
 
-    $('.textHolder3').css("height", h);
-});
+  $('.textHolder3').css("height", h);
+}
     
 
 
