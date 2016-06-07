@@ -46,6 +46,37 @@ Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydk
 //   }
 // });
 // });
+
+$(window).resize(function() {
+  //resize just happened, pixels changed
+  var h = $('#para0').height() + 200;
+
+    $('.textHolder0').css("height", h);
+});
+
+$(window).resize(function() {
+  //resize just happened, pixels changed
+  var h = $('#para1').height() + 200;
+
+    $('.textHolder1').css("height", h);
+});
+
+$(window).resize(function() {
+  //resize just happened, pixels changed
+  var h = $('#para2').height() + 200;
+
+    $('.textHolder2').css("height", h);
+});
+
+$(window).resize(function() {
+  //resize just happened, pixels changed
+  var h = $('#para3').height() + 200;
+
+    $('.textHolder3').css("height", h);
+});
+    
+
+
 var currentUser = Parse.User.current();
 function signup_lace () {
   if (currentUser) {
