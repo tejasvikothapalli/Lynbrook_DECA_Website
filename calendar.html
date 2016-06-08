@@ -15,9 +15,17 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
 
+
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
     <!--Stylesheets-->
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/design.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     
     <!--Script-->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
@@ -41,69 +49,57 @@
 </head>
 
 <body style="background-color:whitesmoke">
-	<header class="header">
-		
-		<div id="navbarlogo">
-            <a href ="javascript:harlem()"><img src="img/favico.png" height="30px" /></a>
+	<!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" style= "padding-bottom:1.3vw"  >
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <div id="navbarlogo" style="display:inline-block;">
+           			 	<a href ="javascript:harlem()"><img src="img/favico.png" height="30px" /></a>
+        		</div> -->
+                
+                	<a class="navbar-brand page-scroll" href="index.html">Lynbrook DECA</a>
+                
+                
+                
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index.html" >Home</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="calendar.html"  style ="color:#1F3A93">Calendar</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="events.html">Events</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="conferences.html">Conferences</a>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        
-        <div id="lynbrookdeca">
-        	<p><a href="index.html">Lynbrook DECA</a></p> 
+            <!-- /.navbar-collapse -->
         </div>
-        
-        <nav class="navbar">
-			<ul style ="float:left" class ="s">
-				<li class = "s"><a href="index.html" style="margin-right:-1px">HOME</a></li>
-				<li class = "s"><a href="about.html">ABOUT</a></li>
-				<li class = "s"><a href="calendar.html" style="color:white;background-color:#1F3A93;padding-top:28px;padding-bottom:24px;">CALENDAR</a></li>
-				<li class = "s"><a href="events.html">EVENTS</a></li>
-                <li class = "s"><a href="conferences.html" style="border-right:1px solid black;">CONFERENCES</a></li>
-                <button class="login-button" id="loginform">LOG IN</button>
-                <button class="signup-button" onclick="window.location='signup.html';">SIGN UP</button>
-
-                <div id="wrap">
-						  <div id="regbar">
-						    <div id="navthing">
-						    <div class="login">
-						      <div class="arrow-up"></div>
-						      <div class="formholder">
-						        <div class="randompad">
-						           <fieldset class = "forgot-pass">
-						             <label name="email">Email</label>
-						             <input type="email" placeholder="example@example.com" id="loginuser" name="loginuser"/>
-						             <label name="password">Password</label>
-						             <input type="password" placeholder="password" id = "loginpass" name= "loginpass"/>
-						             <div id="login-error-message" style = "text-align:center; color:red; padding-bottom:5px;" ></div>
-						             <p onclick="window.location='forgot-pass.html';" >Forgot Password?</p>
-						             <input type="submit" value="Login" id = "loginbutton" />
-						 
-						           </fieldset>
-						        </div>
-						      </div>
-						    </div>
-						    </div>
-						  </div>
-						</div>
-					</div>
-
-
-					
-			</ul>
-
-			<ul class="user-menu" style ="float:right;">
-					<li class="dropdown pull-right">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><span class ="user-name"> User </span><span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu" style ="margin-top:20px">
-							<li style ="padding-top:0; padding-left: 25px"><a href="dashboard/dashboard.html"><span class="glyphicon glyphicon-bookmark"></span> Dashboard</a></li>
-							<li style ="padding-top:0; padding-left: 25px" ><a href="dashboard/profile.html"><span class="glyphicon glyphicon-user"></span> Edit My Profile</a></li>
-							<li style ="padding-top:0; padding-left: 25px"><a href="#" id="logout-button"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-							
-						</ul>
-					</li>
-				</ul>
-		</nav>
-			
-	</header>
+        <!-- /.container-fluid -->
+    </nav>	
 	
 	<div class="title-up" style="width:400px;padding:30px;margin:50px auto;margin-top:100px;margin-bottom:35px">
 		<p><span>Calendar</span></p>

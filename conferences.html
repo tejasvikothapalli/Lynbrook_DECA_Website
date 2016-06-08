@@ -18,10 +18,18 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
 
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
     <!--Stylesheets-->
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/design.css"> <!-- Resource style -->
-    
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/agency.css"> <!-- Resource style -->
+
     <!--Script-->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   	
@@ -41,189 +49,150 @@
 	<link rel="stylesheet" type="text/css" href="ws-bg.css" />
 </head>
 
-<body style="background-color:lightgray">
-	<header class="header">
-		
-		<div id="navbarlogo">
-            <a href ="javascript:harlem()"><img src="img/favico.png" height="30px" /></a>
-        </div>
-        
-        <div id="lynbrookdeca">
-        	<p><a href="index.html">Lynbrook DECA</a></p> 
-        </div>
-        
-        <nav class="navbar">
-			<ul style ="float:left" class ="s">
-				<li><a href="index.html" style="margin-right:-1px">HOME</a></li>
-				<li><a href="about.html">ABOUT</a></li>
-				<li><a href="calendar.html">CALENDAR</a></li>
-				<li><a href="events.html" style="margin-right:-1px">EVENTS</a></li>
-                <li><a href="conferences.html" style="border-right:1px solid black;color:white;background-color:#1F3A93;padding-top:28px;padding-bottom:21px">CONFERENCES</a></li>
-                <button class="login-button" id="loginform">LOG IN</button>
-                <button class="signup-button" onclick="window.location='signup.html';">SIGN UP</button>
+<body style="background-color:white">
+	<!-- Navigation -->
+	<nav class="navbar navbar-default navbar-fixed-top" style= "padding-bottom:1.3vw"  >
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+                <!-- <div id="navbarlogo" style="display:inline-block;">
+           			 	<a href ="javascript:harlem()"><img src="img/favico.png" height="30px" /></a>
+           			 </div> -->
 
-                <div id="wrap">
-						  <div id="regbar">
-						    <div id="navthing">
-						    <div class="login">
-						      <div class="arrow-up"></div>
-						      <div class="formholder">
-						        <div class="randompad">
-						           <fieldset class = "forgot-pass">
-						             <label name="email">Email</label>
-						             <input type="email" placeholder="example@example.com" id="loginuser" name="loginuser"/>
-						             <label name="password">Password</label>
-						             <input type="password" placeholder="password" id = "loginpass" name= "loginpass"/>
-						             <div id="login-error-message" style = "text-align:center; color:red; padding-bottom:5px;" ></div>
-						             <p onclick="window.location='forgot-pass.html';" >Forgot Password?</p>
-						             <input type="submit" value="Login" id = "loginbutton" />
-						 
-						           </fieldset>
-						        </div>
-						      </div>
-						    </div>
-						    </div>
-						  </div>
-						</div>
-					</div>
-			</ul>
+           			 <a class="navbar-brand page-scroll" href="index.html">Lynbrook DECA</a>
 
-			<ul class="user-menu" style ="float:right;">
-					<li class="dropdown pull-right">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><span class ="user-name"> User </span><span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu" style ="margin-top:20px">
-							<li style ="padding-top:0; padding-left: 25px"><a href="dashboard/dashboard.html"><span class="glyphicon glyphicon-bookmark"></span> Dashboard</a></li>
-							<li style ="padding-top:0; padding-left: 25px" ><a href="dashboard/profile.html"><span class="glyphicon glyphicon-user"></span> Edit My Profile</a></li>
-							<li style ="padding-top:0; padding-left: 25px"><a href="#" id="logout-button"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-							
-						</ul>
-					</li>
-				</ul>
-		</nav>
-		
-	</header>
+
+
+           			</div>
+
+           			<!-- Collect the nav links, forms, and other content for toggling -->
+           			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+           				<ul class="nav navbar-nav navbar-right">
+           					<li class="hidden">
+           						<a href="#page-top"></a>
+           					</li>
+           					<li>
+           						<a class="page-scroll" href="index.html" >Home</a>
+           					</li>
+           					<li>
+           						<a class="page-scroll" href="about.html" >About</a>
+           					</li>
+           					<li>
+           						<a class="page-scroll" href="calendar.html" >Calendar</a>
+           					</li>
+           					<li>
+           						<a class="page-scroll" href="events.html" >Events</a>
+           					</li>
+           					<li>
+           						<a class="page-scroll" href="conferences.html" style ="color:#1F3A93">Conferences</a>
+           					</li>
+           				</li>
+           			</ul>
+           		</div>
+           		<!-- /.navbar-collapse -->
+           	</div>
+           	<!-- /.navbar-collapse -->
+           </div>
+           <!-- /.container-fluid -->
+       </nav>	
 	<main class="main-content">
-		<div class="fixed-background-conferences-top fixed-background-top">
-			<h1>
-                <span>Conferences</span>
-            </h1>
-		</div>
-		<div class="scrolling-line line-color"></div>
-		<div class = "conferences">
-			<div class = "conference-div">
-				<div class="conference-pitch">
-					<div class="conference-left">
-						<h2>Leadership and Competitive Excellence</h2>
-						<div class="conference-description">
-							<p>LACE gives DECA members their first taste of what a DECA conference feels like. This conference is NON-competitive, and offers empowering guest speakers, useful workshops, and great networking opportunities to those who attend.</p>
-						</div>
-					</div>
-					<div class="conference-right" id="lace">
-					</div>
-				</div>
-
-				<div class="conference-information">
-					<div style="max-width:1400px;text-align:center;margin:0 auto">
-					<div class="conference-when">
-						<h3>WHEN</h3>
-						<p>November 13-15, 2015</p>
-					</div>
-					<div class="conference-where">
-						<h3>WHERE</h3>
-						<p>San Jose, California<br>Double Tree Hotel <br> <span style="font-size:85%">2050 Gateway Place, San Jose, CA, 95110</span></p>
-					</div>
-					<a onclick="javascript:signup_lace()"><button class="attend-button">Attend</button></a>
-					<a href="http://www.californiadeca.org/conference_leadership.php" target="_blank"><button class="info-button">More Info</button></a>
-					</div>
-				</div>
-			</div>
-
-			<div class = "conference-div">
-				<div class="conference-pitch">
-					<div class="conference-left" style="float:right">
-						<h2>Silicon Valley Career Development Conference</h2>
-						<div class="conference-description">
-							<p>SVCDC is the first competitive DECA conference. Lynbrook DECA members compete against all other DECA chapters in the Silicon Valley Area. It's important to note that performance at this competition will <span style="font-weight:700;font-size:115%">NOT</span> affect your participation in States.</p>
-						</div>
-					</div>
-					<div class="conference-right" id="svcdc" style="float:left">
-					</div>
-				</div>
-				<div class="conference-information">
-					<div style="max-width:1400px;text-align:center;margin:0 auto">
-					<div class="conference-when">
-						<h3>WHEN</h3>
-						<p>January 8-10, 2016</p>
-					</div>
-					<div class="conference-where">
-						<h3>WHERE</h3>
-						<p>San Jose Marriot<br><span style="font-size:85%">301 South Market Street
-San Jose,<br>California 95113</span></p>
-					</div>
-					<a onclick="javascript:signup_sv()"><button class="attend-button">Attend</button></a>
-					<a href="http://californiadeca.org/m/sv/" target="_blank"><button class="info-button">More Info</button></a>
-					</div>
-				</div>
-			</div>
-
-			<div class = "conference-div">
-				<div class="conference-pitch">
-					<div class="conference-left">
-						<h2>State Career Development Conference</h2>
-						<div class="conference-description" style="margin-top:-15px">
-							<p>SCDC is the qualifying competition to see if members are eligible to compete at the International Career Development Conference. This conference is similar to SVCDC, except members will compete with all other DECA chapters in their state instead.</p>
-						</div>
-					</div>
-					<div class="conference-right" id="scdc">
-					</div>
-				</div>
-				<div class="conference-information">
-					<div style="max-width:1400px;text-align:center;margin:0 auto">
-					<div class="conference-when">
-						<h3>WHEN</h3>
-						<p>March 3-6, 2016</p>
-					</div>
-					<div class="conference-where">
-						<h3>WHERE</h3>
-						<p>San Diego, California<br>[Location Coming Soon]</p>
-					</div>
-					<a onclick="javascript:alert('Signups for SCDC not open yet.');"><button class="attend-button">Attend</button></a>
-					<a href="http://www.californiadeca.org/conference_scdc.php" target="_blank"><button class="info-button">More Info</button></a>
-					</div>
-				</div>
-			</div>
-
-			<div class = "conference-div">
-				<div class="conference-pitch">
-					<div class="conference-left" style="float:right">
-						<h2>International Career Development Conference</h2>
-						<div class="conference-description">
-							<p>With over 17,000 people attending each year, ICDC is an entire week of fun, where members get to meet people from other countries, visit world-renowned places with friends, and compete for victory on the international stage!</p>
-						</div>
-					</div>
-					<div class="conference-right" id="icdc" style="float:left">
-					</div>
-				</div>
-				<div class="conference-information">
-					<div style="max-width:1400px;text-align:center;margin:0 auto">
-					<div class="conference-when">
-						<h3>WHEN</h3>
-						<p>April 23-26, 2016</p>
-					</div>
-					<div class="conference-where">
-						<h3>WHERE</h3>
-						<p>Nashville, Tennessee<br>Music City Center</p>
-					</div>
-					<a onclick="javascript:alert('Signups for ICDC not open yet.');"><button class="attend-button">Attend</button></a>
-					<a href="http://www.deca.org/high-school-programs/high-school-educational-conferences/international-career-development-conference-hs/" target="_blank"><button class="info-button">More Info</button></a>
-					</div>
-				</div>
-			</div>
-		</div>
+		
+		<div class="fixed-background background-conferences" style = "min-height: 50% !important">
+       		<h2>
+       			<span >Conferences</span>
+       		</h2>
+       	</div>
+        <div class="scrolling-line line-color"></div>
+			<!-- About Section -->
+    <section id="about">
+        <div class="container" style = "margin-bottom: 50px">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2009-2011</h4>
+                                    <h4 class="subheading">Our Humble Beginnings</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>March 2011</h4>
+                                    <h4 class="subheading">An Agency is Born</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>December 2012</h4>
+                                    <h4 class="subheading">Transition to Full Service</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>July 2014</h4>
+                                    <h4 class="subheading">Phase Two Expansion</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <h4>Be Part
+                                    <br>Of Our
+                                    <br>Story!</h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
 		<div class="scrolling-line line-color"></div>
 	        <!-- Footer w/Sitemap -->
-      	<div class="scrolling-footer footer-color" style = "padding-bottom:240px">
+      	<div class="scrolling-footer footer-color" style = "padding-bottom:320px">
             <h3 style="font-weight:300;font-size:110%">Sitemap</h3>
              
             

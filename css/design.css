@@ -36,6 +36,114 @@ body, html {
   padding: 0;
 }
 
+/*#navbarlogo {
+  float:left;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+#navbarlogo img {
+    height: 25%;
+    width: 25%;
+    margin-right: 0;
+    padding-right: 0;
+    /*margin-left: 2vw;*/
+    
+}*/
+
+li a{
+  color: #5E5E5E !important;
+}
+
+a, a:hover, a:focus, a:active, a.active {
+  outline: 0
+}
+/*a {
+  color: #fed136
+}*/
+a:hover, a:focus, a:active, a.active {
+  color: #1F3A93 !important;
+  /*#354E9E*/
+}
+
+.navbar-default {
+  background-color: rgba(255, 255, 255, 0.91) !important;
+  /*border-color: transparent*/
+}
+.navbar-default .navbar-brand {
+  color: black !important ;
+  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+  font-size: 2em;
+
+
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:active, .navbar-default .navbar-brand.active {
+  /*color: black!important;*/
+  /*color: red !important;*/
+}
+.navbar-default .navbar-collapse {
+  border-color: rgba(255, 255, 255, .02)
+}
+.navbar-default .navbar-toggle {
+  background-color: white !important;
+  border-color: gray !important;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: gray !important;
+  outline: none;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #1F3A93
+}
+.navbar-default .nav li a {
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff
+}
+.navbar-default .nav li a:hover, .navbar-default .nav li a:focus {
+  color: #1F3A93;
+  outline: 0;
+}
+.navbar-default .navbar-nav>.active>a {
+  border-radius: 0;
+  color: #fff;
+  background-color: #1F3A93
+}
+.navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  color: #fff;
+  background-color: #1F3A93!important;
+}
+
+@media (min-width:768px) {
+  .navbar-default {
+    background-color: transparent;
+    padding: 25px 0;
+    -webkit-transition: padding .3s;
+    -moz-transition: padding .3s;
+    transition: padding .3s;
+    border: 0
+  }
+  .navbar-default .navbar-brand {
+    font-size: 2.67em;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s
+  }
+  .navbar-default .navbar-nav>.active>a {
+    border-radius: 3px
+  }
+  .navbar-default.navbar-shrink {
+    background-color: #222;
+    padding: 10px 0
+  }
+  .navbar-default.navbar-shrink .navbar-brand {
+    font-size: 1.5em
+  }
+
+
+}
 
 
 .center {
@@ -65,10 +173,7 @@ body, html {
   margin: 0 auto 30px;
 }
 
-#navthing {
-  margin-left:255px;
-  margin-top: 10px;
-}
+
 
 fieldset {
   border: none;
@@ -170,16 +275,7 @@ a:hover {
     border-bottom:3px solid #1F3A93;
 }
 
-.header #navbarlogo {
-	float:left;
-}
 
-.header #navbarlogo img {
-    height: 35%;
-    width: 35%;
-    margin-top:12px;
-    margin-left:45px;
-}
 
 .header #lynbrookdeca {
 	float:left;
@@ -196,34 +292,8 @@ a:hover {
 	text-decoration:none;
 }
 
-.navbar {
-	float:right;
-}
-		
-.navbar ul {
-	margin-right:20px;
-	padding:0;
-  float:right;
-}
-		
-.navbar li {
-	list-style:none;
-	font-weight:none;
-	font-size:95%;
-	font-family: 'Raleway', sans-serif;
-	padding-top:29px;
-	height:29px;
-	float:left;
-}
 
-.navbar a {
-	color: #000;
-	text-decoration:none;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 18px;
-  padding-bottom: 14px;
-}
+
 
 .s a:hover {
 	  background-color: #1F3A93;
@@ -288,7 +358,7 @@ a:hover {
     font-weight:700;
 }
 
-.container {
+.wordscontainer {
     /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
     width: 90%;
     max-width: 768px;
@@ -313,40 +383,13 @@ a:hover {
     z-index: 1;
 }
 
-.fixed-background-about-top {
-	height:350px;
-	background-repeat:no-repeat;
-	background-attachment:fixed;
-	background-position:center top;
-	clear:both;
-	background-image: url("../img/officers.jpg");
-	background-color:#000;
-  background-size:100% auto;
+.background-conferences
+{
+  background-image: url("../img/conferences-top.jpg");
 }
 
-@media only screen and (min-width: 1200px) {
-  .fixed-background-about-top {
-  height:350px;
-  background-repeat:no-repeat;
-  background-attachment:fixed;
-  background-position:center top;
-  clear:both;
-  background-image: url("../img/officers.jpg");
-  background-color:#000;
-  background-size:100% auto;
-}
-}
 
-.fixed-background-conferences-top {
-    height:350px;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
-    background-position:center top;
-    clear:both;
-    background-image: url("../img/conferences-top.jpg");
-    background-color:#000;
-    background-size:100% auto;
-}
+
 
 
 .fixed-background h1, .fixed-background h2 {
@@ -382,8 +425,19 @@ a:hover {
 h2 span
 {
     font-weight: 300 !important;
-    font-size:6vw !important;
+    font-size: 3vw !important;
     font-family:'Raleway',sans-serif !important;
+
+}
+
+@media  (max-width: 768px) {
+  h2 span
+  {
+    font-weight: 300 !important;
+    font-size: 6vw !important;
+    font-family:'Raleway',sans-serif !important;
+
+  }
 }
 
 .container p
@@ -642,6 +696,11 @@ button:hover {
 }
 .background-5 {
     background-image: url("../img/culture.jpg");
+}
+
+.background-about
+{
+  background-image: url("../img/officers.jpg");
 }
 
 .scrolling-footer {
@@ -946,6 +1005,7 @@ button:hover {
 }
 
 .view {
+
    width: 300px;
    height: 300px;
    margin-top:40px;
@@ -960,6 +1020,22 @@ button:hover {
    box-shadow: 1px 1px 2px #e6e6e6;
    cursor: default;
    background: #fff url(../images/bgimg.jpg) no-repeat center center;
+}
+
+@media (max-width: 600px){
+ .view
+ {
+    /*margin-left: px;*/
+   /*left: 70%;*/
+    /*margin-right: -50%;
+    transform: translate(-50%, -50%)*/
+
+ }
+
+ .officers
+ {
+
+ }
 }
 
 .view img {
@@ -979,6 +1055,7 @@ button:hover {
    text-transform: uppercase;
    color: whitesmoke;
    text-align: center;
+   font-weight: 1500;
    font-size: 25px;
    padding-top:10px;
    padding-bottom:7px;
@@ -986,15 +1063,18 @@ button:hover {
    background: rgba(0, 0, 0, 0.8);
    margin: 0px 0 0 0;
 }
-.view h3 {
-   text-transform: uppercase;
+
+
+/*.postionText
+{
+  text-transform: uppercase;
    color: whitesmoke;
    text-align: center;
    font-size: 18px;
    padding-bottom:7px;
    padding-right:20px;
    background: rgba(0, 0, 0, 0.8);
-}
+}*/
 .view p {
    font-family: 'Raleway', sans-serif;
    font-size: 14px;
@@ -1121,4 +1201,12 @@ button:hover {
 
 .errormessages {
     color:red;
+}
+
+@media (max-width: 500px){
+  #footerwords
+  {
+    font-weight:300;
+    font-size:4.vw;
+  }
 }

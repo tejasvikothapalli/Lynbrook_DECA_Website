@@ -46,6 +46,20 @@ Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydk
 //   }
 // });
 // });
+
+// resizeMargin();
+// $(window).on('resize',resizeMargin());
+
+// function resizeMargin() {
+//   if ($(window).width() < 600) {
+//     // alert("hello");
+//     var w = ($(window).width() - 300)/2 ;
+//     // alert(w);
+//    $('.view').css({'margin-left':w});
+// }
+// }
+
+
 resizeWordBackground();
 $(window).on('resize',resizeWordBackground);
 

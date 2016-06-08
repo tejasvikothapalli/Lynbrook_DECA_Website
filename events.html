@@ -22,7 +22,13 @@
     <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
     <link rel="icon" href="img/favico.png"></link>
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/agency.css"> -->
 
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     
     <script src="js/modernizr.js"></script> <!-- Modernizr -->
@@ -38,64 +44,57 @@
 
     <body data-spy="scroll" data-target=".scrollspy">
 
-      <header class="header">
-    
-    <div id="navbarlogo">
-            <a href ="javascript:harlem()"><img src="img/favico.png" style="margin-top:12px" /></a>
-        </div>
-        
-        <div id="lynbrookdeca">
-          <p><a href="index.html" style="font-size:114%;font-weight:200;position:relative;top:-7px">Lynbrook DECA</a></p> 
-        </div>
-        
-        <nav class="navbar">
-      <ul style ="float:left" class ="s">
-        <li><a href="index.html" style="position:relative;padding-right:15.2px;padding-left:15.2px;font-size:98%;top:-3px">HOME</a></li>
-        <li><a href="about.html" style="position:relative;padding-right:15.2px;padding-left:15.2px;font-size:98%;top:-3px">ABOUT</a></li>
-        <li><a href="calendar.html" style="position:relative;padding-right:15.2px;padding-left:15.2px;font-size:98%;top:-3px">CALENDAR</a></li>
-        <li><a href="events.html" style="position:relative;padding-right:15.2px;padding-left:15.2px;font-size:98%;top:-3px;padding-top:28px;padding-bottom:24px;color:white;background-color:#1F3A93">EVENTS</a></li>
-        <li><a href="conferences.html" style="position:relative;padding-right:15.2px;padding-left:15.2px;font-size:98%;top:-3px;padding-bottom:13px;padding-top:19px;border-right:1px solid black;margin-left:-1px">CONFERENCES</a></li>
-        <button class="login-button" style="font-size:107%;position:relative;top:-1px;margin-left:18px;outline:none"  id="loginform">LOG IN</button>
-        <button class="signup-button" style="font-size:107%;position:relative;top:-1px; outline:none" onclick="window.location='signup.html';">SIGN UP</button>
-           <div id="wrap">
-              <div id="regbar">
-                <div id="navthing">
-                <div class="login">
-                  <div class="arrow-up"></div>
-                  <div class="formholder">
-                    <div class="randompad">
-                       <fieldset class = "forgot-pass">
-                         <label name="email" style="font-size:130%;font-weight:500">Email</label>
-                         <input type="email" placeholder="example@example.com" id="loginuser" name="loginuser"/>
-                         <label name="password" style="font-size:130%;font-weight:500">Password</label>
-                         <input type="password" placeholder="password" id = "loginpass" name= "loginpass"/>
-                         <div id="login-error-message" style = "text-align:center; color:red; padding-bottom:5px;" ></div>
-                         <p onclick="window.location='forgot-pass.html';" >Forgot Password?</p>
-                         <input type="submit" value="Login" id = "loginbutton" />
-             
-                       </fieldset>
-                    </div>
-                  </div>
+      <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top" style= "padding-bottom:1.3vw"  >
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+                <!-- <div id="navbarlogo" style="display:inline-block;">
+                  <a href ="javascript:harlem()"><img src="img/favico.png" height="30px" /></a>
+                 </div> -->
+
+                 <a class="navbar-brand page-scroll" href="index.html">Lynbrook DECA</a>
+
+
+
                 </div>
-                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                      <a href="#page-top"></a>
+                    </li>
+                    <li>
+                      <a class="page-scroll" href="index.html" style = "color: gray" >Home</a>
+                    </li>
+                    <li>
+                      <a class="page-scroll" href="about.html" style ="color:#1F3A93">About</a>
+                    </li>
+                    <li>
+                      <a class="page-scroll" href="calendar.html" style = "color: gray">Calendar</a>
+                    </li>
+                    <li>
+                      <a class="page-scroll" href="events.html" style = "color: gray">Events</a>
+                    </li>
+                    <li>
+                      <a class="page-scroll" href="conferences.html" style = "color: gray">Conferences</a>
+                    </li>
+                  </li>
+                </ul>
               </div>
+              <!-- /.navbar-collapse -->
             </div>
-          </div>
-      </ul>
-      <ul class="user-menu" style ="float:right;">
-          <li class="dropdown pull-right">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><span class ="user-name"> User </span><span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu" style ="margin-top:20px">
-              <li style ="padding-top:0; padding-left: 25px"><a href="dashboard/dashboard.html"><span class="glyphicon glyphicon-bookmark"></span> Dashboard</a></li>
-              <li style ="padding-top:0; padding-left: 25px" ><a href="dashboard/profile.html"><span class="glyphicon glyphicon-user"></span> Edit My Profile</a></li>
-              <li style ="padding-top:0; padding-left: 25px"><a href="#" id="logout-button"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-              
-            </ul>
-          </li>
-        </ul>
-    </nav>
-    
-  </header>
+            <!-- /.navbar-collapse -->
+           </div>
+           <!-- /.container-fluid -->
+       </nav> 
   <div class="fixed-background-conferences-top fixed-background-top">
       <h1>
           <span>Events</span>

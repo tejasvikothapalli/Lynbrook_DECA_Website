@@ -6,31 +6,45 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 	<script src="https://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
-    <!--Fonts-->
+	<!--Fonts-->
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
 
-    <!--Stylesheets-->
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<!--Stylesheets-->
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/design.css"> <!-- Resource style -->
-    
-    <!--Script-->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="css/landing-page.css" rel="stylesheet">
+
+	<!--Script-->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
-  	
+
 	<title>Lynbrook DECA</title>
-    <link rel="icon" href="img/favico.png"></link>
-    <script > 
-    	Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydkGcxGCLfZndbw3H6dQSUHgr");
-    </script>
+	<link rel="icon" href="img/favico.png"></link>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script > 
+	Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydkGcxGCLfZndbw3H6dQSUHgr");
+	</script>
 
-    <!-- Start WOWSlider.com HEAD section -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- Start WOWSlider.com HEAD section -->
 	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
 	<script type="text/javascript" src="engine1/jquery.js"></script>
 	<!-- End WOWSlider.com HEAD section -->
@@ -39,258 +53,281 @@
 </head>
 
 <body style="background-color:whitesmoke">
-	<header class="header">
-		
-		<div id="navbarlogo">
-            <a href ="javascript:harlem()"><img src="img/favico.png" height="30px" /></a>
-        </div>
-        
-        <div id="lynbrookdeca">
-        	<p><a href="index.html">Lynbrook DECA</a></p> 
-        </div>
-        
-        <nav class="navbar">
-			<ul style ="float:left" class ="s">
-				<li class = "s"><a href="index.html" style="margin-right:-1px">HOME</a></li>
-				<li class = "s"><a href="about.html" style="color:white;background-color:#1F3A93;padding-top:28px;padding-bottom:24px;">ABOUT</a></li>
-				<li class = "s"><a href="calendar.html" >CALENDAR</a></li>
-				<li class = "s"><a href="events.html">EVENTS</a></li>
-                <li class = "s"><a href="conferences.html" style="border-right:1px solid black;">CONFERENCES</a></li>
-                <button class="login-button" id="loginform">LOG IN</button>
-                <button class="signup-button" onclick="window.location='signup.html';">SIGN UP</button>
+	<!-- Navigation -->
+	<nav class="navbar navbar-default navbar-fixed-top" style= "padding-bottom:1.3vw"  >
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header page-scroll">
+				<button type="button" style = "color: gray !important" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar" ></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+                <!-- <div id="navbarlogo" style="display:inline-block;">
+           			 	<a href ="javascript:harlem()"><img src="img/favico.png" height="30px" /></a>
+           			 </div> -->
 
-                <div id="wrap">
-						  <div id="regbar">
-						    <div id="navthing">
-						    <div class="login">
-						      <div class="arrow-up"></div>
-						      <div class="formholder">
-						        <div class="randompad">
-						           <fieldset class = "forgot-pass">
-						             <label name="email">Email</label>
-						             <input type="email" placeholder="example@example.com" id="loginuser" name="loginuser"/>
-						             <label name="password">Password</label>
-						             <input type="password" placeholder="password" id = "loginpass" name= "loginpass"/>
-						             <div id="login-error-message" style = "text-align:center; color:red; padding-bottom:5px;" ></div>
-						             <p onclick="window.location='forgot-pass.html';" >Forgot Password?</p>
-						             <input type="submit" value="Login" id = "loginbutton" />
-						 
-						           </fieldset>
-						        </div>
-						      </div>
-						    </div>
-						    </div>
-						  </div>
-						</div>
-					</div>
+           			 <a class="navbar-brand page-scroll" href="index.html">Lynbrook DECA</a>
 
 
-					
-			</ul>
 
-			<ul class="user-menu" style ="float:right;">
-					<li class="dropdown pull-right">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><span class ="user-name"> User </span><span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu" style ="margin-top:20px">
-							<li style ="padding-top:0; padding-left: 25px"><a href="dashboard/dashboard.html"><span class="glyphicon glyphicon-bookmark"></span> Dashboard</a></li>
-							<li style ="padding-top:0; padding-left: 25px" ><a href="dashboard/profile.html"><span class="glyphicon glyphicon-user"></span> Edit My Profile</a></li>
-							<li style ="padding-top:0; padding-left: 25px"><a href="#" id="logout-button"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-							
-						</ul>
-					</li>
-				</ul>
-		</nav>
+           			</div>
 
-		
-	</header>
-	
-	<main class="main-content">
-		<div class="fixed-background-about-top fixed-background-top">
-			<h1>
-                <span>About Us</span>
-            </h1>
-		</div>
+           			<!-- Collect the nav links, forms, and other content for toggling -->
+           			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+           				<ul class="nav navbar-nav navbar-right" >
+           					<li class="hidden" style = "color: gray">
+           						<a href="#page-top"></a>
+           					</li>
+           					<li>
+           						<a class="page-scroll" href="index.html" style = "color: gray" >Home</a>
+           					</li>
+           					<li>
+           						<a class="page-scroll" href="about.html" style ="color:#1F3A93">About</a>
+           					</li>
+           					<li>
+           						<a class="page-scroll" href="calendar.html" style = "color: gray">Calendar</a>
+           					</li>
+           					<li>
+           						<a class="page-scroll" href="events.html" style = "color: gray">Events</a>
+           					</li>
+           					<li>
+           						<a class="page-scroll" href="conferences.html" style = "color: gray">Conferences</a>
+           					</li>
+           				</li>
+           			</ul>
+           		</div>
+           		<!-- /.navbar-collapse -->
+           	</div>
+           	<!-- /.navbar-collapse -->
+           </div>
+           <!-- /.container-fluid -->
+       </nav>	
+
+       <main class="main-content">
 
 
-		<div class="scrolling-line line-color"></div>
+       	<div class="fixed-background background-about" style = "min-height: 50% !important">
+       		<h2>
+       			<span >About Us</span>
+       		</h2>
+       	</div>
 
-		<div class="who-we-are">
-			<div class="big-text">
-				<h1>WHO<br>ARE<br>WE?</h1>
-			</div>
-			<div class="we-are-explanation">
-				<p>Lynbrook DECA is a student-run business organization that offers high school students an opportunity to delve into the areas of marketing, finance, entrepreneurship, etc. DECA teaches members core concepts and prepares them to compete in various events against over 200,000 other DECA members from around the world. Not only do we focus on competing at conferences, but we also provide members with the opportunity to discover business and leadership through community service events, socials, company tours, and speaker events.</p>
-			</div>
-		</div>
 
-		<div class="scrolling-line line-color"></div>
+       	<div class="scrolling-line line-color"></div>
 
-		<div class="title-up" style="width:500px;padding:30px;margin:50px auto;margin-bottom:0";>
-			<p><span>New Eligibility Requirements</span></p>
-		</div>
+       	<a  name="services"></a>
+       	<div class="content-section-a">
 
-	    <div class="container-fluid" style="margin-top:60px; margin-left:5%; width: 100%">
-			<p style="font-family: 'Raleway', sans-serif; line-height:150%; background-color:none; font-size: 120%; text-align: justify; width:60%;">Starting next year, Lynbrook DECA will be enforcing the state law that requires all CTE clubs (DECA, FBLA, HOSA, etc.) to only allow students who have taken or are currently taking a business class to compete in conferences. It is important to note that this business course must be on the student's high school transcript, and you only need to take a business course once (if you already took one, then no need to do anything; if not, you must enroll in the business course to compete at conferences). The courses on the right are the business classes currently offered in Lynbrook.</p>
+       		<div class="container">
+       			<div class="row">
+       				<div class="col-lg-5 col-sm-6">
+       					<hr class="section-heading-spacer">
+       					<div class="clearfix"></div>
+       					<h2 class="section-heading">Who Are We?</h2>
+       					<p class="lead"> Not only do we focus on competing at conferences, but we also provide members with the opportunity to discover business and leadership through community service events, socials, company tours, and speaker events.</p>
+       				</div>
+       				<div class="col-lg-5 col-lg-offset-2 col-sm-6">
+       					<img class="img-responsive" src="img/ipad.png" alt="">
+       				</div>
+       			</div>
 
-			<div class="list-group" style = " width:32%; float:right; margin-top:-170px; margin-right:5%; line-height:125%;">
-			  <a class="list-group-item active">
-			    CTE Course List
-			  </a>
-			  <a class="list-group-item">Virtual Enterprise</a>
-			  <a class="list-group-item">Accounting</a>
-			  <a class="list-group-item">Principles of Business</a>
-		</div>
+       		</div>
+       		<!-- /.container -->
 
-		</div>
+       	</div>
+       	<!-- /.content-section-a -->
 
-		
+       	<div class="content-section-b">
 
-		
-		<div class="officers" style = "padding-bottom: 50px">
-			<div class="title-up" style="width:450px;padding:30px;margin:50px auto;margin-bottom:0";>
-				<p><span>Officer Team</span></p>
-			</div>
-			
-			<div class="view view-first">
-	       		<img src="img/indu.jpg">
-	            <div class="mask">
-	                <h2>Indu Pereira</h2>
-	                <h3>Co-President</h3>
-	                <p style="margin-top:-16px">Hey Lynbrook! I am so pumped to be your Co-President this year! My freshman year, I discovered that the adrenaline of a DECA conference is literally addicting, and have loved every moment since. In my free time, I sing, eat watermelon, and make fun of Arvin and SKR. I also healthily crave watching "Last Week Tonight", gymnastics and Pentatonix. If you have any questions, feel free to contact me at <span style="font-weight:800">presidents@lynbrookdeca.org</span>!</p>
-	                </div>
-	        </div>
+       		<div class="container">
 
-	        <div class="view view-first">
-	       		<img src="img/arvin.jpg">
-	            <div class="mask">
-	                <h2>Arvin Ng</h2>
-	                <h3>Co-President</h3>
-	                <p style="margin-top:-6px">Hey Lynbrook DECA! I’m so excited to be your Co-President this year! DECA has definitely been my favorite experience in high school, from the amusing conferences and lively study sessions to intense 3 AM cram sessions the night before competitions. Outside of DECA, I enjoy hiking, reading, and fixing things around the house. If you have any questions, feel free to contact me at <span style="font-weight:800">presidents@lynbrookdeca.org</span>!</p>
-	                </div>
-	        </div>
+       			<div class="row">
+       				<div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+       					<hr class="section-heading-spacer">
+       					<div class="clearfix"></div>
+       					<h2 class="section-heading">New Member<br>Eligibility Requirement</h2>
+       					<p class="lead">It is important to note that this business course must be on the student's high school transcript, and you only need to take a business course once (if you already took one, then no need to do anything; if not, you must enroll in the business course to compete at conferences). The courses on the right are the business classes currently offered in Lynbrook.</p>
+       				</div>
+       				<div class="col-lg-5 col-sm-pull-6  col-sm-6">
+       					<img class="img-responsive" src="img/dog.png" alt="">
+       				</div>
+       			</div>
 
-	        <div class="view view-first">
-	       		<img src="img/skr.jpg">
-	            <div class="mask">
-	                <h2>Shyam Karthick Ravikumar (SKR)</h2>
-	                <h3>VP of Competitions</h3>
-	                <p style="padding-top:8px">Hey Lynbrook! I'm so thrilled to serve as your VP of Competitions this year. My responsibility is managing study sessions and all competitive aspects of the club. When I'm not working on DECA, I love to randomly code, catch up on TV shows, and complain about college apps. I promise I'm a chill person, so feel free to get in touch at <span style="font-weight:800">vpcompetitions@lynbrookdeca.org</span>!</p>
-	                </div>
-	        </div>
+       		</div>
+       		<!-- /.container -->
 
-	        <div class="view view-first">
-	       		<img src="img/vaid.jpg">
-	            <div class="mask">
-	                <h2>Vaidehi Duraphe</h2>
-	                <h3>VP of Operations</h3>
-	                <p style="margin-top:-6px">Hey LHS DECA! I’m super pumped to serve as your VP of Operations this year! I’ll mostly be organizing social events and conference registration, but I'm more than happy to answer any competitive questions too! Besides DECA, I’m a part of various dance teams and obsessed with Snapchat. Hit me up if you have any questions (or want my Snapchat username) at <span style="font-weight:800">vpoperations@lynbrookdeca.org</span>!</p>
-	                </div>
-	        </div>
+       	</div>
+       	<!-- /.content-section-b -->
 
-	        <div class="clear"></div>
 
-	        <div class="view view-first">
-	       		<img src="img/karthik.jpg">
-	            <div class="mask">
-	                <h2>Karthik Ravikumar</h2>
-	                <h3>Director of Writtens</h3>
-	                <p style="margin-top:-6px">Hey what's up guys?! I'm the cooler Karthik Ravikumar and I'm thrilled to serve as your Director of Written Events this year. My job is to help you through writing competitive business plans and presenting them. Outside of DECA, I love to rap and make music. Try to check out my mixtape! If you have any questions about DECA (or my mixtape), contact me at <span style="font-weight:800">directorwrittens@lynbrookdeca.org</span>!</p>
-	                </div>
-	        </div>
 
-	        <div class="view view-first">
-	       		<img src="img/pransu.jpg">
-	            <div class="mask">
-	                <h2>Pransu Dash</h2>
-	                <h3>Director of Roleplays</h3>
-	                <p style="margin-top:-5px">Hey guys, I'm psyched to be your Director of Roleplays this year. Basically, anything related to roleplays is my territory, though I love written events too. Besides DECA, I love band (s/o to fellow trumpets), cross country, and science club. I love to code, browse YouTube, and make music. If you guys ever need to talk, feel free to find me at school or email me at <span style="font-weight:800">directorroleplays@lynbrookdeca.org</span>!</p>
-	                </div>
-	        </div>
 
-	        <div class="view view-first">
-	       		<img src="img/ronald.jpg">
-	            <div class="mask">
-	                <h2>Ronald Zhang</h2>
-	                <h3>Director of Testing</h3>
-	                <p style="margin-top:-15px">Hi Lynbrook DECA! I’m really excited to serve as your Director of Testing this year. In DECA, my main job is to help you guys with those dreaded tests that scare us all away and teach you tips and tricks that will help you conquer it. Outside of DECA, I spend most of my time watching TV or napping, so feel free to bother me with any questions at <span style="font-weight:800">directortesting@lynbrookdeca.org</span> (you probably won’t be interrupting anything important)!</p>
-	                </div>
-	        </div>
+       	<h2 class="section-heading" style ="text-align:center">Meet the Team</h2>
+       	<!-- <hr class="section-heading-spacer"> -->
+       	<div class="officers " style = "width:100%" >
 
-	        <div class="view view-first">
-	       		<img src="img/andrew.jpg">
-	            <div class="mask">
-	                <h2>Andrew Kou</h2>
-	                <h3>Director of Principles</h3>
-	                <p style="margin-top:-15px">What’s up, Lynbrook DECA? I’m Andrew, and I’m excited to serve as your Director of Principles this year! I'll be working with first year DECA members participating in the Principles events to make their DECA life very successful! Outside of DECA, you’ll find me running, playing frisbee, or eating. I look forward to an awesome year with you all, and if you have any questions, feel free to contact me at <span style="font-weight:800">directorprinciples@lynbrookdeca.org</span>!</p>
-	                </div>
-	        </div>
 
-	        <div class="clear"></div>
+       		<div class="view view-first">
+       			<img src="img/indu.jpg">
+       			<div class="mask">
+       				<h2>Pransu Dash<br><span>Director of Roleplays</span></h2>
 
-	        <div class="view view-first">
-	       		<img src="img/sophia.jpg">
-	            <div class="mask">
-	                <h2>Sophia Ling</h2>
-	                <h3>Secretary/Treasurer</h3>
-	                <p style="margin-top:-15px">Hey all! I’ll be serving as your Secretary/Treasurer this year and I couldn’t be more psyched! My duties include updating important chapter documentation and organizing fundraisers and other promotional events.  Questions about DECA? Feel free to ask me. Need to talk? I’m always here for you. No friends? Me neither, let’s hang out! Feel free to contact me, no matter the reason, at <span style="font-weight:800">secretary-treasurer@lynbrookdeca.org</span>!</p>
-	                </div>
-	        </div>
+       				<p style="margin-top:-16px">I also healthily crave watching "Last Week Tonight", gymnastics and Pentatonix. If you have any questions, feel free to contact me at <span style="font-weight:800">presidents@lynbrookdeca.org</span>!</p>
+       			</div>
+       		</div>
 
-	        <div class="view view-first">
-	       		<img src="img/teja.jpg">
-	            <div class="mask">
-	                <h2>Tejasvi Kothapalli</h2>
-	                <h3>Webmaster</h3>
-	                <p style="margin-top:-15px">How's it going, Lynbrook? My name is Tejasvi, and I'm honored to be your DECA Webmaster this year. My main responsibility is maintaining and updating the website as the year goes on, but I can also help you out if you need help with your events! Outside of DECA, I dabble with code, play frisbee, and constantly crave Chipotle. If you guys have questions, DECA-related or not, hit me up at <span style="font-weight:800">webmaster@lynbrookdeca.org</span>!</p>
-	                </div>
-	        </div>
+       		<div class="view view-first">
+       			<img src="img/arvin.jpg">
+       			<div class="mask">
+       				<h2>Pransu Dash<br><span>Director of Roleplays</span></h2>
+       				<p style="margin-top:-6px">Outside of DECA, I enjoy hiking, reading, and fixing things around the house. If you have any questions, feel free to contact me at <span style="font-weight:800">presidents@lynbrookdeca.org</span>!</p>
+       			</div>
+       		</div>
 
-	        <div class="view view-first">
-	       		<img src="img/tcf.jpg">
-	            <div class="mask">
-	                <h2>Brad Fulk</h2>
-	                <h3>Advisor</h3>
-	                <p style="font-size:360%;line-height:112%;margin-top:-10px;font-weight:800">BEST ADVISOR EVER!</p>
-	                </div>
-	        </div>
+       		<div class="view view-first">
+       			<img src="img/skr.jpg">
+       			<div class="mask">
+       				<h2>Pransu Dash<br><span>Director of Roleplays</span></h2>
+       				<p style="padding-top:8px">When I'm not working on DECA, I love to randomly code, catch up on TV shows, and complain about college apps. I promise I'm a chill person, so feel free to get in touch at <span style="font-weight:800">vpcompetitions@lynbrookdeca.org</span>!</p>
+       			</div>
+       		</div>
 
-	        <div class="clear"></div>
+       		<div class="view view-first">
+       			<img src="img/vaid.jpg">
+       			<div class="mask">
+       				<h2>Pransu Dash<br><span>Director of Roleplays</span></h2>
+       				<p style="margin-top:-6px"> I’m a part of various dance teams and obsessed with Snapchat. Hit me up if you have any questions (or want my Snapchat username) at <span style="font-weight:800">vpoperations@lynbrookdeca.org</span>!</p>
+       			</div>
+       		</div>
 
-		</div>
+       		<div class="clear"></div>
 
-		<div class="scrolling-line line-color" style="height:5px; margin-top:30px"></div>
-        <div class="who-we-are">
-			<div class="big-text">
-				<h1 style="margin-top:10%">OUR<br>VISION</h1>
-			</div>
-			<div class="we-are-explanation" style="padding-top:4%">
-				<p>Located in the heart of Silicon Valley, Lynbrook DECA hopes to prepare its members for the thriving business community that awaits just outside of Lynbrook. The club will focus on the pillars of leadership, strategy, and ethics through the in-depth exploration and application of business concepts. Overall, Lynbrook DECA aims to light the entrepreneurial spark within all of its members through the fun and rewarding experiences that DECA has to offer.</p>
-			</div>
-		</div>
+       		<div class="view view-first">
+       			<img src="img/karthik.jpg">
+       			<div class="mask">
+       				<h2>Pransu Dash<br><span>Director of Roleplays</span></h2>
+       				<p style="margin-top:-6px"> Try to check out my mixtape! If you have any questions about DECA (or my mixtape), contact me at <span style="font-weight:800">directorwrittens@lynbrookdeca.org</span>!</p>
+       			</div>
+       		</div>
 
-		<div class="scrolling-line line-color" style="height:5px;"></div>
-	
-			<!-- Footer w/Sitemap -->
-	        <div class="scrolling-footer footer-color" style = "padding-bottom:240px">
-	            <h3>Sitemap</h3>
-	            <p>
-	                <a href="index.html">Home</a> | 
-	                <a href="about.html">About</a> | 
-	                <a href="calendar.html">Calendar</a> | 
-	                <a href="events.html">Events</a> | 
-	                <a href="conferences.html">Conferences</a>
-	            </p>
+       		<div class="view view-first">
+       			<img src="img/pransu.jpg">
+       			<div class="mask">
+       				<h2>Pransu Dash<br><span>Director of Roleplays</span></h2>
 
-	            <h3 style="font-weight:300;font-size:110%">Our Proud Sponsor</h3>
-            <img src="data1/images/sponsor.png" style = "margin-bottom:0px; padding-bottom:10px">
-				<div class="container">
-					<p>&copy 2015 Lynbrook DECA</p>
-				</div>
-			</div>
-		
-	</main>
-	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+       				<p style="margin-top:-5px"> If you guys ever need to talk, feel free to find me at school or email me at <span style="font-weight:800">directorroleplays@lynbrookdeca.org</span>!</p>
+       			</div>
+       		</div>
 
-    <script src="js/modernizr.js"></script>
-</body>
-</html>
+       		<div class="view view-first">
+       			<img src="img/ronald.jpg">
+       			<div class="mask">
+       				<h2>Pransu Dash<br><span>Director of Roleplays</span></h2>
+       				<p style="margin-top:-15px">Outside of DECA, I spend most of my time watching TV or napping, so feel free to bother me with any questions at <span style="font-weight:800">directortesting@lynbrookdeca.org</span> (you probably won’t be interrupting anything important)!</p>
+       			</div>
+       		</div>
+
+       		<div class="view view-first">
+       			<img src="img/andrew.jpg">
+       			<div class="mask">
+       				<h2>Pransu Dash<br><span>Director of Roleplays</span></h2>
+       				<p style="margin-top:-15px">Outside of DECA, you’ll find me running, playing frisbee, or eating. I look forward to an awesome year with you all, and if you have any questions, feel free to contact me at <span style="font-weight:800">directorprinciples@lynbrookdeca.org</span>!</p>
+       			</div>
+       		</div>
+
+       		<div class="clear"></div>
+
+       		<div class="view view-first">
+       			<img src="img/sophia.jpg">
+       			<div class="mask">
+       				<h2>Pransu Dash<br><span>Director of Roleplays</span></h2>
+       				<p style="margin-top:-15px">Feel free to ask me. Need to talk? I’m always here for you. No friends? Me neither, let’s hang out! Feel free to contact me, no matter the reason, at <span style="font-weight:800">secretary-treasurer@lynbrookdeca.org</span>!</p>
+       			</div>
+       		</div>
+
+       		<div class="view view-first">
+       			<img src="img/teja.jpg">
+       			<div class="mask">
+       				<h2>Pransu Dash<br><span>Director of Roleplays</span></h2>
+       				<p style="margin-top:-15px"> Outside of DECA, I dabble with code, play frisbee, and constantly crave Chipotle. If you guys have questions, DECA-related or not, hit me up at <span style="font-weight:800">webmaster@lynbrookdeca.org</span>!</p>
+       			</div>
+       		</div>
+
+       		<div class="view view-first">
+       			<img src="img/tcf.jpg">
+       			<div class="mask">
+       				<h2>Pransu Dash<br><span>Director of Roleplays</span></h2>
+       				<p style="font-size:360%;line-height:112%;margin-top:-10px;font-weight:800">BEST ADVISOR EVER!</p>
+       			</div>
+       		</div>
+
+       		<div class="clear"></div>
+
+
+       		<!-- <a  name="contact"></a> -->
+       		<div class="banner" style = "margin-top: 60px;">
+
+       			<div class="container">
+
+       				<div class="row">
+       					<div class="col-lg-6">
+       						<h2>Connect to Lynbrook DECA:</h2>
+       					</div>
+       					<div class="col-lg-6">
+       						<ul class="list-inline banner-social-buttons">
+       							<li>
+       								<a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+       							</li>
+       							<li>
+       								<a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+       							</li>
+       							<li>
+       								<a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+       							</li>
+       						</ul>
+       					</div>
+       				</div>
+
+       			</div>
+       			<!-- /.container -->
+
+       		</div>
+
+       	</div>
+
+
+
+
+
+
+
+
+
+       		<div class="scrolling-line line-color" style="height:5px;"></div>
+
+       		<!-- Footer w/Sitemap -->
+       		<div class="scrolling-footer footer-color" style = " padding-bottom: 320px">
+       			<h3>Sitemap</h3>
+       			<p>
+       				<a href="index.html">Home</a> | 
+       				<a href="about.html">About</a> | 
+       				<a href="calendar.html">Calendar</a> | 
+       				<a href="events.html">Events</a> | 
+       				<a href="conferences.html">Conferences</a>
+       			</p>
+
+       			<h3 style="font-weight:300;font-size:110%">Our Proud Sponsor</h3>
+       			<img src="data1/images/sponsor.png" style = "margin-bottom:0px; padding-bottom:10px">
+       			<div class="container">
+       				<p>&copy 2015 Lynbrook DECA</p>
+       			</div>
+       		</div>
+
+       	</main>
+       	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+       	<script src="js/modernizr.js"></script>
+       </body>
+       </html>
