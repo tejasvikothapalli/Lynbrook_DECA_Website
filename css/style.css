@@ -1,4 +1,97 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
+li a{
+  color: #5E5E5E !important;
+}
+
+.navbar a, a:hover, a:focus, a:active, a.active {
+  outline: 0
+}
+/*a {
+  color: #fed136
+}*/
+.navbar a:hover, a:focus, a:active, a.active {
+  color: #1F3A93 !important;
+  /*#354E9E*/
+}
+
+.navbar-default {
+  background-color: rgba(255, 255, 255, 0.91) !important;
+  /*border-color: transparent*/
+}
+.navbar-default .navbar-brand {
+  color: black !important ;
+  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+  font-size: 2em;
+
+
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:active, .navbar-default .navbar-brand.active {
+  /*color: black!important;*/
+  /*color: red !important;*/
+}
+.navbar-default .navbar-collapse {
+  border-color: rgba(255, 255, 255, .02)
+}
+.navbar-default .navbar-toggle {
+  background-color: white !important;
+  border-color: gray !important;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: gray !important;
+  outline: none;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #1F3A93
+}
+.navbar-default .nav li a {
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff
+}
+.navbar-default .nav li a:hover, .navbar-default .nav li a:focus {
+  color: #1F3A93;
+  outline: 0;
+}
+.navbar-default .navbar-nav>.active>a {
+  border-radius: 0;
+  color: #fff;
+  background-color: #1F3A93
+}
+.navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  color: #fff;
+  background-color: #1F3A93!important;
+}
+
+@media (min-width:768px) {
+  .navbar-default {
+    background-color: transparent;
+    padding: 25px 0;
+    -webkit-transition: padding .3s;
+    -moz-transition: padding .3s;
+    transition: padding .3s;
+    border: 0
+  }
+  .navbar-default .navbar-brand {
+    font-size: 2.67em;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s
+  }
+  .navbar-default .navbar-nav>.active>a {
+    border-radius: 3px
+  }
+  .navbar-default.navbar-shrink {
+    background-color: #222;
+    padding: 10px 0
+  }
+  .navbar-default.navbar-shrink .navbar-brand {
+    font-size: 1.5em
+  }
+
+
+}
 
 * {
   margin: 0;
@@ -10,10 +103,7 @@
   margin: 0 auto 30px;
 }
 
-#navthing {
-  margin-left:255px;
-  margin-top: 10px;
-}
+
 
 
 
@@ -90,14 +180,14 @@ fieldset {
     cursor:pointer;
     text-decoration: underline;
   }
-
+/*
 a {
   color: #ecf0f1;
   text-decoration: none;
 }
 a:hover {
   color: #1abc9c;
-}
+}*/
 
 .scrolling-line {
     position: relative;
@@ -141,47 +231,47 @@ section:last-child {
   border-bottom: none;
 }
 
-.nav {
+.navbar2 .nav {
   background: #1F3A93;
 }
-
+/*
 #nav {
   margin-top:-1px;
-}
+}*/
 
-.nav a {
+.navbar2 .nav a {
   color: whitesmoke;
   font-size:125%;
 }
 
-.nav li a:hover,
-.nav li a:focus {
+.navbar2 .nav li a:hover,
+.navbar2 .nav li a:focus {
   background: #3366FF;
 }
 
-.nav .active {
+.navbar2 .nav .active {
   font-weight: bold;
   background: #2E5CE6;
 }
 
-.nav .nav {
+.navbar2 .nav .nav {
   display: none;
 }
 
-.nav .active .nav {
+ .navbar2 .nav .active .nav {
   display: block;
 }
 
-.nav .nav a {
+.navbar2 .nav .nav a {
   font-weight: normal;
   font-size: 1em;
 }
 
-.nav .nav span {
+.navbar2 .nav .nav span {
   margin: 0 5px 0 2px;
 }
 
-.nav .nav .active a,
+.navbar2 .nav .nav .active a,
 .nav .nav .active:hover a,
 .nav .nav .active:focus a {
   font-weight: bold;
@@ -189,9 +279,9 @@ section:last-child {
   border-left: 5px solid #CDCDCD;
 }
 
-.nav .nav .active span,
-.nav .nav .active:hover span,
-.nav .nav .active:focus span {
+.navbar2 .nav .nav .active span,
+.navbar2 .nav .nav .active:hover span,
+.navbar2 .nav .nav .active:focus span {
   display: none;
 }
 
@@ -374,6 +464,11 @@ footer p {
     background-image: url("../img/events-top.jpg");
     background-color:#000;
     background-size: 100% auto;
+}
+
+.background-events
+{
+  background-image: url("../img/events-top.jpg");
 }
 
 

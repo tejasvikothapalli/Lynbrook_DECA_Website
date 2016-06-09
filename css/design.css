@@ -65,6 +65,29 @@ a:hover, a:focus, a:active, a.active {
   color: #1F3A93 !important;
   /*#354E9E*/
 }
+/*@media (max-width: 900px){
+  .navbar-toggle
+  {
+    display: block !important;
+  }
+
+  .divider
+  {
+    display: none !important;
+  }
+
+}*/
+
+/*.nav {
+  display: none !important;
+}*/
+
+@media (max-width: 767px){
+  .divider
+  {
+    display: none !important;
+  }
+}
 
 .navbar-default {
   background-color: rgba(255, 255, 255, 0.91) !important;
@@ -126,10 +149,10 @@ a:hover, a:focus, a:active, a.active {
     border: 0
   }
   .navbar-default .navbar-brand {
-    font-size: 2.67em;
+    font-size: 2.0em;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
-    transition: all .3s
+    transition: all .3s;
   }
   .navbar-default .navbar-nav>.active>a {
     border-radius: 3px
