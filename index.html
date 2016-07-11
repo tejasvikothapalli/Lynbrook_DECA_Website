@@ -106,7 +106,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#" style ="color:#1F3A93">Home</a>
+                        <a class="page-scroll active" href="#" >Home</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="about.html">About</a>
@@ -128,9 +128,36 @@
                     <li style="margin-top: -6px; margin-right: -10px">
                       <a><button type="button" class="btn btn-default navbtn page-scroll" >SIGN UP</button></a>
                     </li>
+
                     <li style="margin-top: -6px; margin-right: ">
-                      <a><button type="button" class="btn btn-default navbtn page-scroll" >LOG IN</button></a>
+                      <a><button type="button" id="loginform" class="btn btn-default navbtn page-scroll" >LOG IN</button></a>
                     </li>
+
+                     <div id="wrap">
+						  <div id="regbar">
+						    <div id="navthing">
+						    <div class="login">
+						      <div class="arrow-up" style ="margin-left:-5px"></div>
+						      <div class="formholder">
+						        <div class="randompad">
+						           <fieldset class = "forgot-pass" style="line-height:100%">
+						             <label name="email" style="font-family:'Raleway',sans-serif;font-weight:500">Email</label>
+						             <input type="email" placeholder="example@example.com" id="loginuser" name="loginuser"/>
+						             <label name="password" style="font-family:'Raleway',sans-serif;font-weight:500">Password</label>
+						             <input type="password" placeholder="password" id = "loginpass" name= "loginpass"/>
+						             <div id="login-error-message" style = "text-align:center; color:red; padding-bottom:5px;" ></div>
+						             <p onclick="window.location='forgot-pass.html'" style="font-size:110%" >Forgot Password?</p>
+						             <input type="submit" value="Login" id = "loginbutton" />
+						 
+						           </fieldset>
+						        </div>
+						      </div>
+						    </div>
+						    </div>
+						  </div>
+						</div>
+					</div>
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -232,7 +259,7 @@
 		
 		<div class="scrolling-line line-color"></div>
         <!-- Footer w/Sitemap -->
-        <div class="scrolling-footer footer-color" style ="padding-top:10px;line-height:50%; margin-bottom:0; padding-bottom:290px" id ="footerwords">
+        <div class="scrolling-footer footer-color" style ="padding-top:10px;line-height:50%; margin-bottom:0;" id ="footerwords">
             <h3 style="font-weight:300;font-size:110%">Sitemap</h3>
              
             

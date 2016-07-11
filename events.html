@@ -1,126 +1,125 @@
 <!DOCTYPE html>
 <html >
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap's Affix and ScrollSpy plugins</title>
 
-    <title>Lynbrook DECA</title>
-  
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-     
-    <script src="https://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
 
-    <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
 
-    <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css'>
-
-    <!--Fonts-->
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
-    <link rel="icon" href="img/favico.png"></link>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  
-    <!-- <link rel="stylesheet" href="css/agency.css"> -->
-
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-    
-    <script src="js/modernizr.js"></script> <!-- Modernizr -->
-    
-    <script > 
-      Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydkGcxGCLfZndbw3H6dQSUHgr");
-    </script>
-    
- 
-  </head>
 
-  <body style="background-color:whitesmoke">
 
-    <body data-spy="scroll" data-target=".scrollspy">
+  <link rel="stylesheet" href="css/normalize.css">
 
-      <!-- Navigation -->
-      <div class = "navbar2">
-  <nav class="navbar navbar-default navbar-fixed-top" style= "padding-bottom:1.3vw"  >
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header page-scroll">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+  <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css'>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="css/design.css">
+
+
+
+
+
+</head>
+
+<body>
+
+  <body data-spy="scroll" data-target=".scrollspy">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" style= "padding-bottom:1.3vw" id = "heightOfnav" >
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+          <button type="button" style = "color: gray !important" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar" ></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
                 <!-- <div id="navbarlogo" style="display:inline-block;">
                   <a href ="javascript:harlem()"><img src="img/favico.png" height="30px" /></a>
-                 </div> -->
+                </div> -->
 
-                 <a class="navbar-brand page-scroll" href="index.html">Lynbrook DECA</a>
+                <a class="navbar-brand page-scroll" href="index.html">Lynbrook DECA</a>
 
 
 
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                      <a href="#page-top"></a>
-                    </li>
-                    <li>
-                      <a class="page-scroll" href="index.html" style = "color: gray" >Home</a>
-                    </li>
-                    <li>
-                      <a class="page-scroll" href="about.html" style ="color:#1F3A93">About</a>
-                    </li>
-                    <li>
-                      <a class="page-scroll" href="calendar.html" style = "color: gray">Calendar</a>
-                    </li>
-                    <li>
-                      <a class="page-scroll" href="events.html" style = "color: gray">Events</a>
-                    </li>
-                    <li>
-                      <a class="page-scroll" href="conferences.html" style = "color: gray">Conferences</a>
-                    </li>
-                  </li>
-                </ul>
               </div>
-              <!-- /.navbar-collapse -->
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right" >
+                  <li class="hidden" style = "color: gray">
+                    <a href="#page-top"></a>
+                  </li>
+                  <li>
+                    <a class="page-scroll" href="index.html" style = "color: gray" >Home</a>
+                  </li>
+                  <li>
+                    <a class="page-scroll" href="about.html" style = "color: gray" >About</a>
+                  </li>
+                  <li>
+                    <a class="page-scroll" href="calendar.html" style = "color: gray">Calendar</a>
+                  </li>
+                  <li>
+                    <a class="page-scroll active" href="events.html" >Events</a>
+                  </li>
+                  <li>
+                    <a class="page-scroll" href="conferences.html" style = "color: gray">Conferences</a>
+                  </li>
+
+                  <li>
+                    <img class="divider .center" style = "height: 50px;width: 1px;" src="http://mvdeca.org/img/vertical_divider.png">
+                  </li>
+
+                  <li style="margin-top: -6px; margin-right: -10px">
+                    <a><button type="button" class="btn btn-default navbtn page-scroll" onclick="window.location='signup.html';" >SIGN UP</button></a>
+                  </li>
+                  <li style="margin-top: -6px; margin-right: ">
+                    <a><button type="button" class="btn btn-default navbtn page-scroll" >LOG IN</button></a>
+                  </li>
+                </li>
+              </ul>
             </div>
             <!-- /.navbar-collapse -->
-           </div>
-           <!-- /.container-fluid -->
-       </nav> 
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+      </nav> 
 
-    </div>
-  
-
- 
-  <main class="main-content">
-    <div class="fixed-background-conferences-top fixed-background-top">
-      <h1>
-          <span>Events</span>
-      </h1>
-    </div>
-
-    <!-- <div class="fixed-background background-conferences" style = "min-height: 50% !important">
+        <div class="fixed-background background-about" style = "min-height: 50vh !important; ">
           <h2>
-            <span >Conferences</span>
+            <span >About Us</span>
           </h2>
-    </div> -->
-   <div class="scrolling-line line-color"></div>
-    <div class="scrolling-line line-color" style="height:5px"></div>
-  <div class="container">
-    <div class="row">
+        </div>
+        <div class="scrolling-line line-color"></div>
 
-      <div class="col-md-3 scrollspy">
+        <!-- <div class="fixed-background-conferences-top fixed-background">
+          <h1>
+            <span>Events</span>
+          </h1>
+        </div> -->
+        
+
+      
+
+
+        <div class="container">
+          <div class="row">
+
+             <div class="col-md-3 scrollspy">
         <ul id="nav" class="nav hidden-xs hidden-sm" data-spy="affix" style="margin-left:-20px;margin-right:20px">
           <li><a href="#selection">Event Selection</a></li>
           <li><a href="#roleplay">Roleplay Events</a>
@@ -155,7 +154,7 @@
         </ul>
       </div>
 
-      <div class="col-md-9">
+            <div class="col-md-9">
         <section id="selection">
           <h2><span class="fa fa-edit"></span> Event Selection</h2>
           <p>In DECA, there are two main types of events: roleplays and written events. Roleplays are similar to interviews or business consultations, where members are the interviewee or the business professional, and the judge is either interviewing members or seeking their help. On the other hand, written events are pre-prepared written components and presentations in which members must create an advertising plan, come up with a new business idea, or think of ways to improve existing businesses (there are more variations to this depending on the event selected).
@@ -181,7 +180,7 @@
             <h3>Principles Events</h3>
             <p>DECA's Principles Events measure members' proficiency in basic business concepts within all aspects of business, such as marketing, finance, business administration, emotional intelligence, etc. All members are tested through an interview situation with 10 minutes of preparation time, where members are interviewing for a position at the judge's company. Furthermore, these events are only open for first-year DECA members, so <strong>we highly recommend that all first-year members participate in a Principles Event for their roleplay</strong>, as they will then be competing against others with a similar level of experience.
             </p>
-            <table class="event-table">
+            <table class="event-table" border= "1">
                 <tr>
                     <th style="text-align:center">Event</th>
                     <th style="text-align:center">Participants</th>
@@ -240,7 +239,7 @@
             <h3>Team Decision Making Events</h3>
             <p>DECA's TDM Events test members on both conceptual knowledge as well as team dynamics. All teams are tested through some form of corporate interaction, where teams are given a prompt with 30 minutes of preparation time and asked for their opinion as per what to do based on the given situation. The judge is their client who evaluates them based on content presented, style and clarity of presentation, as well as team dynamics between the partners. Members must also take an exam (depends on the event selected), and the average of both partners' scores will be taken as a team exam score.
             </p>
-            <table class="event-table">
+            <table class="event-table" border= "1">
                 <tr>
                     <th style="text-align:center">Event</th>
                     <th style="text-align:center">Participants</th>
@@ -332,7 +331,7 @@
             <h3>Individual Series Events</h3>
             <p>DECA's Individual Series Events test members on both conceptual knowledge as well as thinking quickly under a time constraint. Members are given a prompt with 10 minutes of preparation time and asked for their opinion as per what to do based on the given situation. The judge is their client/boss who evaluates them based on content presented and style/clarity of presentation. Members must also take an exam (depends on the event selected), the score of which count towards 40% of the overall event score.
             </p>
-            <table class="event-table">
+            <table class="event-table" border= "1" >
                 <tr>
                     <th style="text-align:center">Event</th>
                     <th style="text-align:center">Participants</th>
@@ -484,7 +483,7 @@
                 </tr>
             </table>
             <button type="button" value="Open Window" class="btn btn-primary" style="margin-top:15px;margin-bottom:15px"  onclick="window.open('http://www.deca.org/wp-content/uploads/2014/08/HS_Ind_Series_Guidelines1.pdf')">Learn More about Individual Series</button>
-            <table class="event-table">
+            <table class="event-table" border= "1">
                 <tr>
                     <th style="text-align:center">Event</th>
                     <th style="text-align:center">Participants</th>
@@ -534,7 +533,7 @@
               <li>Presentation Time: 15 Minutes</li>
             </ul>
           </p>
-            <table class="event-table" style="margin-top:25px">
+            <table class="event-table" style="margin-top:25px" border= "1">
                 <tr>
                     <th style="text-align:center">Event</th>
                     <th style="text-align:center">Types of Companies</th>
@@ -603,7 +602,7 @@
               <li>Presentation Time: 15 Minutes</li>
             </ul>
             </p>
-            <table class="event-table" style="margin-top:25px">
+            <table class="event-table" style="margin-top:25px" border= "1">
                 <tr>
                     <th style="text-align:center">Event</th>
                     <th style="text-align:center">Description</th>
@@ -681,7 +680,7 @@
               <li>Presentation Time: 15 Minutes</li>
             </ul>
             </p>
-            <table class="event-table" style="margin-top:25px">
+            <table class="event-table" style="margin-top:25px" border= "1">
                 <tr>
                     <th style="text-align:center">Event</th>
                     <th style="text-align:center">Participants</th>
@@ -776,7 +775,7 @@
               <li>Presentation Time: 15 Minutes</li>
             </ul>
             </p>
-            <table class="event-table" style="margin-top:25px">
+            <table class="event-table" style="margin-top:25px" border= "1">
                 <tr>
                     <th style="text-align:center">Event</th>
                     <th style="text-align:center">Description</th>
@@ -826,7 +825,7 @@
               <li>Presentation Time: 15 Minutes</li>
             </ul>
             </p>
-            <table class="event-table" style="margin-top:25px">
+            <table class="event-table" style="margin-top:25px" border= "1">
                 <tr>
                     <th style="text-align:center">Event</th>
                     <th style="text-align:center">Prompt</th>
@@ -874,7 +873,7 @@
             <h3>Virtual Business Challenges</h3>
             <p>Participants in the DECA Virtual Business Challenge (VBC) operate a computerized business simulation utilizing a competition version of the Virtual Business software. The VBC qualifying rounds are conducted via the Internet, where participants post competition scores for chartered association, regional and overall rankings. Think of VBC as a game like The Sims, but oriented towards business and with profit as the main goal. Members can compete in VBCs as Teams of 1-3, and the top two teams from each region (for Lynbrook, it's Western USA) will be invited to compete at ICDC.
             </p>
-            <table class="event-table" style="margin-top:25px">
+            <table class="event-table" style="margin-top:25px" border= "1">
                 <tr>
                     <th style="text-align:center">Event</th>
                     <th style="text-align:center">Description</th>
@@ -933,38 +932,35 @@
           </section><!--end of #php-->
         </section><!--end of #web-devlopment-->
       </div>
-    
-    </div><!--end of .row-->
-  </div><!--end of .container-->
-  
-  </main>
+          </div><!--end of .row-->
+        </div><!--end of .container-->
 
-  <div class="scrolling-line line-color" style="height:6px;"></div>
-    
-    <!-- Footer w/Sitemap -->
-    <div class="scrolling-footer footer-color">
-            <h3 style="font-weight:300;font-size:110%; ">Sitemap</h3>
-             
-            
+        <div class="scrolling-line line-color" style="height:5px;"></div>
+       <!-- Footer w/Sitemap -->
+          <div class="scrolling-footer footer-color" >
+            <h3>Sitemap</h3>
             <p>
-                <a href="index.html">Home</a> | 
-                <a href="about.html">About</a> | 
-                <a href="calendar.html">Calendar</a> | 
-                <a href="events.html">Events</a> | 
-                <a href="conferences.html">Conferences</a>
+              <a href="index.html">Home</a> | 
+              <a href="about.html">About</a> | 
+              <a href="calendar.html">Calendar</a> | 
+              <a href="events.html">Events</a> | 
+              <a href="conferences.html">Conferences</a>
             </p>
 
-      <div class="container">
-        <p>&copy 2015 Lynbrook DECA</p>
-      </div>
-    </div>
-</body>
-    
-    
-    <script src="js/index.js"></script>
+            <h3 style="font-weight:300;font-size:110%">Our Proud Sponsor</h3>
+            <img src="data1/images/sponsor.png" style = "margin-bottom:0px; padding-bottom:10px">
+            <div class="container">
+              <p>&copy 2015 Lynbrook DECA</p>
+            </div>
+          </div>
+      </body>
+      <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script src='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/js/bootstrap.min.js'></script>
 
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script src="js/index.js"></script>
 
-    <script src="js/modernizr.js"></script>
-  </body>
-</html>
+
+
+
+    </body>
+    </html>

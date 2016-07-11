@@ -21,7 +21,16 @@
  * Authors        Faruk Ates, Paul Irish, Alex Sexton
  * Contributors   Ryan Seddon, Ben Alman
  */
-Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydkGcxGCLfZndbw3H6dQSUHgr");
+
+
+// Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydkGcxGCLfZndbw3H6dQSUHgr");
+
+Parse.initialize("DECA_APPLICATION_ID");
+Parse.serverURL = 'http://54.149.121.192:1337/parse';
+
+
+
+
 
 // var currentUser = Parse.User.current();
 // if (currentUser) {
