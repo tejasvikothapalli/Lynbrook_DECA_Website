@@ -1,14 +1,14 @@
 Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydkGcxGCLfZndbw3H6dQSUHgr");
 
     	var currentUser = Parse.User.current();
-		if (currentUser) {
-		    // alert("you are logged in");
-		    $(".user-name").html(" "+currentUser.get("firstname")+" " + currentUser.get("lastname") +" ");
+		// if (currentUser) {
+		//     // alert("you are logged in");
+		//     $(".user-name").html(" "+currentUser.get("firstname")+" " + currentUser.get("lastname") +" ");
 
-		} else {
-		    // alert("not logged in");
-		    window.location.href='../index.html';
-		}
+		// } else {
+		//     // alert("not logged in");
+		//     window.location.href='../index.html';
+		// }
 
         $(window).resize(function() {
 
