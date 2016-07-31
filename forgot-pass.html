@@ -7,8 +7,14 @@
 
     <!--Fonts-->
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!--Stylesheets-->
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
@@ -16,8 +22,17 @@
 
     <!--Script-->
 	
-		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js" ></script>
-	  <script src="https://www.parsecdn.com/js/parse-1.6.14.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js" ></script>
+	<script src="https://www.parsecdn.com/js/parse-1.6.14.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	  
 	<title>Lynbrook DECA</title>
 
@@ -25,63 +40,80 @@
 </head>
 
 <body style="background-color:whitesmoke">
-	<header class="header">
-		
-		<div id="navbarlogo">
-            <a href ="javascript:harlem()"><img src="img/favico.png" height="30px" /></a>
-        </div>
-        
-        <div id="lynbrookdeca">
-        	<p><a href="index.html">Lynbrook DECA</a></p> 
-        </div>
-        
-        <nav class="navbar">
-			<ul class ="s">
-				<li><a href="index.html">HOME</a></li>
-				<li><a href="about.html">ABOUT</a></li>
-				<li><a href="calendar.html">CALENDAR</a></li>
-				<li><a href="events.html">EVENTS</a></li>
-                <li><a href="conferences.html" style="border-right:1px solid black">CONFERENCES</a></li>
-                <button class="login-button" id="loginform">LOG IN</button>
-                <button class="signup-button" onclick="window.location='signup.html';">SIGN UP</button>
 
-                <div id="wrap">
-						  <div id="regbar">
-						    <div id="navthing">
-						    <div class="login">
-						      <div class="arrow-up"></div>
-						      <div class="formholder">
-						        <div class="randompad">
-						           <fieldset class = "forgot-pass">
-						             <label name="email">Email</label>
-						             <input type="email" placeholder="example@example.com" />
-						             <label name="password">Password</label>
-						             <input type="password" placeholder="password" />
-						             <p onclick="window.location='forgot-pass.html';" >Forgot Password?</p>
-						             <input type="submit" value="Login" />
-						 
-						           </fieldset>
-						        </div>
-						      </div>
-						    </div>
-						    </div>
-						  </div>
-						</div>
-					</div>
-			</ul>
-		</nav>
+        <!-- Navigation -->
+	<nav class="navbar navbar-default navbar-fixed-top" style= "padding-bottom:1.3vw"  >
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header page-scroll">
+				<button type="button" style = "color: gray !important" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar" ></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+                <!-- <div id="navbarlogo" style="display:inline-block;">
+           			 	<a href ="javascript:harlem()"><img src="img/favico.png" height="30px" /></a>
+           			 </div> -->
+
+           			 <a class="navbar-brand page-scroll" href="index.html">Lynbrook DECA</a>
+
+
+
+           			</div>
+
+           			<!-- Collect the nav links, forms, and other content for toggling -->
+           			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+           				<ul class="nav navbar-nav navbar-right" >
+           					<li class="hidden" style = "color: gray">
+           						<a href="#page-top"></a>
+           					</li>
+           					<li>
+           						<a class="page-scroll" href="index.html" style = "color: gray" >Home</a>
+           					</li>
+           					<li>
+           						<a class="page-scroll active" href="about.html" >About</a>
+           					</li>
+           					<li>
+           						<a class="page-scroll" href="calendar.html" style = "color: gray">Calendar</a>
+           					</li>
+           					<li>
+           						<a class="page-scroll" href="events.html" style = "color: gray">Events</a>
+           					</li>
+           					<li>
+           						<a class="page-scroll" href="conferences.html" style = "color: gray">Conferences</a>
+           					</li>
+
+                    <li>
+                      <img class="divider .center" style = "height: 50px;width: 1px;" src="http://mvdeca.org/img/vertical_divider.png">
+                    </li>
+
+                    <li style="margin-top: -6px; margin-right: -10px">
+                      <a><button type="button" class="btn btn-default navbtn page-scroll" onclick="window.location='signup.html';" >SIGN UP</button></a>
+                    </li>
+                    <li style="margin-top: -6px; margin-right: ">
+                      <a><button type="button" class="btn btn-default navbtn page-scroll" onclick="window.location='login.html';" >LOG IN</button></a>
+                    </li>
+           			</ul>
+           		</div>
+           		<!-- /.navbar-collapse -->
+           	</div>
+           	<!-- /.navbar-collapse -->
+           </div>
+           <!-- /.container-fluid -->
+       </nav>	
 		
-	</header>
 	
 	<main class="main-content">
 		
-		<div class="title-up" style="margin:0 auto;margin-top:100px">
-			<h1>
-                <span>Forgot Password</span>
-            </h1>
-		</div>
+		<div class="fixed-background " style = "min-height: 50vh !important">
+       		<h2>
+       			<span >Forgot Password</span>
+       		</h2>
+       	</div>
+		
 		<div class ="center">
-                  <div class="formholder" style="width:500px" >
+                  <div class="formholder" style="min-width:390px" >
                     <div class="randompad">
                        <fieldset class = "forgot-pass" >
                          
@@ -104,7 +136,7 @@
 	    <div class="scrolling-line line-color"></div>
 		
 		<!-- Footer w/Sitemap -->
-        <div class="scrolling-footer footer-color" style ="padding-bottom:240px">
+        <div class="scrolling-footer footer-color" style ="">
             <h3 style="font-weight:300;font-size:110%">Sitemap</h3>
              
             
