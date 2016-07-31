@@ -34,8 +34,8 @@ Parse.serverURL = 'http://54.201.150.12:1337/parse';
 
 var currentUser = Parse.User.current();
 if (currentUser) {
-    alert("hidden");
-    window.location.href='dashboard.html';
+    // alert("hidden");
+    window.location.href='dashboard/dashboard.html';
 
 } else {
     // alert("no log");
@@ -307,30 +307,28 @@ $('input[type="submit"]').mouseup(function(){
 //     ');
 //   $(this).toggleClass('green');
 // });
+// $("#login-error-message").html("changing1");
 
-$('#loginbutton').click(function(){
-  
+$('#loginbutton1').click(function(){
+  // alert("hello");
+    // $("#login-error-message").html("changing");
     $("#loginbutton").css('background', '#1C3484');
     var username = $("#loginuser").val();
     var password = $("#loginpass").val();
-    $("#login-error-message").html("changing");
-    alert(username + " " + password);
     
     Parse.User.logIn(username, password, {
      success: function(user) {
        // Do stuff after successful login.
-       // alert("success logging in");
-       window.alert("success logging in");
+       // window.alert("success logging in");
        $("#login-error-message").html("success");
-       //window.location.href='dashboard/dashboard.html';
+       window.location.href='dashboard/dashboard.html';
 
      },
      error: function(user, error) {
        // The login failed. Check error to see why.
-       window.alert("no success logging in");
-       alert("no success logging in");
+      
        // alert("didnt work")
-       $("#login-error-message").html("Login failed! Username or password do not match.");
+       $("#login-error-message").html("Username or password do not match!");
        $("#loginuser").val('');
        $("#loginpass").val('');
        $("#loginbutton").css('background', '#1F3A93');
