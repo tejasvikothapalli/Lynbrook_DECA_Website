@@ -23,23 +23,23 @@
  */
 
 
-// Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydkGcxGCLfZndbw3H6dQSUHgr");
+// // Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydkGcxGCLfZndbw3H6dQSUHgr");
 
 Parse.initialize("DECA_APPLICATION_ID");
-Parse.serverURL = 'http://54.149.121.192:1337/parse';
+Parse.serverURL = 'http://54.201.150.12:1337/parse';
 
 
 
 
 
-// var currentUser = Parse.User.current();
-// if (currentUser) {
-//     alert("hidden");
-//     window.location.href='dashboard.html';
+var currentUser = Parse.User.current();
+if (currentUser) {
+    alert("hidden");
+    window.location.href='dashboard.html';
 
-// } else {
-//     alert("no log");
-// }
+} else {
+    // alert("no log");
+}
 
 // $('#forgot-pass-button').click(function(){
 //   var username = $("#forgot-email").val();
@@ -301,26 +301,35 @@ $('input[type="submit"]').mouseup(function(){
   $(this).css('background', '#1F3A93');
 });
 
-$('#loginform').click(function(){
-  $('.login').fadeToggle('fast');
-  $(this).toggleClass('green');
-});
+// $('#loginform').click(function(){
+//   $('.login').fadeToggle('
+
+//     ');
+//   $(this).toggleClass('green');
+// });
 
 $('#loginbutton').click(function(){
+  
     $("#loginbutton").css('background', '#1C3484');
     var username = $("#loginuser").val();
     var password = $("#loginpass").val();
+    $("#login-error-message").html("changing");
+    alert(username + " " + password);
+    
     Parse.User.logIn(username, password, {
      success: function(user) {
        // Do stuff after successful login.
        // alert("success logging in");
-       window.location.href='dashboard/dashboard.html';
+       window.alert("success logging in");
+       $("#login-error-message").html("success");
+       //window.location.href='dashboard/dashboard.html';
 
      },
      error: function(user, error) {
        // The login failed. Check error to see why.
-       // alert("no success logging in");
-
+       window.alert("no success logging in");
+       alert("no success logging in");
+       // alert("didnt work")
        $("#login-error-message").html("Login failed! Username or password do not match.");
        $("#loginuser").val('');
        $("#loginpass").val('');
@@ -329,20 +338,20 @@ $('#loginbutton').click(function(){
 });
 });
 
-$(document).mouseup(function (e)
-{
-    var container = $(".login");
+// $(document).mouseup(function (e)
+// {
+//     var container = $(".login");
 
-    if (!container.is(e.target) // if the target of the click isn't the container...
-        && container.has(e.target).length === 0) // ... nor a descendant of the container
-    {
+//     if (!container.is(e.target) // if the target of the click isn't the container...
+//         && container.has(e.target).length === 0) // ... nor a descendant of the container
+//     {
 
-        container.fadeOut("fast");
-        $('#loginform').removeClass('green');
-        $("#login-error-message").html("");
+//         container.fadeOut("fast");
+//         $('#loginform').removeClass('green');
+//         // $("#login-error-message").html("");
 
-    }
-});
+//     }
+// });
 
 window.Modernizr = (function( window, document, undefined ) {
 

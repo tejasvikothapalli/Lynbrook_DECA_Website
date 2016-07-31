@@ -1,4 +1,6 @@
-Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydkGcxGCLfZndbw3H6dQSUHgr");
+// // Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydkGcxGCLfZndbw3H6dQSUHgr");
+Parse.initialize("DECA_APPLICATION_ID");
+Parse.serverURL = 'http://54.201.150.12:1337/parse';
 
     	var currentUser = Parse.User.current();
 		// if (currentUser) {
@@ -12,13 +14,21 @@ Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydk
 
         $(window).resize(function() {
 
-
-            if ($(window).width() > 1100)
-            {
-                $(".nav-menu").css("display", "none");
+            // alert("hello")
+            // if ($(window).width() > 1100)
+            // {
+            //     $(".nav-menu").css("display", "none");
                 
+            // }
+            if (screen.width < 790)
+            {
+                alert("hello");
+                $(".navbar-brand").css("font-size", "200vw");
             }
         });
+
+      
+        
 
 $(".logout-button").click(function(){
 	// alert("working");
