@@ -1,3 +1,7 @@
+Parse.initialize("DECA_APPLICATION_ID");
+Parse.serverURL = 'http://54.201.150.12:1337/parse';
+
+
 $("#forgot-pass-button").click(function(){
 	var email = $("#forgot-email").val();
 
@@ -14,7 +18,9 @@ $("#forgot-pass-button").click(function(){
     // Show the error message somewhere
     $("#message").html("This email is not registered with us. Please try again!");
   	$("#message").css("color", "red");
+    $("#forgot-email").val("");
   	$(".forgot-pass").css("text-align", "center");
+
   }
 });
 });
