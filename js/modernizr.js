@@ -35,7 +35,7 @@ Parse.serverURL = 'http://54.201.150.12:1337/parse';
 var currentUser = Parse.User.current();
 if (currentUser) {
     // alert("hidden");
-    window.location.href='dashboard/dashboard.html';
+    // window.location.href='dashboard/dashboard.html';
 
 } else {
     // alert("no log");
@@ -320,7 +320,7 @@ $('#loginbutton1').click(function(){
      success: function(user) {
        // Do stuff after successful login.
        // window.alert("success logging in");
-       $("#login-error-message").html("success");
+       // $("#login-error-message").html("success");
        window.location.href='dashboard/dashboard.html';
 
      },

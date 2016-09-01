@@ -5,7 +5,8 @@ Parse.serverURL = 'http://54.201.150.12:1337/parse';
     	var currentUser = Parse.User.current();
 		if (currentUser) {
 		    // alert("you are logged in");
-		    $(".user-name").html(" "+currentUser.get("firstname")+" " + currentUser.get("lastname") +" ");
+            $(".bodyDisplay").css("display", "block");
+		    $(".user-name").html(" "+currentUser.get("firstname")+ " " + currentUser.get("lastname") +" ");
 
 		} else {
 		    // alert("not logged in");
