@@ -23,7 +23,7 @@ Parse.serverURL = 'http://54.201.150.12:1337/parse';
             // }
             if (screen.width < 790)
             {
-                alert("hello");
+                // alert("hello");
                 $(".navbar-brand").css("font-size", "200vw");
             }
         });
