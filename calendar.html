@@ -93,11 +93,26 @@
                     </li>
                     
                     <li style="margin-top: -6px; margin-right: -10px">
-                      <a><button type="button" class="btn btn-default navbtn page-scroll" onclick="window.location='signup.html';" >SIGN UP</button></a>
+                      <a><button type="button" class="btn btn-default navbtn page-scroll signbutton" onclick="window.location='signup.html';" >SIGN UP</button></a>
                     </li>
                     <li style="margin-top: -6px; margin-right: ">
-                      <a><button type="button" class="btn btn-default navbtn page-scroll" onclick="window.location='login.html';" >LOG IN</button></a>
+                      <a><button type="button" class="btn btn-default navbtn page-scroll logbutton" onclick="window.location='login.html';" >LOG IN</button></a>
                     </li>
+
+                    <li style = "margin-top:15px">
+                      <ul class="user-menu">
+                        <li class="dropdown pull-right">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><span class ="user-name"> User </span><span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu" style ="margin-top:20px">
+                            <li style ="padding-top:0"><a href="dashboard/dashboard.html"><span class="glyphicon glyphicon-bookmark"></span> Dashboard</a></li>
+                            <li style ="padding-top:0" ><a href="profile.html"><span class="glyphicon glyphicon-user"></span> Edit My Profile</a></li>
+                            <li style ="padding-top:0"><a href="#" id="logout-button"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+
+                          </ul>
+
+                        </li>
+                      </ul>
+                      </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

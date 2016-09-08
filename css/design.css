@@ -123,7 +123,7 @@ a:hover, a:focus, a:active, a.active {
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 1px;
-  color: #fff
+  color: navy;
 }
 .navbar-default .nav li a:hover, .navbar-default .nav li a:focus {
   color: #1F3A93;

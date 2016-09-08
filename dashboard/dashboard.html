@@ -5,32 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lynbrook DECA - Dashboard</title>
 <link rel="icon" href="../img/favico.png"></link>
+
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/datepicker3.css" rel="stylesheet">
+<link href="css/bootstrap-table.css" rel="stylesheet">
 <link href="css/styles.css" rel="stylesheet">
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="https://www.parsecdn.com/js/parse-1.6.14.min.js"></script>
-<script > 
-  //   	// Parse.initialize("kScQXRCZFHxkzilbr6loKIKO2hxt7lcKom9DWKRD", "R0gxChWChXhekNDydkGcxGCLfZndbw3H6dQSUHgr");
-
-  //   	var currentUser = Parse.User.current();
-		// if (currentUser) {
-		//     alert("you are logged in");
-		//     //window.location.href='dashboard.html';
-
-		// } else {
-		//     alert("not logged in");
-		//     window.location.href='../index.html';
-		// }
-</script>
-
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
 <script src="js/respond.min.js"></script>
@@ -80,7 +61,7 @@
 						<ul class="dropdown-menu" role="menu" style ="margin-top:20px">
 							<li style ="padding-top:0"><a href="dashboard.html"><span class="glyphicon glyphicon-bookmark"></span> Dashboard</a></li>
 							<li style ="padding-top:0" ><a href="profile.html"><span class="glyphicon glyphicon-user"></span> Edit My Profile</a></li>
-							<li style ="padding-top:0"><a href="#" class="logout-button"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+							<li style ="padding-top:0"><a href="#" id="logout-button"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 							
 						</ul>
 						
@@ -190,248 +171,9 @@
 							Help one of our teams doing the community marketing project chapter team event by taking their survey about the viking vault <a href = "https://docs.google.com/forms/d/1HN4O28ug6YAk1VepQuft1XZiG4S6mPdlbdxYQKfWvCs/viewform">here</a>.
 						</p> <!-- Message of Announcement -->
 
-						<hr>
+			
 
-						<h1 style="text-align:center"><em style="color:blue;font-size:90%" class="glyphicon glyphicon-plane"></em> States Bus Sign Ups</h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">January 28, 2016</h3> <!-- Date of Announcement -->
-						<p> 
-							If you are attending SCDC 2016, sign up for your bus <a target = "_blank"href = "https://docs.google.com/spreadsheets/d/1qI3PuuPXPPlA0MqFoH5mbjfe1dRBNK8KtCYqt5mwGjA/edit#gid=0">here</a>. Do not move anyone else's name or you might have to walk. This will take 20.5 days, if you walk 3 miles an hour for 8 hours a day - choose wisely. 
-
-						</p> <!-- Message of Announcement -->
-
-						<hr>
-
-						<h1 style="text-align:center"><em style="color:green;font-size:90%" class="	glyphicon glyphicon-gift"></em> Apparel</h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">January 26, 2016</h3> <!-- Date of Announcement -->
-						<p> 
-							This year, we have designed a windbreaker to be our official DECA Apparel. If you would like to purchase one of these, please fill out <a target = "_blank" href = "https://docs.google.com/forms/d/13V5UlE5i02QVZEnEdqcTs1WY2iGH7AhxqyaFQQFSOQ0/viewform">this form</a> by Thursday, 1.28.2015. A link to an image of the windbreaker is included <a target = "_blank" href = "https://docs.google.com/document/d/1zI9OEuTAEBwKYr_g-Km1ekRG2FYaOOmTz6Y6M94RSYE/edit" >here</a>, and the cost of this jacket is <strong>$30, due by Friday 1.29.2015</strong>. All checks can be made out to Lynbrook ASB.
-						</p> <!-- Message of Announcement -->
-
-						<hr>
-
-						<h1 style="text-align:center"><em style="color:blue;font-size:90%" class="glyphicon glyphicon-flag"></em> State Career Development Conference Registration </h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">January 10, 2016</h3> <!-- Date of Announcement -->
-						<p> 
-							<strong>LOCATION</strong>: Town and Country Resort & Convention Center - 500 Hotel Circle North, San Diego, CA<br>
-							<strong>DATES</strong>: March 3-6, 2016 (Leaving at 4 AM on the 3rd and arriving home by 10 PM on the 6th)<br>
-							<strong>TRANSPORTATION</strong>: Charter Buses<br>
-							<strong>SUGGESTED DONATION</strong>: $390<br>
-							*If you cannot pay the suggested donation due to financial reasons, please just contact us!<br>
-							*Either email presidents@lynbrookdeca.org or Mr. Fulk (our advisor) at brad_fulk@fuhsd.org<br><br>
-
-							The following forms must all be submitted by <strong>Friday, Jan 14</strong>:
-							<br>
-							<br>
-
-							<a target="_blank" href = "http://tumblr.us2.list-manage.com/track/click?u=cde2f90f4f5ad28c66a32888b&id=b18a6f9e41&e=71a992bcb7">Sign Up Form</a>
-							<br>
-							<br>
-							<a target="_blank" href = "https://drive.google.com/file/d/0BynRUPUwV3cwSW1VZ2Q2cjFtZWs/view">FUHSD Medical Release form</a>
-							<br>
-							<a target="_blank" href = "https://drive.google.com/file/d/0BynRUPUwV3cwRVZzclBaTlNEaG8/view">Trip Permit</a>
-							<br>
-							<a target="_blank" href="formd.pdf">Form D: Medical Release Form</a> (Please print only the last page)
-							<br>
-							<a target="_blank" href="forme.pdf">Form E: DECA Dance Contract</a>
-							<br>
-
-						</p> <!-- Message of Announcement -->
-
-						<br>
-
-						<hr>
-
-						<h1 style="text-align:center"><em style="color:green;font-size:90%" class="glyphicon glyphicon-ok"></em> Written Event Statement of Assurances</h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">December 10, 2015</h3> <!-- Date of Announcement -->
-						<p> 
-							If you are doing a written event the statement of assurances is mandatory. Every written event only needs to print out one copy and bring it to the conference. <strong>The advisor signature will be given on the day of the conference</strong>. Please click on <a href = "http://www.deca.org/wp-content/uploads/2014/08/HS_Written_Statement.pdf">this link</a> and fill out the Written Event Statement of Assurances.
-						</p> <!-- Message of Announcement -->
-
-						<hr>
-
-						<h1 style="text-align:center"><em style="color:blue;font-size:90%" class="glyphicon glyphicon-flag"></em> SV Instructional Areas for Roleplays! </h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">December 10, 2015</h3> <!-- Date of Announcement -->
-						<p> 
-							The specific instructional area for your roleplay has been released for SVCDC! Rather than studying all the performance indicators you will only need to <strong>focus on the PI's under your event's specific instructional area that has been annouced</strong>. In other words the specific PI's under the annouced instructional area will be the only PI's that show up on your roleplay. <strong>However, remember that all the performance indicators will be tested on the test</strong>. Click on <a href = "http://www.decadirect.org/September-2015/2015-2016-DECA-District-Scenarios-Instructional-Areas-Announced/">this link</a> below and look for the "scenario" under your roleplay event. <strong>Using this information to your advantage will definitely give you a competitive edge when compared to your competition</strong>.
-						</p> <!-- Message of Announcement -->
-
-						<br>
-
-						<hr>
-
-						<h1 style="text-align:center"><em style="color:green;font-size:90%" class="glyphicon glyphicon-pencil"></em> Silicon Valley Career Development Conference Sign Ups </h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">November 21, 2015</h3> <!-- Date of Announcement -->
-						<p>This is our first competitive conference of the year and a conference you definitely do not want to miss. SVCDC is from <strong>January 8-10 at the San Jose Downtown Hilton</strong>. You will be presenting your roleplays and/or written plans in front of real judges and awards will be given out at the end if you place! The cost for this conference is <strong>$230</strong>, so please turn in the check along with forms below. <strong>Make sure to sign up and turn in your forms by November 23rd</strong>.
-
-						<br>
-						<br>
-						<a target="_blank" href = "https://docs.google.com/forms/d/1N1B0k3sIpZH0j6Pe4JYAGJhnjJa7JaG18XZ8yEmsZtw/viewform">Sign Up Form</a>
-						<br>
-						<br>
-						<a target="_blank" href = "https://drive.google.com/file/d/0BynRUPUwV3cwZXFSdG94VHN6akNpMFc2OGZoN1dqX3FtZWE0/view">FUHSD Medical Release form, and Trip Permit</a>
-						<br>
-						<a target="_blank" href="formd.pdf">Form D: Medical Release Form</a> (Please print only the last page)
-						<br>
-						<a target="_blank" href="forme.pdf">Form E: DECA Dance Contract</a>
-						<br>
-						<a target="_blank" href="releaseform.pdf">FUHSD Release Form</a>
-						<br>
-						<br>
-						If you would like to change your event, please email <a href = "mailto:vpcompetitions@lynbrookdeca.org">vpcompetitions@lynbrookdeca.org</a>. 
-
-						</p> <!-- Message of Announcement -->
-
-						<br>
-
-						<hr>
-
-						<h1 style="text-align:center"><em style="color:blue;font-size:90%" class="glyphicon glyphicon glyphicon-road"></em> Required Roleplay Extended </h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">November 21, 2015</h3> <!-- Date of Announcement -->
-						<p> 
-							Because of really exciting increases in membership this year, we felt that the timeline was too short to process all the required roleplays for SVCDC. Instead, we will be making the completion of a roleplay a requirement for States this year. Make sure to sign up for SV!
-						</p> <!-- Message of Announcement -->
-
-						<br>
-
-						<hr>
-
-						<h1 style="text-align:center"><em style="color:green;font-size:90%" class="glyphicon glyphicon glyphicon-fire"></em> Idea Challenge </h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">November 15, 2015</h3> <!-- Date of Announcement -->
-						<p> 
-							A premier event of Global Entrepreneurship Week (GEW), the DECA Idea Challenge 2015 is a fast-paced, hands-on learning experience that dares students around the globe to generate an innovative new use for a commonplace item in just eight days. Students must organize into <strong>teams of 3-5 people</strong>, access the challenge item online, collaborate as a team to produce an original and sustainable use for the item and pitch their invention in an engaging YouTube video presentation.
-							<br>
-							<br>
-							<strong>The mystery item is cardboard boxes.</strong>
-							Sign up <a target= "_blank" href = "https://docs.google.com/forms/d/1-IuaF2Y1r-AubkFwxw0uAHPeLGYHuox08FSDoZlcM7o/viewform?c=0&w=1">here</a>.
-						</p> <!-- Message of Announcement -->
-
-						<br>
-
-						<hr>
-
-						<h1 style="text-align:center"><em style="color:blue;font-size:90%" class="glyphicon glyphicon-map-marker"></em> Weekend Study Sessions </h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">November 7, 2015</h3> <!-- Date of Announcement -->
-						<p> 
-							This <strong>Sunday, 11/8</strong>, we will be holding a study session in the <strong>Cupertino Library from 1-3pm</strong>. This study session doesn't have a lesson plan or lecture, so it is a great opportunity to get more personalized attention and help on your competitive events! Make sure to drop in if you haven't been able to attend a study session yet, and remember that in order to compete at SVCDC, <strong>you must do a practice roleplay with an officer before November 23rd</strong>.
-						</p> <!-- Message of Announcement -->
-
-						<br>
-
-						<hr>
-
-						<h1 style="text-align:center"><em style="color:green;font-size:90%" class="glyphicon glyphicon-ok-sign"></em> Mandatory Roleplay </h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">November 7, 2015</h3> <!-- Date of Announcement -->
-						<p>
-							Before the SVCDC registration deadline, <strong>November 23rd</strong>, we are requiring all members registering in a roleplay event to do a practice roleplay with an officer or cluster captain. This can occur in any study session or at a meeting scheduled at your own time, like brunch or lunch. We can't wait to hear you guys rock it at your practice roleplays!
-						</p> <!-- Message of Announcement -->
-
-						<br>
-
-						<hr>
-
-						<h1 style="text-align:center"><em style="color:blue;font-size:90%" class="glyphicon glyphicon-exclamation-sign"></em> Mandatory Written Evalutions </h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">November 2, 2015</h3> <!-- Date of Announcement -->
-						<p>As we kick off the competitive season, we want to make sure everyone is prepared by their first business conference. In order for the officer team to be able to give feedback about each specific plan we need everyone to attend to the following <strong>mandatory</strong> action items. The instructions are listed below, step by step:
-							<ol>
-							  <li>Create google doc of your plan</li>
-							  <li>Create shareable link</li>
-							  <li>Go to <a target = "_blank" href = "http://www.deca.org/high-school-programs/high-school-competitive-events/"> deca.org competitive events page</a></li>
-							  <li>Find your written event and click on guidelines</li>
-							  <li>Fill out the form for your <strong>written</strong> event cluster:
-							  	<ul>
-							  		<li><a target = "_blank" href = "http://goo.gl/forms/jXtT9PiVHD">Entrepreneurship Link</a></li>
-							  		<li><a target = "_blank" href = "http://goo.gl/forms/STblzXmBN0">Operational Research Link</a></li>
-							  		<li><a target = "_blank" href = "http://goo.gl/forms/nH7Q2IygDN">Professional Selling Link</a></li>
-							  		<li><a target = "_blank" href = "http://goo.gl/forms/HqGYDkqAhv">Marketing Representative Link</a></li>
-							  	</ul>
-							  </li>
-							</ol>
-							If you have any questions, feel free to contact <a href = "mailto:directorwrittens@lynbrookdeca.org">directorwrittens@lynbrookdeca.org</a>. 
-						</p> <!-- Message of Announcement -->
-
-						<br>
-
-						<hr>
-						<h1 style="text-align:center"><em style="color:green;font-size:90%" class="glyphicon glyphicon-shopping-cart"></em> Virtual Business Challenge </h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">October 17, 2015</h3> <!-- Date of Announcement -->
-						<p>The DECA Virtual Business Challenge is an official DECA competitive event where participants use highly visual simulation software to manage a business. The DECA Virtual Business Challenge (VBC) encourages DECA members to test their skills at managing a business individually or as a team. The VBC culminates in live competitions at the ICDC Nationals. This year's VBC will have the six tracks, VBC Accounting, VBC Restaurant, VBC Retailing, VBC Sports, VBC Personal Finance and the DECA Hotel Challenge.<br><br>Click <a target = "_blank" href = "http://vbc.knowledgematters.com/vbc/">HERE</a> to access the Virtual Business Challenge webpage where you will be able to sign up on your own. Once you are on there website click on "Register for Competitions" and follow their steps to sign up. Then allow our advisor to approve your account. If you have any questions please email <a href = "mailto:directortesting@lynbrookdeca.org">directortesting@lynbrookdeca.org</a>.
-						</p> <!-- Message of Announcement -->
-
-						<br>
-
-						<hr>
-
-						<h1 style="text-align:center"><em style="color:blue;font-size:90%" class="glyphicon glyphicon-list-alt"></em> Event Selection </h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">October 6, 2015</h3> <!-- Date of Announcement -->
-						<p>Hey Lynbrook DECA! Since we want to start competitive preparation as soon as possible, we are requesting that all members choose their events ASAP. This is so that we have an idea for what everyone is taking part in, and we will be able to assign you to cluster captains and know who to direct you to for further assistance with your events. Of course, this isn't binding, and you may change your events later if you wish by notifying an officer. Please fill out the form <a target = "_blank" href = "https://docs.google.com/forms/d/1tR_9T3_3hH2GPqzfzYoL9EU0zq-jL6lFub-e7du0yNA/viewform">HERE</a> by October 14th so that we may split you up by cluster in order to teach you content. If not, we request this by October 21st as the latest.</p> <!-- Message of Announcement -->
-
-						<br>
-
-						<hr>
-
-						<h1 style="text-align:center"><em style="color:green;font-size:90%" class="glyphicon glyphicon-euro"></em> Lynbrook DECA Donations </h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">October 3, 2015</h3> <!-- Date of Announcement -->
-						<p>In order to fund chapter events, study resources, and the DECA membership cost, we would appreciate donations. Support our chapter by submitting a <strong>check of $45.00 addressed to LYNBROOK ASB</strong>! Larger donations are always welcome as well! Please <strong>submit your donations by Friday, October 23rd.</strong></p> <!-- Message of Announcement -->
-
-						<br>
-
-						<hr>
-
-						<h1 style="text-align:center"><em style="color:blue;font-size:80%" class="glyphicon glyphicon-road"></em> Sign Up for LACE </h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">October 1, 2015</h3> <!-- Date of Announcement -->
-						<p>The first conference of the year, LACE, is finally here! It takes place during <strong>November 13-15</strong>, and is a purely <strong>NON-COMPETITIVE CONFERENCE</strong>. This means that the conference is for DECA members to learn about the club, attend valuable workshops, listen to world-renowned guest speakers, network with other DECA members, and get valuable tips about their own competitive events for future conferences. If you are interested in attending, please sign up on this <a target = "_blank" href = "https://docs.google.com/forms/d/1n_q3cb-ajUU5GQkyqJ__fMJgly8Xm-_7JOPz6iIbG-w/viewform">form</a>. The <strong>cost of the conference is $220</strong>, and the <strong>deadline to sign up and turn in all forms is October 16th</strong>. If you have any questions, feel free to contact <a href = "mailto:vpoperations@lynbrookdeca.org">vpoperations@lynbrookdeca.org</a>.
-						<br>
-						<br>
-						<a target="_blank" href="formd.pdf">Form D: Medical Release Form</a> (Please print only the last page)
-						<br>
-						<a target="_blank" href="forme.pdf">Form E: DECA Dance Contract</a>
-						<br>
-						<a target="_blank" href="releaseform.pdf">FUHSD Release Form</a>
-
-						</p>
-
-						<!-- Message of Announcement -->
-
-						<br>
-
-						<hr>
-
-						<h1 style="text-align:center"><em style="color:green;font-size:90%" class="glyphicon glyphicon-bullhorn"></em> New Member Workshop </h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">September 19, 2015</h3> <!-- Date of Announcement -->
-						<p>Lynbrook DECA is excited to host our Intro to DECA Workshop on <strong>September 25th</strong>. The event will take place from <strong>3:00 p.m. to 5:30 p.m</strong>. in the <strong>Lynbrook Cafeteria</strong>. New members are encouraged to attend to learn more about DECA and its competitive events as well as to get to know the officer and cluster captain teams. We will also be playing games and food will be provided. Hope to see you all there!</p> <!-- Message of Announcement -->
-
-						<br>
-
-						<hr>
-
-		
-						<h1 style="text-align:center"><em style="color:blue;font-size:90%" class="glyphicon glyphicon-calendar"></em> Friday Meetings </h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">September 13, 2015</h3> <!-- Date of Announcement -->
-						<p>Thank you to all those who came out to our first meeting in the auditorium last Tuesday. We hope you're all excited for a great year in Lynbrook DECA! From here on out, we will be having our regular meetings on <strong>FRIDAYS AT LUNCH IN ROOM 608</strong>. Our second meeting will be <strong>this Friday (9/18)</strong>, and we recommend that everyone comes to these meetings because we will be covering important information relating to logistics, events, deadlines, and much more. However, we understand that some of you can't make it due to other clubs or commitments. In that case, make sure to read the emails that we send out and contact an officer if you have any further questions. If you have not recieved any Lynbrook DECA emails so far, please email <a href = "mailto:presidents@lynbrookdeca.org">presidents@lynbrookdeca.org</a> and let us know to add you onto our mailing list.</p> <!-- Message of Announcement -->
-
-						<br>
-
-						<hr>
-
-						<h1 style="text-align:center"><em style="color:green;font-size:100%" class="glyphicon glyphicon-stats"></em> Stock Market Game </h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">September 1, 2015</h3> <!-- Date of Announcement -->
-						<p>Hi everybody! Just like last year, there will be a DECA Stock Market Game beginning September 8th. You’ll be tasked with managing a virtual investment portfolio of $100,000 in groups of 1-3 for three months, and the top 25 finalists in the western United States region will have the opportunity to go and compete at ICDC! We encourage all members to participate, because there is nothing to lose by taking part. Shoot an email ASAP to <a href = "mailto:directortesting@lynbrookdeca.org">directortesting@lynbrookdeca.org</a> if you’re interested in participating!</p> <!-- Message of Announcement -->
-
-						<br>
-
-						<hr>
-
-						<h1 style="text-align:center"><em style="color:blue;font-size:90%" class="glyphicon glyphicon-music"></em> Flash Mob! </h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">August 31, 2015</h3> <!-- Date of Announcement -->
-						<p>Hey everyone!! For club promotion this year, Lynbrook DECA is planning on doing a flashmob in the middle of the quad on September 11th! We will be dancing to the song "Watch Me" by Silento. We already have approximately 30 people signed up, so if you would like to join in on the fun, <a href="https://docs.google.com/spreadsheets/d/1EmOVCi_E4-TcyMb1Pn0UNk7OBivDiSMUYnnPELO3n6E/edit?usp=sharing" target="_blank">sign up here.</a> More information will be sent to those who sign up on the spreadsheet!</p> <!-- Message of Announcement -->
-						<br>
-
-						<hr>
-
-						<h1 style="text-align:center"><em style = "color:green;font-size:80%" class="glyphicon glyphicon-random"></em> DECA Handshake </h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">August 31, 2015</h3> <!-- Date of Announcement -->
-						<p>Hello everybody! This year, DECA will be implementing its own "DECA Handshake." This is in efforts to have something that all DECA members can do, thereby promoting member unity. We encourage, and would really appreciate it, if you could do DECA handshakes with other members, or teach it to people who aren't in the club and recommend them to join. A tutorial for how the handshake goes is provided below.</p> <!-- Message of Announcement -->
-						<iframe width="100%" height="400" src="https://www.youtube.com/embed/sdln9Ce7gZQ?rel=0" frameborder="0" allowfullscreen></iframe>
+						
 					</div>
 				</div>
 			</div>
@@ -444,8 +186,8 @@
 							<em class="glyphicon glyphicon-calendar glyphicon-l"></em>
 						</div>
 						<div class="col-sm-9 col-lg-7 widget-right">
-							<div class="large">4 Days</div>
-							<div class="text-muted">Until ICDC</div>
+							<div class="large">2 Months</div>
+							<div class="text-muted">Until LACE</div>
 						</div>
 					</div>
 				</div>
@@ -457,7 +199,7 @@
 							<li class="todo-list-item">
 								<div class="checkbox">
 									<span class="glyphicon glyphicon-check"></span>
-									<label for="checkbox">All good :)</strong></label>
+									<label for="checkbox">Friday Lunch Meetings</strong></label>
 								</div>
 							</li>
 							

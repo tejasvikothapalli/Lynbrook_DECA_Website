@@ -31,7 +31,7 @@ Parse.serverURL = 'http://54.201.150.12:1337/parse';
       
         
 
-$(".logout-button").click(function(){
+$("#logout-button").click(function(){
 	// alert("working");
 
 	Parse.User.logOut();
