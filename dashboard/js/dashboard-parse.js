@@ -46,7 +46,7 @@ if (currentUser) {
 
         $("#pointsbutton").click(function(){
             var thepass = 'lophiasing';
-            alert ($('#pointspass').val());
+            // alert ($('#pointspass').val());
             if ($('#pointspass').val() == thepass)
             {
             var currentUser = Parse.User.current();
