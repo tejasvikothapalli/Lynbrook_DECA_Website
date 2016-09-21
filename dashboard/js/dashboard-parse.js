@@ -79,7 +79,7 @@ if (currentUser) {
           object.set( 'firstname', currentUser.get('firstname') ) ;
           object.set( 'lastname', currentUser.get('lastname') ) ;
           object.set( 'yearindeca', currentUser.get('yearindeca') ) ;
-          object.set( 'swag', 5 ) ;
+          object.set( 'SS_9/21/16', 5 ) ;
           object.save(null, {
             success: function(object) {
                 // alert("Saved new user");
@@ -91,7 +91,7 @@ if (currentUser) {
         });
                    // alert("fail");
                } else {
-                decaDiamonds.set('swag', 5 ) ;
+                decaDiamonds.set('SS_9/21/16', 5 ) ;
                 decaDiamonds.save(null, {
                     success: function(object) {
                         // alert("Saved for existing user.");
