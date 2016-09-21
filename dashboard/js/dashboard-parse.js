@@ -82,7 +82,8 @@ if (currentUser) {
           object.set( 'swag', 5 ) ;
           object.save(null, {
             success: function(object) {
-                alert("Saved new user");
+                // alert("Saved new user");
+                alert("Success logging points!");
             },
             error: function(object, error) {
                 alert('error saving for new user:' + error.message);
@@ -93,7 +94,8 @@ if (currentUser) {
                 decaDiamonds.set('swag', 5 ) ;
                 decaDiamonds.save(null, {
                     success: function(object) {
-                        alert("Saved for existing user.");
+                        // alert("Saved for existing user.");
+                        alert("Success logging points!");
                     },
                     error: function(object, error) {
                         alert('Error saving for existing user:' + error.message);
