@@ -44,76 +44,76 @@ if (currentUser) {
 
 });
 
-        $("#pointsbutton").click(function(){
-            var thepass = 'lophiasing';
-            // alert ($('#pointspass').val());
-            if ($('#pointspass').val() == thepass)
-            {
-            var currentUser = Parse.User.current();
-            var username = currentUser.get("username");
-            // alert(username);
+   //      $("#pointsbutton").click(function(){
+   //          var thepass = 'lophiasing';
+   //          // alert ($('#pointspass').val());
+   //          if ($('#pointspass').val() == thepass)
+   //          {
+   //          var currentUser = Parse.User.current();
+   //          var username = currentUser.get("username");
+   //          // alert(username);
 
 
-            var query = new Parse.Query("DECAdiamonds"); 
+   //          var query = new Parse.Query("DECAdiamonds"); 
 
-            query.find( {
-                success: function listOfObjects(results) {
-                    var decaDiamonds = null;
-            // alert("Error");
-            // console.log("Successfully retrieved " + results.length);
-            // Do something with the returned Parse.Object values
-            if ( results.length == 0 ) {
+   //          query.find( {
+   //              success: function listOfObjects(results) {
+   //                  var decaDiamonds = null;
+   //          // alert("Error");
+   //          // console.log("Successfully retrieved " + results.length);
+   //          // Do something with the returned Parse.Object values
+   //          if ( results.length == 0 ) {
 
-            } 
-            for (var i = 0; i < results.length; i++) { 
-               var object = results[i];
-               console.log(object.id + ' - ' + object.get('column'));
-               if(object.get('username') == username) {
-                decaDiamonds = object;
-                break;
-            }
-        }
-        if (decaDiamonds == null) {
-          var object = new Parse.Object("DECAdiamonds");
-          object.set( 'username', username ) ;
-          object.set( 'firstname', currentUser.get('firstname') ) ;
-          object.set( 'lastname', currentUser.get('lastname') ) ;
-          object.set( 'yearindeca', currentUser.get('yearindeca') ) ;
-          object.set( 'SS_092131', 3 ) ;
-          object.save(null, {
-            success: function(object) {
-                // alert("Saved new user");
-                alert("Success logging points!");
-            },
-            error: function(object, error) {
-                alert('error saving for new user:' + error.message);
-            }
-        });
-                   // alert("fail");
-               } else {
-                decaDiamonds.set('SS_092131', 3 ) ;
-                decaDiamonds.save(null, {
-                    success: function(object) {
-                        // alert("Saved for existing user.");
-                        alert("Success logging points!");
-                    },
-                    error: function(object, error) {
-                        alert('Error saving for existing user:' + error.message);
-                    }
-                });
-            }
+   //          } 
+   //          for (var i = 0; i < results.length; i++) { 
+   //             var object = results[i];
+   //             console.log(object.id + ' - ' + object.get('column'));
+   //             if(object.get('username') == username) {
+   //              decaDiamonds = object;
+   //              break;
+   //          }
+   //      }
+   //      if (decaDiamonds == null) {
+   //        var object = new Parse.Object("DECAdiamonds");
+   //        object.set( 'username', username ) ;
+   //        object.set( 'firstname', currentUser.get('firstname') ) ;
+   //        object.set( 'lastname', currentUser.get('lastname') ) ;
+   //        object.set( 'yearindeca', currentUser.get('yearindeca') ) ;
+   //        object.set( 'SS_092131', 3 ) ;
+   //        object.save(null, {
+   //          success: function(object) {
+   //              // alert("Saved new user");
+   //              alert("Success logging points!");
+   //          },
+   //          error: function(object, error) {
+   //              alert('error saving for new user:' + error.message);
+   //          }
+   //      });
+   //                 // alert("fail");
+   //             } else {
+   //              decaDiamonds.set('SS_092131', 3 ) ;
+   //              decaDiamonds.save(null, {
+   //                  success: function(object) {
+   //                      // alert("Saved for existing user.");
+   //                      alert("Success logging points!");
+   //                  },
+   //                  error: function(object, error) {
+   //                      alert('Error saving for existing user:' + error.message);
+   //                  }
+   //              });
+   //          }
 
 
-        },
-        error: function (error) {
-           alert("Error")
-       }
+   //      },
+   //      error: function (error) {
+   //         alert("Error")
+   //     }
 
-   })
+   // })
 
-        }
+   //      }
 
-    }); // end of points button actions
+   //  }); // end of points button actions
 
         var isopen = false;
         $("#icon-bar1").click(function()
