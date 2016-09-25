@@ -2,6 +2,9 @@
 Parse.initialize("DECA_APPLICATION_ID");
 Parse.serverURL = 'http://54.201.150.12:1337/parse';
 
+// var object = new Parse.Object("DECAdiamonds");
+// alert (object);
+
 var currentUser = Parse.User.current();
 if (currentUser) {
 		    // alert("you are logged in");
@@ -44,17 +47,22 @@ if (currentUser) {
 
 });
 
-        $("#pointsbutton").click(function(){
-            var thepass = 'smallmatt';                 						// CHANGE THIS
-            // alert ($('#pointspass').val());
-            if ($('#pointspass').val() == thepass)
-            {
-            var currentUser = Parse.User.current();
-            var username = currentUser.get("username");
+
+
+
+
+
+
+
+
+
+        var currentUser = Parse.User.current();
+        var username = currentUser.get("username");
             // alert(username);
 
-
+            var points = 0;
             var query = new Parse.Query("DECAdiamonds"); 
+
 
             query.find( {
                 success: function listOfObjects(results) {
@@ -66,72 +74,183 @@ if (currentUser) {
 
             } 
             for (var i = 0; i < results.length; i++) { 
-               var object = results[i];
-               console.log(object.id + ' - ' + object.get('column'));
-               if(object.get('username') == username) {
+             var object = results[i];
+             console.log(object.id + ' - ' + object.get('column'));
+             if(object.get('username') == username) {
                 decaDiamonds = object;
+                //alert(JSON.stringify(object));
+                var str =  JSON.stringify(object);
+                var jsonObj = $.parseJSON(str);
+
+                for (var key in jsonObj) {
+                    if(jsonObj.hasOwnProperty(key)) {
+                        //alert( key + " " + jsonObj[key]);
+                        if(key.indexOf("SS_") != -1) {
+                            if(jsonObj[key] != undefined) {
+                                 points += jsonObj[key];
+                            }
+
+                        } else if (key.indexOf("FM_") != -1) {
+                            if(jsonObj[key] != undefined) {
+                                 points += jsonObj[key];
+                            }
+                        }
+                    }
+                }
+                // alert("Points:" + points);
+                $("#decaDiamondPointDisplay").html("Your DECA Diamond Point Total: " + points);
+                //Object.keys(jsonObj).forEach(function(key) {
+                //    var value = jsonObj[key];
+                //    alert(key + " "  + value);
+                //});
+                //JSON.parse(str, function(key, value) {
+                //    alert(key + " "  +value);
+
+                //});
+                //for (key in Object.keys(str) ) {
+                //    alert(key)
+                //}
+                //alert(String(decaDiamonds));
+                //alert(decaDiamonds.toJSON());
+                //alert(decaDiamonds.attributes);
+                //for (key in Object.keys(decaDiamonds.toJSON()) ) {
+                //    alert(key + object.get(key));
+                //}
+
+                // for(key in decaDiamonds.keys().toJSON()) 
+                // {
+                //     alert(key + object.get(key));
+                // }
                 break;
             }
         }
-        if (decaDiamonds == null) {
-          var object = new Parse.Object("DECAdiamonds");
-          object.set( 'username', username ) ;
-          object.set( 'firstname', currentUser.get('firstname') ) ;
-          object.set( 'lastname', currentUser.get('lastname') ) ;
-          object.set( 'yearindeca', currentUser.get('yearindeca') ) ;
-          object.set( 'FM_092316', 3 ) ;									 // CHANGE THIS
-          object.save(null, {
-            success: function(object) {
-                // alert("Saved new user");
-                alert("Success logging points!");
-            },
-            error: function(object, error) {
-                alert('error saving for new user:' + error.message);
-            }
-        });
-                   // alert("fail");
-               } else {
-                decaDiamonds.set('FM_092316', 3 ) ;							 // CHANGE THIS
-                decaDiamonds.save(null, {
-                    success: function(object) {
-                        // alert("Saved for existing user.");
-                        alert("Success logging points!");
-                    },
-                    error: function(object, error) {
-                        alert('Error saving for existing user:' + error.message);
-                    }
-                });
-            }
+    }
+       //  if (decaDiamonds == null) {
+       //    var object = new Parse.Object("DECAdiamonds");
+       //    object.set( 'username', username ) ;
+       //    object.set( 'firstname', currentUser.get('firstname') ) ;
+       //    object.set( 'lastname', currentUser.get('lastname') ) ;
+       //    object.set( 'yearindeca', currentUser.get('yearindeca') ) ;
+       //    object.set( 'FM_092316', 3 ) ;                                     // CHANGE THIS
+       //    object.save(null, {
+       //      success: function(object) {
+       //          // alert("Saved new user");
+       //          alert("Success logging points!");
+       //      },
+       //      error: function(object, error) {
+       //          alert('error saving for new user:' + error.message);
+       //      }
+       //  });
+       //             // alert("fail");
+       //         } else {
+       //          decaDiamonds.set('FM_092316', 3 ) ;                          // CHANGE THIS
+       //          decaDiamonds.save(null, {
+       //              success: function(object) {
+       //                  // alert("Saved for existing user.");
+       //                  alert("Success logging points!");
+       //              },
+       //              error: function(object, error) {
+       //                  alert('Error saving for existing user:' + error.message);
+       //              }
+       //          });
+       //      }
 
 
-        },
-        error: function (error) {
-           alert("Error")
-       }
+       //  },
+       //  error: function (error) {
+       //     alert("Error")
+       // }
 
-   })
+   });
 
-        }
+ //            $("#pointsbutton").click(function(){
+ //            var thepass = 'smallmatt';                 						// CHANGE THIS
+ //            // alert ($('#pointspass').val());
+ //            if ($('#pointspass').val() == thepass)
+ //            {
+ //                var currentUser = Parse.User.current();
+ //                var username = currentUser.get("username");
+ //            // alert(username);
 
-    }); // end of points button actions
 
-        var isopen = false;
-        $("#icon-bar1").click(function()
-        {
+ //            var query = new Parse.Query("DECAdiamonds"); 
 
-            if (isopen)
+ //            query.find( {
+ //                success: function listOfObjects(results) {
+ //                    var decaDiamonds = null;
+ //            // alert("Error");
+ //            // console.log("Successfully retrieved " + results.length);
+ //            // Do something with the returned Parse.Object values
+ //            if ( results.length == 0 ) {
+
+ //            } 
+ //            for (var i = 0; i < results.length; i++) { 
+ //             var object = results[i];
+ //             console.log(object.id + ' - ' + object.get('column'));
+ //             if(object.get('username') == username) {
+ //                decaDiamonds = object;
+ //                break;
+ //            }
+ //        }
+ //        if (decaDiamonds == null) {
+ //          var object = new Parse.Object("DECAdiamonds");
+ //          object.set( 'username', username ) ;
+ //          object.set( 'firstname', currentUser.get('firstname') ) ;
+ //          object.set( 'lastname', currentUser.get('lastname') ) ;
+ //          object.set( 'yearindeca', currentUser.get('yearindeca') ) ;
+ //          object.set( 'FM_092316', 3 ) ;									 // CHANGE THIS
+ //          object.save(null, {
+ //            success: function(object) {
+ //                // alert("Saved new user");
+ //                alert("Success logging points!");
+ //            },
+ //            error: function(object, error) {
+ //                alert('error saving for new user:' + error.message);
+ //            }
+ //        });
+ //                   // alert("fail");
+ //               } else {
+ //                decaDiamonds.set('FM_092316', 3 ) ;							 // CHANGE THIS
+ //                decaDiamonds.save(null, {
+ //                    success: function(object) {
+ //                        // alert("Saved for existing user.");
+ //                        alert("Success logging points!");
+ //                    },
+ //                    error: function(object, error) {
+ //                        alert('Error saving for existing user:' + error.message);
+ //                    }
+ //                });
+ //            }
+
+
+ //        },
+ //        error: function (error) {
+ //         alert("Error")
+ //     }
+
+ // })
+
+ //        }
+
+ //    }); // end of points button actions
+
+            var isopen = false;
+            $("#icon-bar1").click(function()
             {
-                $(".nav-menu").css("display", "none");
 
-                isopen = !isopen;
-            }
-            else {
-                $(".nav-menu").css("display", "block");
+                if (isopen)
+                {
+                    $(".nav-menu").css("display", "none");
 
-                isopen = !isopen;
-            }
+                    isopen = !isopen;
+                }
+                else {
+                    $(".nav-menu").css("display", "block");
 
-        });
+                    isopen = !isopen;
+                }
+
+            });
 
 //Profile.html Java Script
 currentUser.fetch({
@@ -202,8 +321,8 @@ $("#save").click(function(){
 			currentUser.set("tshirtsize", tshirtsize);
 			currentUser.set("parentemail", parentemail);
 
-         currentUser.save();
-         alert("Profile Updated");
+           currentUser.save();
+           alert("Profile Updated");
 
 // 	alert($("#firstname-profile").val() );
 // 	//currentUser.save();
