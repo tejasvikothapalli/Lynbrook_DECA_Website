@@ -56,7 +56,7 @@
 						<ul class="dropdown-menu" role="menu" style ="margin-top:20px">
 							<li style ="padding-top:0"><a href="dashboard.html"><span class="glyphicon glyphicon-bookmark"></span> Dashboard</a></li>
 							<li style ="padding-top:0" ><a href="profile.html"><span class="glyphicon glyphicon-user"></span> Edit My Profile</a></li>
-							<li style ="padding-top:0"><a href="#" class="logout-button"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+							<li style ="padding-top:0"><a href="#" id="logout-button"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 						</ul>
 						
 					</li>
@@ -136,9 +136,19 @@
 
 		</div><!--/.row-->
 
+		<div class="col-md-6" style="width:100%">
+				<div class="panel panel-default">
+					<div class="panel-body tabs">
+						<ul class="nav nav-tabs">
+							<li class="active"><a href="#tab1" data-toggle="tab">Profile</a></li>
+							<li><a href="#tab2" data-toggle="tab">Event Selection</a></li>
+							<!-- <li><a href="#tab3" data-toggle="tab">Tab 3</a></li> -->
+						</ul>
+		
+						<div class="tab-content">
+							<div class="tab-pane fade in active" id="tab1">
 
-
-		<div class="row">
+								<div class="row">
 			<div class="col-lg-12">
 				<div class="panel panel-default">
 					<div class="panel-heading profile-name" style ="font-size:200%">Profile</div>
@@ -191,6 +201,7 @@
 									<input class="form-control" id ="email-profile" value="" readonly>
 								</div>
 
+								
 
 								<button type="submit" class="btn btn-primary" id ="save">Save Changes</button>
 								
@@ -200,6 +211,95 @@
 				</div>
 			</div><!-- /.col-->
 		</div><!-- /.row -->
+							</div>
+							<div class="tab-pane fade" id="tab2">
+								
+								<div class="panel-heading" style ="font-size:200%">Events</div>
+								<div class="panel-body">
+						<div class="col-md-6">
+							<form role="form">
+							
+								<div class="form-group">
+									<label>Roleplay</label>
+									<select class="form-control" id="roleplayevent">
+										<option></option>
+										<option value = "Business Law and Ethics Team Decision Making (BLTDM)">Business Law and Ethics Team Decision Making (BLTDM)</option>
+										<option value = "Buying and Merchandising Team Decision Making (BTDM)">Buying and Merchandising Team Decision Making (BTDM)</option>
+										<option value = "Financial Services Team Decision Making (FTDM)">Financial Services Team Decision Making (FTDM)</option>
+										<option value = "Hospitality Service Team Decision Making (HTDM)">Hospitality Service Team Decision Making (HTDM)</option>
+										<option value = "Marketing Management Team Decision Making (MTDM)">Marketing Management Team Decision Making (MTDM)</option>
+										<option value = "Sports and Entertainment Marketing Team Decision Making (STDM)">Sports and Entertainment Marketing Team Decision Making (STDM)</option>
+										<option value = "Travel and Tourism Team Decision Making (TTDM)">Travel and Tourism Team Decision Making (TTDM)</option>
+										<option value = "Accounting Applications (ACT)">Accounting Applications (ACT)</option>
+										<option value = "Apparel and Accessories Marketing (AAM)">Apparel and Accessories Marketing (AAM)</option>
+										<option value = "Automotive Services Marketing (ASM)">Automotive Services Marketing (ASM)</option>
+										<option value = "Business Finance (BFS)">Business Finance (BFS)</option>
+										<option value = "Business Services Marketing (BSM)">Business Services Marketing (BSM)</option>
+										<option value = "Food Marketing (FMS)">Food Marketing (FMS)</option>
+										<option value = "Hotel and Lodging Management (HLM)">Hotel and Lodging Management (HLM)</option>
+										<option value = "Human Resources Management (HRM)">Human Resources Management (HRM)</option>
+										<option value = "Marketing Communications (MCS)">Marketing Communications (MCS)</option>
+										<option value = "Quick Serve Restaurant Management (QSRM)">Quick Serve Restaurant Management (QSRM)</option>
+										<option value = "Restaurant and Food Service Management (RFSM)">Restaurant and Food Service Management (RFSM)</option>
+										<option value = "Retail Merchandising (RMS)">Retail Merchandising (RMS)</option>
+										<option value = "Sports and Entertainment Marketing (SEM)">Sports and Entertainment Marketing (SEM)</option>
+										<option value = "Personal Financial Literacy (PFL)">Personal Financial Literacy (PFL)</option>
+										<option value = "Principles of Marketing (PMK)">Principles of Marketing (PMK)</option>
+										<option value = "Principles of Hospitality and Tourism (PHT)">Principles of Hospitality and Tourism (PHT)</option>
+										<option value = "Principles of Finance (PFN)">Principles of Finance (PFN)</option>
+										<option value = "Principles of Business Management and Administration (PBM)">Principles of Business Management and Administration (PBM)</option>
+
+									</select>
+								</div>
+
+								<div class="form-group">
+									<label>Written</label>
+									<select class="form-control" id="writtenevent">
+										<option></option>
+										<option value = "Business Services Operations (BOR)">Business Services Operations (BOR)</option>
+										<option value = "Buying and Merchandising Operations (BMOR)">Buying and Merchandising Operations (BMOR)</option>
+										<option value = "Finance Operations (FOR)">Finance Operations (FOR)</option>
+										<option value = "Hospitality and Tourism Operations (HTOR)">Hospitality and Tourism Operations (HTOR)</option>
+										<option value = "Sports and Entertainment Marketing Operations (SEOR)">Sports and Entertainment Marketing Operations (SEOR)</option>
+										<option value = "Community Service Project Chapter Team Event (CSP)">Community Service Project Chapter Team Event (CSP)</option>
+										<option value ="Entrepreneurship Promotion Project Chapter Team Event (EPP)">Entrepreneurship Promotion Project Chapter Team Event (EPP)</option>
+										<option value ="Financial Literacy Promotion Project Chapter Team Event (FLPP)">Financial Literacy Promotion Project Chapter Team Event (FLPP)</option>
+										<option value = "Learn and Earn Project Chapter Team Event (LEP)">Learn and Earn Project Chapter Team Event (LEP)</option>
+										<option value = "Public Relations Project Chapter Team Event (PRP)">Public Relations Project Chapter Team Event (PRP)</option>
+										<option value = "Entrepreneurship Innovation Plan (EIP)">Entrepreneurship Innovation Plan (EIP)</option>
+										<option value = "Entrepreneurship Independent Business Plan (EIB)">Entrepreneurship Independent Business Plan (EIB)</option>
+										<option value = "Entrepreneurship Business Growth Plan (EBG)">Entrepreneurship Business Growth Plan (EBG)</option>
+										<option value="Entrepreneurship International Business Plan (IBP)">Entrepreneurship International Business Plan (IBP)</option>
+										<option value="Entrepreneurship Franchise Business Plan (EFB)">Entrepreneurship Franchise Business Plan (EFB)</option>
+										<option value="Entrepreneurship Start-up Business Plan (ESB)">Entrepreneurship Start-up Business Plan (ESB)</option>
+										<option value="Advertising Campaign (ADC)">Advertising Campaign (ADC)</option>
+										<option value="Fashion Merchandising Promotion Plan (FMP)">Fashion Merchandising Promotion Plan (FMP)</option>
+										<option value="Sports and Entertainment Promotion Plan (SEPP)">Sports and Entertainment Promotion Plan (SEPP)</option>
+										<option value="Financial Consulting Professional Selling (FCE)">Financial Consulting Professional Selling (FCE)</option>
+										<option value="Hospitality and Tourism Professional Selling (HTPS)">Hospitality and Tourism Professional Selling (HTPS)</option>
+										<option value="Professional Selling (PSE)">Professional Selling (PSE)</option>
+
+									</select>
+								</div>
+
+
+								
+
+								<button type="button" class="btn btn-primary" id ="eventsSave">Save Events</button>
+								
+							</div>
+						</form>
+					</div>
+
+								
+							</div>
+							
+						</div>
+					</div>
+				</div><!--/.panel-->
+			</div><!--/.col-->
+
+		
 
 		
 	

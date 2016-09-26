@@ -74,9 +74,9 @@ if (currentUser) {
 
             } 
             for (var i = 0; i < results.length; i++) { 
-             var object = results[i];
-             console.log(object.id + ' - ' + object.get('column'));
-             if(object.get('username') == username) {
+               var object = results[i];
+               console.log(object.id + ' - ' + object.get('column'));
+               if(object.get('username') == username) {
                 decaDiamonds = object;
                 //alert(JSON.stringify(object));
                 var str =  JSON.stringify(object);
@@ -87,16 +87,16 @@ if (currentUser) {
                         //alert( key + " " + jsonObj[key]);
                         if(key.indexOf("SS_") != -1) {
                             if(jsonObj[key] != undefined) {
-                                 points += jsonObj[key];
-                            }
+                               points += jsonObj[key];
+                           }
 
-                        } else if (key.indexOf("FM_") != -1) {
-                            if(jsonObj[key] != undefined) {
-                                 points += jsonObj[key];
-                            }
-                        }
-                    }
-                }
+                       } else if (key.indexOf("FM_") != -1) {
+                        if(jsonObj[key] != undefined) {
+                           points += jsonObj[key];
+                       }
+                   }
+               }
+           }
                 // alert("Points:" + points);
                 $("#decaDiamondPointDisplay").html("Your DECA Diamond Point Total: " + points);
                 //Object.keys(jsonObj).forEach(function(key) {
@@ -163,76 +163,76 @@ if (currentUser) {
 
    });
 
- //            $("#pointsbutton").click(function(){
- //            var thepass = 'smallmatt';                 						// CHANGE THIS
- //            // alert ($('#pointspass').val());
- //            if ($('#pointspass').val() == thepass)
- //            {
- //                var currentUser = Parse.User.current();
- //                var username = currentUser.get("username");
- //            // alert(username);
+   //          $("#pointsbutton").click(function(){
+   //          var thepass = 'smallmatt';                 						// CHANGE THIS
+   //          // alert ($('#pointspass').val());
+   //          if ($('#pointspass').val() == thepass)
+   //          {
+   //              var currentUser = Parse.User.current();
+   //              var username = currentUser.get("username");
+   //          // alert(username);
 
 
- //            var query = new Parse.Query("DECAdiamonds"); 
+   //          var query = new Parse.Query("DECAdiamonds"); 
 
- //            query.find( {
- //                success: function listOfObjects(results) {
- //                    var decaDiamonds = null;
- //            // alert("Error");
- //            // console.log("Successfully retrieved " + results.length);
- //            // Do something with the returned Parse.Object values
- //            if ( results.length == 0 ) {
+   //          query.find( {
+   //              success: function listOfObjects(results) {
+   //                  var decaDiamonds = null;
+   //          // alert("Error");
+   //          // console.log("Successfully retrieved " + results.length);
+   //          // Do something with the returned Parse.Object values
+   //          if ( results.length == 0 ) {
 
- //            } 
- //            for (var i = 0; i < results.length; i++) { 
- //             var object = results[i];
- //             console.log(object.id + ' - ' + object.get('column'));
- //             if(object.get('username') == username) {
- //                decaDiamonds = object;
- //                break;
- //            }
- //        }
- //        if (decaDiamonds == null) {
- //          var object = new Parse.Object("DECAdiamonds");
- //          object.set( 'username', username ) ;
- //          object.set( 'firstname', currentUser.get('firstname') ) ;
- //          object.set( 'lastname', currentUser.get('lastname') ) ;
- //          object.set( 'yearindeca', currentUser.get('yearindeca') ) ;
- //          object.set( 'FM_092316', 3 ) ;									 // CHANGE THIS
- //          object.save(null, {
- //            success: function(object) {
- //                // alert("Saved new user");
- //                alert("Success logging points!");
- //            },
- //            error: function(object, error) {
- //                alert('error saving for new user:' + error.message);
- //            }
- //        });
- //                   // alert("fail");
- //               } else {
- //                decaDiamonds.set('FM_092316', 3 ) ;							 // CHANGE THIS
- //                decaDiamonds.save(null, {
- //                    success: function(object) {
- //                        // alert("Saved for existing user.");
- //                        alert("Success logging points!");
- //                    },
- //                    error: function(object, error) {
- //                        alert('Error saving for existing user:' + error.message);
- //                    }
- //                });
- //            }
+   //          } 
+   //          for (var i = 0; i < results.length; i++) { 
+   //             var object = results[i];
+   //             console.log(object.id + ' - ' + object.get('column'));
+   //             if(object.get('username') == username) {
+   //              decaDiamonds = object;
+   //              break;
+   //          }
+   //      }
+   //      if (decaDiamonds == null) {
+   //        var object = new Parse.Object("DECAdiamonds");
+   //        object.set( 'username', username ) ;
+   //        object.set( 'firstname', currentUser.get('firstname') ) ;
+   //        object.set( 'lastname', currentUser.get('lastname') ) ;
+   //        object.set( 'yearindeca', currentUser.get('yearindeca') ) ;
+   //        object.set( 'FM_092316', 3 ) ;									 // CHANGE THIS
+   //        object.save(null, {
+   //          success: function(object) {
+   //              // alert("Saved new user");
+   //              alert("Success logging points!");
+   //          },
+   //          error: function(object, error) {
+   //              alert('error saving for new user:' + error.message);
+   //          }
+   //      });
+   //                 // alert("fail");
+   //             } else {
+   //              decaDiamonds.set('FM_092316', 3 ) ;							 // CHANGE THIS
+   //              decaDiamonds.save(null, {
+   //                  success: function(object) {
+   //                      // alert("Saved for existing user.");
+   //                      alert("Success logging points!");
+   //                  },
+   //                  error: function(object, error) {
+   //                      alert('Error saving for existing user:' + error.message);
+   //                  }
+   //              });
+   //          }
 
 
- //        },
- //        error: function (error) {
- //         alert("Error")
- //     }
+   //      },
+   //      error: function (error) {
+   //         alert("Error")
+   //     }
 
- // })
+   // })
 
- //        }
+   //      }
 
- //    }); // end of points button actions
+   //  }); // end of points button actions
 
             var isopen = false;
             $("#icon-bar1").click(function()
@@ -291,7 +291,122 @@ $("#parentemail-profile").val(currentUser.get("parentemail"));
 
 
 
-$("#save").click(function(){
+var urrentUser = Parse.User.current();
+var username = urrentUser.get("username");
+// alert(username);
+ // alert($("#roleplayevent").val());
+
+var query1 = new Parse.Query(Parse.Object.extend("Events")); 
+
+query1.find( {
+
+    success: function (results) {
+
+        var Events = null;
+        // alert("hello" + results.length); 
+
+        for (var i = 0; i < results.length; i++) { 
+            var object = results[i];
+            console.log(object.id + ' - ' + object.get('column'));
+            if(object.get('username') == username) {
+                Events = object;
+                break;
+            }
+        }
+        if (Events == null) {
+
+          
+        } else {
+            $("#roleplayevent").val(Events.get("roleplay"));
+            $("#writtenevent").val(Events.get("written"));
+            // Events.get("roleplay")
+             
+            
+        }
+
+
+    },
+    error: function (error) {
+        alert("Error" + " " + error.message);
+    }
+
+    });
+
+
+
+ $("#eventsSave").click(function(){ 
+// alert("hello");
+var urrentUser = Parse.User.current();
+var username = urrentUser.get("username");
+// alert(username);
+ // alert($("#roleplayevent").val());
+
+var query1 = new Parse.Query(Parse.Object.extend("Events")); 
+
+query1.find( {
+
+    success: function (results) {
+
+        var Events = null;
+        // alert("hello" + results.length); 
+
+        for (var i = 0; i < results.length; i++) { 
+            var object = results[i];
+            console.log(object.id + ' - ' + object.get('column'));
+            if(object.get('username') == username) {
+                Events = object;
+                break;
+            }
+        }
+        if (Events == null) {
+
+            var object = new Parse.Object("Events");
+            object.set( 'username', username ) ;
+            object.set( 'firstname', currentUser.get('firstname') ) ;
+            object.set( 'lastname', currentUser.get('lastname') ) ;
+            object.set( 'yearindeca', currentUser.get('yearindeca') ) ;
+            object.set('roleplay', $("#roleplayevent").val() ) ;                          // CHANGE THIS
+            object.set('written', $("#writtenevent").val() ) ;   
+            object.save(null, {
+            success: function(object) {
+
+                    // alert("Changing Events.");
+                    location.reload();
+                },
+                error: function(object, error) {
+                alert('error saving for new user:' + error.message);
+                }
+            });
+    // alert("fail");
+        } else {
+            Events.set('roleplay', $("#roleplayevent").val() ) ;                          // CHANGE THIS
+            Events.set('written', $("#writtenevent").val() ) ;   
+            Events.save(null, {
+                success: function(object) {
+                
+                    // alert("Success logging points!");
+
+                    location.reload();
+                },
+                error: function(object, error) {
+                    alert('Error saving for existing user:' + error.message);
+                }
+            });
+        }
+
+
+    },
+    error: function (error) {
+        alert("Error" + " " + error.message);
+    }
+
+    });
+
+});
+
+
+
+$("#save").click(function(){                                        // THIS IS IT!!!
 	
 	var currentUser = Parse.User.current();
 	//currentUser.set("firstname",$("#firstname-profile").val());
@@ -321,23 +436,16 @@ $("#save").click(function(){
 			currentUser.set("tshirtsize", tshirtsize);
 			currentUser.set("parentemail", parentemail);
 
-           currentUser.save();
-           alert("Profile Updated");
+         currentUser.save();
+         alert("Profile Updated");
 
-// 	alert($("#firstname-profile").val() );
-// 	//currentUser.save();
 
-//   currentUser.save(null, {
-//   success: function(currentUser) {
-//     // Execute any logic that should take place after the object is saved.
-//     alert('Updated object ' + currentUser.id);
-//   },
-//   error: function(currentUser, error) {
-//     // Execute any logic that should take place if the save fails.
-//     // error is a Parse.Error with an error code and message.
-//     alert('Failed to create new object, with error code: ' + error.message);
-//   }
-// });
+
+                    // CHANGE THIS
+// alert ($('#pointspass').val());
+
+
+
 
 });
 
