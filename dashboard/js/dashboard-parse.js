@@ -319,6 +319,9 @@ query1.find( {
         } else {
             $("#roleplayevent").val(Events.get("roleplay"));
             $("#writtenevent").val(Events.get("written"));
+            $("#roleplayPartner").val(Events.get("roleplayPartner"));
+            $("#writtenPartner1").val(Events.get("writtenPartner1"));
+            $("#writtenPartner2").val(Events.get("writtenPartner2"));
             // Events.get("roleplay")
              
             
@@ -335,6 +338,34 @@ query1.find( {
 
 
  $("#eventsSave").click(function(){ 
+
+    if($("option:selected", "select[name=roleplays]").hasClass('team')){
+        //do something
+        // alert("hello");
+        if ($("#roleplayPartner").val() =='')
+        {
+            // alert("hello");
+            $("#needPartner").css("display", "block");
+
+            return;
+        }
+    }
+    else if ($("#roleplayPartner").val().length > 0)
+    {
+        $("#noPartner").css("display", "block");
+        return;
+    }
+
+
+    if ($("#writtenPartner1").val().length > 0 || $("#writtenPartner2").val().length >0)
+    {
+         if(!$("option:selected", "select[name=writtens]").hasClass('team'))
+         {
+            // alert("u stupid");
+            $("#noWrittenPartner").css("display", "block");
+            return;
+         }
+    }
 // alert("hello");
 var urrentUser = Parse.User.current();
 var username = urrentUser.get("username");
@@ -367,6 +398,9 @@ query1.find( {
             object.set( 'yearindeca', currentUser.get('yearindeca') ) ;
             object.set('roleplay', $("#roleplayevent").val() ) ;                          // CHANGE THIS
             object.set('written', $("#writtenevent").val() ) ;   
+            object.set('roleplayPartner', $("#roleplayPartner").val() ) ;
+            object.set('writtenPartner1', $("#writtenPartner1").val() ) ;
+            object.set('writtenPartner2', $("#writtenPartner2").val() ) ;
             object.save(null, {
             success: function(object) {
 
@@ -381,6 +415,9 @@ query1.find( {
         } else {
             Events.set('roleplay', $("#roleplayevent").val() ) ;                          // CHANGE THIS
             Events.set('written', $("#writtenevent").val() ) ;   
+            Events.set('roleplayPartner', $("#roleplayPartner").val() ) ;
+            Events.set('writtenPartner1', $("#writtenPartner1").val() ) ;
+            Events.set('writtenPartner2', $("#writtenPartner2").val() ) ;
             Events.save(null, {
                 success: function(object) {
                 
