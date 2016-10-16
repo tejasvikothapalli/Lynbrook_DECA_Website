@@ -62,7 +62,7 @@ if (currentUser) {
 
             var points = 0;
             var query = new Parse.Query("DECAdiamonds"); 
-	    query.limit(1000);
+
 
             query.find( {
                 success: function listOfObjects(results) {
@@ -174,7 +174,6 @@ if (currentUser) {
 
 
             var query = new Parse.Query("DECAdiamonds"); 
-	    query.limit(1000);
 
             query.find( {
                 success: function listOfObjects(results) {
@@ -298,7 +297,6 @@ var username = urrentUser.get("username");
  // alert($("#roleplayevent").val());
 
 var query1 = new Parse.Query(Parse.Object.extend("Events")); 
- query1.limit(1000);
 
 query1.find( {
 
@@ -375,7 +373,6 @@ var username = urrentUser.get("username");
  // alert($("#roleplayevent").val());
 
 var query1 = new Parse.Query(Parse.Object.extend("Events")); 
-query1.limit(1000);
 
 query1.find( {
 
