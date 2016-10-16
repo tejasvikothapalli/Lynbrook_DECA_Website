@@ -153,7 +153,7 @@ $("#logout-button").click(function(){
 
 $("#loginpass").keyup(function(event){
     if(event.keyCode == 13){
-        $("#loginbutton").click();
+        $("#loginbutton1").click();
 
     }
 });
