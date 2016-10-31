@@ -235,6 +235,91 @@ if (currentUser) {
 
     }); // end of points button actions
 
+
+
+            $("#pointsbutton2").click(function(){
+            var thepass = 'supersecret';                             // CHANGE THIS
+            // alert ($('#pointspass').val());
+            if ($('#pointspass2').val() == thepass)
+            {
+                var currentUser = Parse.User.current();
+                var username = currentUser.get("username");
+            // alert(username);
+
+
+            var query = new Parse.Query("DECAdiamonds"); 
+      query.limit(1000);
+
+            query.find( {
+                success: function listOfObjects(results) {
+                    var decaDiamonds = null;
+            // alert("Error");
+            // console.log("Successfully retrieved " + results.length);
+            // Do something with the returned Parse.Object values
+            if ( results.length == 0 ) {
+
+            } 
+            for (var i = 0; i < results.length; i++) { 
+               var object = results[i];
+               console.log(object.id + ' - ' + object.get('column'));
+               if(object.get('username') == username) {
+                decaDiamonds = object;
+                break;
+            }
+        }
+        if (decaDiamonds == null) {
+
+          var object = new Parse.Object("DECAdiamonds");
+          object.set( 'username', username ) ;
+          object.set( 'firstname', currentUser.get('firstname') ) ;
+          object.set( 'lastname', currentUser.get('lastname') ) ;
+          object.set( 'yearindeca', currentUser.get('yearindeca') ) ;
+          object.set( 'FM_bucket', parseInt($("#preparation").val(), 10) ) ;                   // CHANGE THIS
+          object.save(null, {
+            success: function(object) {
+                // alert("Saved new user");
+                alert("Success logging points!");
+            },
+            error: function(object, error) {
+                alert('error saving for new user:' + error.message);
+            }
+        });
+                   // alert("fail");
+               } else {
+                var val;
+                if (decaDiamonds.get('FM_bucket') == null || decaDiamonds.get('FM_bucket') == undefined)
+                {
+                  val = 0;
+                }
+                else
+                {
+                    val = decaDiamonds.get('FM_bucket');
+                }
+                decaDiamonds.set( 'FM_bucket', val + parseInt($("#preparation").val(), 10)) ;               // CHANGE THIS
+                decaDiamonds.save(null, {
+                    success: function(object) {
+                        // alert("Saved for existing user.");
+                        alert("Success logging points!" );
+
+                    },
+                    error: function(object, error) {
+                        alert('Error saving for existing user:' + error.message);
+                    }
+                });
+            }
+
+
+        },
+        error: function (error) {
+           alert("Error")
+       }
+
+   })
+
+        }
+
+    }); // end of points button actions
+
             var isopen = false;
             $("#icon-bar1").click(function()
             {
