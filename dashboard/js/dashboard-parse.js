@@ -164,7 +164,7 @@ if (currentUser) {
    });
 
             $("#pointsbutton").click(function(){
-            var thepass = 'jacuzzi';                 						// CHANGE THIS
+            var thepass = 'svcdc';                 						// CHANGE THIS
             // alert ($('#pointspass').val());
             if ($('#pointspass').val() == thepass)
             {
@@ -199,7 +199,7 @@ if (currentUser) {
           object.set( 'firstname', currentUser.get('firstname') ) ;
           object.set( 'lastname', currentUser.get('lastname') ) ;
           object.set( 'yearindeca', currentUser.get('yearindeca') ) ;
-          object.set( 'SS_110216', 3 ) ;									 // CHANGE THIS
+          object.set( 'FM_110416', 3 ) ;									 // CHANGE THIS
           object.save(null, {
             success: function(object) {
                 // alert("Saved new user");
@@ -211,7 +211,7 @@ if (currentUser) {
         });
                    // alert("fail");
                } else {
-                decaDiamonds.set( 'SS_110216', 3 ) ;							 // CHANGE THIS
+                decaDiamonds.set( 'FM_110416', 3 ) ;							 // CHANGE THIS
                 decaDiamonds.save(null, {
                     success: function(object) {
                         // alert("Saved for existing user.");
