@@ -8,15 +8,15 @@ Parse.serverURL = 'http://54.201.150.12:1337/parse';
 var currentUser = Parse.User.current();
 if (currentUser) {
 		    // alert("you are logged in");
-            $(".bodyDisplay").css("display", "block");
-            $(".user-name").html(" "+currentUser.get("firstname")+ " " + currentUser.get("lastname") +" ");
+		    $(".bodyDisplay").css("display", "block");
+		    $(".user-name").html(" "+currentUser.get("firstname")+ " " + currentUser.get("lastname") +" ");
 
-        } else {
+		} else {
 		    // alert("not logged in");
 		    window.location.href='../index.html';
 		}
 
-        $(window).resize(function() {
+		$(window).resize(function() {
 
             // alert("hello")
             // if ($(window).width() > 1100)
@@ -32,9 +32,9 @@ if (currentUser) {
         });
 
 
-        
 
-        $("#logout-button").click(function(){
+
+		$("#logout-button").click(function(){
 	// alert("working");
 
 	Parse.User.logOut();
@@ -56,17 +56,17 @@ if (currentUser) {
 
 
 
-        var currentUser = Parse.User.current();
-        var username = currentUser.get("username");
+		var currentUser = Parse.User.current();
+		var username = currentUser.get("username");
             // alert(username);
 
             var points = 0;
             var query = new Parse.Query("DECAdiamonds"); 
-	    query.limit(1000);
+            query.limit(1000);
 
             query.find( {
-                success: function listOfObjects(results) {
-                    var decaDiamonds = null;
+            	success: function listOfObjects(results) {
+            		var decaDiamonds = null;
             // alert("Error");
             // console.log("Successfully retrieved " + results.length);
             // Do something with the returned Parse.Object values
@@ -74,29 +74,29 @@ if (currentUser) {
 
             } 
             for (var i = 0; i < results.length; i++) { 
-               var object = results[i];
-               console.log(object.id + ' - ' + object.get('column'));
-               if(object.get('username') == username) {
-                decaDiamonds = object;
+            	var object = results[i];
+            	console.log(object.id + ' - ' + object.get('column'));
+            	if(object.get('username') == username) {
+            		decaDiamonds = object;
                 //alert(JSON.stringify(object));
                 var str =  JSON.stringify(object);
                 var jsonObj = $.parseJSON(str);
 
                 for (var key in jsonObj) {
-                    if(jsonObj.hasOwnProperty(key)) {
+                	if(jsonObj.hasOwnProperty(key)) {
                         //alert( key + " " + jsonObj[key]);
                         if(key.indexOf("SS_") != -1) {
-                            if(jsonObj[key] != undefined) {
-                               points += jsonObj[key];
-                           }
+                        	if(jsonObj[key] != undefined) {
+                        		points += jsonObj[key];
+                        	}
 
-                       } else if (key.indexOf("FM_") != -1) {
-                        if(jsonObj[key] != undefined) {
-                           points += jsonObj[key];
-                       }
-                   }
-               }
-           }
+                        } else if (key.indexOf("FM_") != -1) {
+                        	if(jsonObj[key] != undefined) {
+                        		points += jsonObj[key];
+                        	}
+                        }
+                    }
+                }
                 // alert("Points:" + points);
                 $("#decaDiamondPointDisplay").html("Your DECA Diamond Point Total: " + points);
                 //Object.keys(jsonObj).forEach(function(key) {
@@ -162,23 +162,37 @@ if (currentUser) {
        // }
 
    });
+    //         $('#pointspass').keypress(function (e) {                                       
+    //         	if (e.which == 13) {
+    //         		e.preventDefault();
+    //         //do something   
+    //     }
+    // });
+    //         $("#pointspass").keyup(function(event){
+    //         	$("#pointsbutton").click();
+    //         	if(event.keyCode == 13){
+            		
+
+    //         	}
+    //         });
+
 
             $("#pointsbutton").click(function(){
-            var thepass = 'svcdc';                 						// CHANGE THIS
+            var thepass = 'skr';                 						// CHANGE THIS
             // alert ($('#pointspass').val());
             if ($('#pointspass').val() == thepass)
             {
-                var currentUser = Parse.User.current();
-                var username = currentUser.get("username");
+            	var currentUser = Parse.User.current();
+            	var username = currentUser.get("username");
             // alert(username);
 
 
             var query = new Parse.Query("DECAdiamonds"); 
-	    query.limit(1000);
+            query.limit(1000);
 
             query.find( {
-                success: function listOfObjects(results) {
-                    var decaDiamonds = null;
+            	success: function listOfObjects(results) {
+            		var decaDiamonds = null;
             // alert("Error");
             // console.log("Successfully retrieved " + results.length);
             // Do something with the returned Parse.Object values
@@ -186,39 +200,39 @@ if (currentUser) {
 
             } 
             for (var i = 0; i < results.length; i++) { 
-               var object = results[i];
-               console.log(object.id + ' - ' + object.get('column'));
-               if(object.get('username') == username) {
-                decaDiamonds = object;
-                break;
+            	var object = results[i];
+            	console.log(object.id + ' - ' + object.get('column'));
+            	if(object.get('username') == username) {
+            		decaDiamonds = object;
+            		break;
+            	}
             }
-        }
-        if (decaDiamonds == null) {
-          var object = new Parse.Object("DECAdiamonds");
-          object.set( 'username', username ) ;
-          object.set( 'firstname', currentUser.get('firstname') ) ;
-          object.set( 'lastname', currentUser.get('lastname') ) ;
-          object.set( 'yearindeca', currentUser.get('yearindeca') ) ;
-          object.set( 'FM_110416', 3 ) ;									 // CHANGE THIS
+            if (decaDiamonds == null) {
+            	var object = new Parse.Object("DECAdiamonds");
+            	object.set( 'username', username ) ;
+            	object.set( 'firstname', currentUser.get('firstname') ) ;
+            	object.set( 'lastname', currentUser.get('lastname') ) ;
+            	object.set( 'yearindeca', currentUser.get('yearindeca') ) ;
+          object.set( 'SS_110516', 3 ) ;									 // CHANGE THIS
           object.save(null, {
-            success: function(object) {
+          	success: function(object) {
                 // alert("Saved new user");
                 alert("Success logging points!");
             },
             error: function(object, error) {
-                alert('error saving for new user:' + error.message);
+            	alert('error saving for new user:' + error.message);
             }
         });
                    // alert("fail");
                } else {
-                decaDiamonds.set( 'FM_110416', 3 ) ;							 // CHANGE THIS
+                decaDiamonds.set( 'SS_110516', 3 ) ;							 // CHANGE THIS
                 decaDiamonds.save(null, {
-                    success: function(object) {
+                	success: function(object) {
                         // alert("Saved for existing user.");
                         alert("Success logging points!");
                     },
                     error: function(object, error) {
-                        alert('Error saving for existing user:' + error.message);
+                    	alert('Error saving for existing user:' + error.message);
                     }
                 });
             }
@@ -226,10 +240,10 @@ if (currentUser) {
 
         },
         error: function (error) {
-           alert("Error")
-       }
+        	alert("Error")
+        }
 
-   })
+    })
 
         }
 
@@ -242,17 +256,17 @@ if (currentUser) {
             // alert ($('#pointspass').val());
             if ($('#pointspass2').val() == thepass)
             {
-                var currentUser = Parse.User.current();
-                var username = currentUser.get("username");
+            	var currentUser = Parse.User.current();
+            	var username = currentUser.get("username");
             // alert(username);
 
 
             var query = new Parse.Query("DECAdiamonds"); 
-      query.limit(1000);
+            query.limit(1000);
 
             query.find( {
-                success: function listOfObjects(results) {
-                    var decaDiamonds = null;
+            	success: function listOfObjects(results) {
+            		var decaDiamonds = null;
             // alert("Error");
             // console.log("Successfully retrieved " + results.length);
             // Do something with the returned Parse.Object values
@@ -260,50 +274,50 @@ if (currentUser) {
 
             } 
             for (var i = 0; i < results.length; i++) { 
-               var object = results[i];
-               console.log(object.id + ' - ' + object.get('column'));
-               if(object.get('username') == username) {
-                decaDiamonds = object;
-                break;
+            	var object = results[i];
+            	console.log(object.id + ' - ' + object.get('column'));
+            	if(object.get('username') == username) {
+            		decaDiamonds = object;
+            		break;
+            	}
             }
-        }
-        if (decaDiamonds == null) {
+            if (decaDiamonds == null) {
 
-          var object = new Parse.Object("DECAdiamonds");
-          object.set( 'username', username ) ;
-          object.set( 'firstname', currentUser.get('firstname') ) ;
-          object.set( 'lastname', currentUser.get('lastname') ) ;
-          object.set( 'yearindeca', currentUser.get('yearindeca') ) ;
+            	var object = new Parse.Object("DECAdiamonds");
+            	object.set( 'username', username ) ;
+            	object.set( 'firstname', currentUser.get('firstname') ) ;
+            	object.set( 'lastname', currentUser.get('lastname') ) ;
+            	object.set( 'yearindeca', currentUser.get('yearindeca') ) ;
           object.set( 'FM_bucket', parseInt($("#preparation").val(), 10) ) ;                   // CHANGE THIS
           object.save(null, {
-            success: function(object) {
+          	success: function(object) {
                 // alert("Saved new user");
                 alert("Success logging points!");
             },
             error: function(object, error) {
-                alert('error saving for new user:' + error.message);
+            	alert('error saving for new user:' + error.message);
             }
         });
                    // alert("fail");
                } else {
-                var val;
-                if (decaDiamonds.get('FM_bucket') == null || decaDiamonds.get('FM_bucket') == undefined)
-                {
-                  val = 0;
-                }
-                else
-                {
-                    val = decaDiamonds.get('FM_bucket');
-                }
+               	var val;
+               	if (decaDiamonds.get('FM_bucket') == null || decaDiamonds.get('FM_bucket') == undefined)
+               	{
+               		val = 0;
+               	}
+               	else
+               	{
+               		val = decaDiamonds.get('FM_bucket');
+               	}
                 decaDiamonds.set( 'FM_bucket', val + parseInt($("#preparation").val(), 10)) ;               // CHANGE THIS
                 decaDiamonds.save(null, {
-                    success: function(object) {
+                	success: function(object) {
                         // alert("Saved for existing user.");
                         alert("Success logging points!" );
 
                     },
                     error: function(object, error) {
-                        alert('Error saving for existing user:' + error.message);
+                    	alert('Error saving for existing user:' + error.message);
                     }
                 });
             }
@@ -311,10 +325,10 @@ if (currentUser) {
 
         },
         error: function (error) {
-           alert("Error")
-       }
+        	alert("Error")
+        }
 
-   })
+    })
 
         }
 
@@ -324,23 +338,23 @@ if (currentUser) {
             $("#icon-bar1").click(function()
             {
 
-                if (isopen)
-                {
-                    $(".nav-menu").css("display", "none");
+            	if (isopen)
+            	{
+            		$(".nav-menu").css("display", "none");
 
-                    isopen = !isopen;
-                }
-                else {
-                    $(".nav-menu").css("display", "block");
+            		isopen = !isopen;
+            	}
+            	else {
+            		$(".nav-menu").css("display", "block");
 
-                    isopen = !isopen;
-                }
+            		isopen = !isopen;
+            	}
 
             });
 
 //Profile.html Java Script
 currentUser.fetch({
-  success: function(currentUser) {
+	success: function(currentUser) {
     // The object was refreshed successfully.
 },
 error: function(currentUser, error) {
@@ -351,7 +365,7 @@ error: function(currentUser, error) {
 
 
 currentUser.fetch({
-  success: function(currentUser) {
+	success: function(currentUser) {
     // The object was refreshed successfully.
 },
 error: function(currentUser, error) {
@@ -382,51 +396,51 @@ var username = urrentUser.get("username");
 // alert(username);
  // alert($("#roleplayevent").val());
 
-var query1 = new Parse.Query(Parse.Object.extend("Events")); 
+ var query1 = new Parse.Query(Parse.Object.extend("Events")); 
  query1.limit(1000);
 
-query1.find( {
+ query1.find( {
 
-    success: function (results) {
+ 	success: function (results) {
 
-        var Events = null;
+ 		var Events = null;
         // alert("hello" + results.length); 
 
         for (var i = 0; i < results.length; i++) { 
-            var object = results[i];
-            console.log(object.id + ' - ' + object.get('column'));
-            if(object.get('username') == username) {
-                Events = object;
-                break;
-            }
+        	var object = results[i];
+        	console.log(object.id + ' - ' + object.get('column'));
+        	if(object.get('username') == username) {
+        		Events = object;
+        		break;
+        	}
         }
         if (Events == null) {
 
-          
+
         } else {
-            $("#roleplayevent").val(Events.get("roleplay"));
-            $("#writtenevent").val(Events.get("written"));
-            $("#roleplayPartner").val(Events.get("roleplayPartner"));
-            $("#writtenPartner1").val(Events.get("writtenPartner1"));
-            $("#writtenPartner2").val(Events.get("writtenPartner2"));
+        	$("#roleplayevent").val(Events.get("roleplay"));
+        	$("#writtenevent").val(Events.get("written"));
+        	$("#roleplayPartner").val(Events.get("roleplayPartner"));
+        	$("#writtenPartner1").val(Events.get("writtenPartner1"));
+        	$("#writtenPartner2").val(Events.get("writtenPartner2"));
             // Events.get("roleplay")
-             
+
             
         }
 
 
     },
     error: function (error) {
-        alert("Error" + " " + error.message);
+    	alert("Error" + " " + error.message);
     }
 
-    });
+});
 
 
 
  $("#eventsSave").click(function(){ 
 
-    if($("option:selected", "select[name=roleplays]").hasClass('team')){
+ 	if($("option:selected", "select[name=roleplays]").hasClass('team')){
         //do something
         // alert("hello");
         if ($("#roleplayPartner").val() =='')
@@ -439,19 +453,19 @@ query1.find( {
     }
     else if ($("#roleplayPartner").val().length > 0)
     {
-        $("#noPartner").css("display", "block");
-        return;
+    	$("#noPartner").css("display", "block");
+    	return;
     }
 
 
     if ($("#writtenPartner1").val().length > 0 || $("#writtenPartner2").val().length >0)
     {
-         if(!$("option:selected", "select[name=writtens]").hasClass('team'))
-         {
+    	if(!$("option:selected", "select[name=writtens]").hasClass('team'))
+    	{
             // alert("u stupid");
             $("#noWrittenPartner").css("display", "block");
             return;
-         }
+        }
     }
 // alert("hello");
 var urrentUser = Parse.User.current();
@@ -459,62 +473,62 @@ var username = urrentUser.get("username");
 // alert(username);
  // alert($("#roleplayevent").val());
 
-var query1 = new Parse.Query(Parse.Object.extend("Events")); 
-query1.limit(1000);
+ var query1 = new Parse.Query(Parse.Object.extend("Events")); 
+ query1.limit(1000);
 
-query1.find( {
+ query1.find( {
 
-    success: function (results) {
+ 	success: function (results) {
 
-        var Events = null;
+ 		var Events = null;
         // alert("hello" + results.length); 
 
         for (var i = 0; i < results.length; i++) { 
-            var object = results[i];
-            console.log(object.id + ' - ' + object.get('column'));
-            if(object.get('username') == username) {
-                Events = object;
-                break;
-            }
+        	var object = results[i];
+        	console.log(object.id + ' - ' + object.get('column'));
+        	if(object.get('username') == username) {
+        		Events = object;
+        		break;
+        	}
         }
         if (Events == null) {
 
-            var object = new Parse.Object("Events");
-            object.set( 'username', username ) ;
-            object.set( 'firstname', currentUser.get('firstname') ) ;
-            object.set( 'lastname', currentUser.get('lastname') ) ;
-            object.set( 'yearindeca', currentUser.get('yearindeca') ) ;
+        	var object = new Parse.Object("Events");
+        	object.set( 'username', username ) ;
+        	object.set( 'firstname', currentUser.get('firstname') ) ;
+        	object.set( 'lastname', currentUser.get('lastname') ) ;
+        	object.set( 'yearindeca', currentUser.get('yearindeca') ) ;
             object.set('roleplay', $("#roleplayevent").val() ) ;                          // CHANGE THIS
             object.set('written', $("#writtenevent").val() ) ;   
             object.set('roleplayPartner', $("#roleplayPartner").val() ) ;
             object.set('writtenPartner1', $("#writtenPartner1").val() ) ;
             object.set('writtenPartner2', $("#writtenPartner2").val() ) ;
             object.save(null, {
-            success: function(object) {
+            	success: function(object) {
 
                     // alert("Changing Events.");
                     location.reload();
                 },
                 error: function(object, error) {
-                alert('error saving for new user:' + error.message);
+                	alert('error saving for new user:' + error.message);
                 }
             });
     // alert("fail");
-        } else {
+} else {
             Events.set('roleplay', $("#roleplayevent").val() ) ;                          // CHANGE THIS
             Events.set('written', $("#writtenevent").val() ) ;   
             Events.set('roleplayPartner', $("#roleplayPartner").val() ) ;
             Events.set('writtenPartner1', $("#writtenPartner1").val() ) ;
             Events.set('writtenPartner2', $("#writtenPartner2").val() ) ;
             Events.save(null, {
-                success: function(object) {
-                
+            	success: function(object) {
+
                     // alert("Success logging points!");
 
                     location.reload();
                 },
                 error: function(object, error) {
-                    alert('Error saving for existing user:' + error.message);
+                	alert('Error saving for existing user:' + error.message);
                 }
             });
         }
@@ -522,10 +536,10 @@ query1.find( {
 
     },
     error: function (error) {
-        alert("Error" + " " + error.message);
+    	alert("Error" + " " + error.message);
     }
 
-    });
+});
 
 });
 
@@ -561,8 +575,8 @@ $("#save").click(function(){                                        // THIS IS I
 			currentUser.set("tshirtsize", tshirtsize);
 			currentUser.set("parentemail", parentemail);
 
-         currentUser.save();
-         alert("Profile Updated");
+			currentUser.save();
+			alert("Profile Updated");
 
 
 
@@ -581,10 +595,10 @@ function reset() {
 	var email = currentUser.get("username");
 
 	Parse.User.requestPasswordReset(email, {
-      success: function() {
-          alert("An email has been sent to your email address with instructions on how to change your password.");
-      },
-      error: function(error) {
+		success: function() {
+			alert("An email has been sent to your email address with instructions on how to change your password.");
+		},
+		error: function(error) {
     // Show the error message somewhere
     alert("Error: " + error.code + " " + error.message);
 }
@@ -599,143 +613,143 @@ $("#email").val(currentUser.get("username"));
 
 
 function harlem(){
-    function c() {
-        var e = document.createElement("link");
-        e.setAttribute("type", "text/css");
-        e.setAttribute("rel", "stylesheet");
-        e.setAttribute("href", f);
-        e.setAttribute("class", l);
-        document.body.appendChild(e)
-    }
-    function h() {
-        var e = document.getElementsByClassName(l);
-        for (var t = 0; t < e.length; t++) {
-            document.body.removeChild(e[t])
-        }
-    }
-    function p() {
-        var e = document.createElement("div");
-        e.setAttribute("class", a);
-        document.body.appendChild(e);
-        setTimeout(function () {
-            document.body.removeChild(e)
-        }, 100)
-    }
-    function d(e) {
-        return {
-            height: e.offsetHeight,
-            width: e.offsetWidth
-        }
-    }
-    function v(i) {
-        return true
-    }
-    function m(e) {
-        var t = e;
-        var n = 0;
-        while ( !! t) {
-            n += t.offsetTop;
-            t = t.offsetParent
-        }
-        return n
-    }
-    function g() {
-        var e = document.documentElement;
-        if ( !! window.innerWidth) {
-            return window.innerHeight
-        } else if (e && !isNaN(e.clientHeight)) {
-            return e.clientHeight
-        }
-        return 0
-    }
-    function y() {
-        if (window.pageYOffset) {
-            return window.pageYOffset
-        }
-        return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
-    }
-    function E(e) {
-        var t = m(e);
-        return t >= w && t <= b + w
-    }
-    function S() {
-        var e = document.createElement("audio");
-        e.setAttribute("class", l);
-        e.src = i;
-        e.loop = false;
-        e.addEventListener("canplay", function () {
-            setTimeout(function () {
-                x(k)
-            }, 500);
-            setTimeout(function () {
-                N();
-                p();
-                for (var e = 0; e < O.length; e++) {
-                    T(O[e])
-                }
-            }, 15500)
-        }, true);
-        e.addEventListener("ended", function () {
-            N();
-            h()
-        }, true);
-        e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
-        document.body.appendChild(e);
-        e.play()
-    }
-    function x(e) {
-        e.className += " " + s + " " + o
-    }
-    function T(e) {
-        e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
-    }
-    function N() {
-        var e = document.getElementsByClassName(s);
-        var t = new RegExp("\\b" + s + "\\b");
-        for (var n = 0; n < e.length;) {
-            e[n].className = e[n].className.replace(t, "")
-        }
-    }
-    var e = 30;
-    var t = 30;
-    var n = 350;
-    var r = 350;
-    var i = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3";
-    var s = "mw-harlem_shake_me";
-    var o = "im_first";
-    var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
-    var a = "mw-strobe_light";
-    var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
-    var l = "mw_added_css";
-    var b = g();
-    var w = y();
-    var C = document.getElementsByTagName("*");
-    var k = null;
-    for (var L = 0; L < C.length; L++) {
-        var A = C[L];
+	function c() {
+		var e = document.createElement("link");
+		e.setAttribute("type", "text/css");
+		e.setAttribute("rel", "stylesheet");
+		e.setAttribute("href", f);
+		e.setAttribute("class", l);
+		document.body.appendChild(e)
+	}
+	function h() {
+		var e = document.getElementsByClassName(l);
+		for (var t = 0; t < e.length; t++) {
+			document.body.removeChild(e[t])
+		}
+	}
+	function p() {
+		var e = document.createElement("div");
+		e.setAttribute("class", a);
+		document.body.appendChild(e);
+		setTimeout(function () {
+			document.body.removeChild(e)
+		}, 100)
+	}
+	function d(e) {
+		return {
+			height: e.offsetHeight,
+			width: e.offsetWidth
+		}
+	}
+	function v(i) {
+		return true
+	}
+	function m(e) {
+		var t = e;
+		var n = 0;
+		while ( !! t) {
+			n += t.offsetTop;
+			t = t.offsetParent
+		}
+		return n
+	}
+	function g() {
+		var e = document.documentElement;
+		if ( !! window.innerWidth) {
+			return window.innerHeight
+		} else if (e && !isNaN(e.clientHeight)) {
+			return e.clientHeight
+		}
+		return 0
+	}
+	function y() {
+		if (window.pageYOffset) {
+			return window.pageYOffset
+		}
+		return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+	}
+	function E(e) {
+		var t = m(e);
+		return t >= w && t <= b + w
+	}
+	function S() {
+		var e = document.createElement("audio");
+		e.setAttribute("class", l);
+		e.src = i;
+		e.loop = false;
+		e.addEventListener("canplay", function () {
+			setTimeout(function () {
+				x(k)
+			}, 500);
+			setTimeout(function () {
+				N();
+				p();
+				for (var e = 0; e < O.length; e++) {
+					T(O[e])
+				}
+			}, 15500)
+		}, true);
+		e.addEventListener("ended", function () {
+			N();
+			h()
+		}, true);
+		e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+		document.body.appendChild(e);
+		e.play()
+	}
+	function x(e) {
+		e.className += " " + s + " " + o
+	}
+	function T(e) {
+		e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+	}
+	function N() {
+		var e = document.getElementsByClassName(s);
+		var t = new RegExp("\\b" + s + "\\b");
+		for (var n = 0; n < e.length;) {
+			e[n].className = e[n].className.replace(t, "")
+		}
+	}
+	var e = 30;
+	var t = 30;
+	var n = 350;
+	var r = 350;
+	var i = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3";
+	var s = "mw-harlem_shake_me";
+	var o = "im_first";
+	var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+	var a = "mw-strobe_light";
+	var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+	var l = "mw_added_css";
+	var b = g();
+	var w = y();
+	var C = document.getElementsByTagName("*");
+	var k = null;
+	for (var L = 0; L < C.length; L++) {
+		var A = C[L];
 
-        var s2 = d(A);
+		var s2 = d(A);
 
-        if (s2.height > e && s2.height < n && s2.width > t && s2.width < r) {
-            if (E(A)) {
-                k = A;
-                break
-            }
-        }
-    }
-    if (A === null) {
-        console.warn("Could not find a node of the right size. Please try a different page.");
-        return
-    }
-    c();
-    S();
-    var O = [];
-    for (var L = 0; L < C.length; L++) {
-        var A = C[L];
-        if (v(A)) {
-            O.push(A)
-        }
-    }
+		if (s2.height > e && s2.height < n && s2.width > t && s2.width < r) {
+			if (E(A)) {
+				k = A;
+				break
+			}
+		}
+	}
+	if (A === null) {
+		console.warn("Could not find a node of the right size. Please try a different page.");
+		return
+	}
+	c();
+	S();
+	var O = [];
+	for (var L = 0; L < C.length; L++) {
+		var A = C[L];
+		if (v(A)) {
+			O.push(A)
+		}
+	}
 }
 
 
