@@ -218,6 +218,7 @@ if (currentUser) {
           	success: function(object) {
                 // alert("Saved new user");
                 alert("Success logging points!");
+                location.reload();
             },
             error: function(object, error) {
             	alert('error saving for new user:' + error.message);
@@ -230,6 +231,7 @@ if (currentUser) {
                 	success: function(object) {
                         // alert("Saved for existing user.");
                         alert("Success logging points!");
+                        location.reload();
                     },
                     error: function(object, error) {
                     	alert('Error saving for existing user:' + error.message);
@@ -293,6 +295,7 @@ if (currentUser) {
           	success: function(object) {
                 // alert("Saved new user");
                 alert("Success logging points!");
+                location.reload();
             },
             error: function(object, error) {
             	alert('error saving for new user:' + error.message);
@@ -314,6 +317,7 @@ if (currentUser) {
                 	success: function(object) {
                         // alert("Saved for existing user.");
                         alert("Success logging points!" );
+                        location.reload();
 
                     },
                     error: function(object, error) {
