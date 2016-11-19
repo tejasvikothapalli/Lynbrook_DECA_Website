@@ -178,7 +178,7 @@ if (currentUser) {
 
 
             $("#pointsbutton").click(function(){
-            var thepass = 'clip';                 						// CHANGE THIS
+            var thepass = 'sv';                 						// CHANGE THIS
             // alert ($('#pointspass').val());
             if ($('#pointspass').val() == thepass)
             {
@@ -213,7 +213,7 @@ if (currentUser) {
             	object.set( 'firstname', currentUser.get('firstname') ) ;
             	object.set( 'lastname', currentUser.get('lastname') ) ;
             	object.set( 'yearindeca', currentUser.get('yearindeca') ) ;
-          object.set( 'FM_111816', 3 ) ;									 // CHANGE THIS
+          object.set( 'SS_111916', 3 ) ;									 // CHANGE THIS
           object.save(null, {
           	success: function(object) {
                 // alert("Saved new user");
@@ -226,7 +226,7 @@ if (currentUser) {
         });
                    // alert("fail");
                } else {
-                decaDiamonds.set( 'FM_111816', 3 ) ;							 // CHANGE THIS
+                decaDiamonds.set( 'SS_111916', 3 ) ;							 // CHANGE THIS
                 decaDiamonds.save(null, {
                 	success: function(object) {
                         // alert("Saved for existing user.");
