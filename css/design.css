@@ -726,6 +726,11 @@ button:hover {
   background-image: url("../img/officers.jpg");
 }
 
+.background-alums
+{
+  background-image: url("../img/alums.jpg");
+}
+
 .scrolling-footer {
     position: relative;
     height: 25%;
