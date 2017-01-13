@@ -1,21 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lynbrook DECA - Dashboard</title>
-<link rel="icon" href="../img/favico.png"></link>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lynbrook DECA - Dashboard</title>
+	<link rel="icon" href="../img/favico.png"></link>
 
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/datepicker3.css" rel="stylesheet">
-<link href="css/bootstrap-table.css" rel="stylesheet">
-<link href="css/styles.css" rel="stylesheet">
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="https://www.parsecdn.com/js/parse-1.6.14.min.js"></script>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/datepicker3.css" rel="stylesheet">
+	<link href="css/bootstrap-table.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src="https://www.parsecdn.com/js/parse-1.6.14.min.js"></script>
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
 <script src="js/respond.min.js"></script>
 <![endif]-->
+
+<script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+<script>
+  // Initialize Firebase
+//   var config = {
+//   	apiKey: "AIzaSyBdf755F2RHw5-IUsMR1rYUyCGvpdvKSOk",
+//   	authDomain: "lynbrook-deca.firebaseapp.com",
+//   	databaseURL: "https://lynbrook-deca.firebaseio.com",
+//   	storageBucket: "lynbrook-deca.appspot.com",
+//   	messagingSenderId: "105997057044"
+//   };
+//   firebase.initializeApp(config);
+
+//   const messaging = firebase.messaging();
+//   messaging.requestPermission()
+//   .then(function() {
+//   	console.log('Notification permission granted.');
+//   	return messaging.getToken();
+//   // TODO(developer): Retrieve an Instance ID token for use with FCM.
+//   // ...
+// })
+//   .then (function(token)
+//   {
+//   	console.log(token);
+//   })
+//   .catch(function(err) {
+//   	console.log('Unable to get permission to notify.', err);
+//   });
+
+
+</script>
 
 </head>
 
@@ -29,52 +60,52 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-        		
+
 
 				<div id="navbarlogo" style = "margin-right:20px">
-            		<a href="" ><img src="../img/favico.png"/></a>
-        		</div>
-        
+					<a href="" ><img src="../img/favico.png"/></a>
+				</div>
+
 		        <!-- <div id="lynbrookdeca">
 		        	<p><a class = "navbar-brand" style = "font-size:3vw" href="../index.html">Lynbrook DECA</a></p> 
 		        </div> -->
 		        
 		        
-        		
-        		
-				<!-- <a class="navbar-brand" href="dashboard.html"><span>Lynbrook DECA</span> Admin</a> -->
-				<ul class = "dash-hover">
 
-					
-					<li class = "s"><a href="../index.html">HOME</a></li>
-					<li class = "s"><a href="../about.html">ABOUT</a></li>
-					<li class = "s"><a href="../calendar.html">CALENDAR</a></li>
-					<li class = "s"><a href="../events.html">EVENTS</a></li>
-	                <li class = "s"><a href="../conferences.html" style="border-right:1px solid black">CONFERENCES</a></li>
+
+		        <!-- <a class="navbar-brand" href="dashboard.html"><span>Lynbrook DECA</span> Admin</a> -->
+		        <ul class = "dash-hover">
+
+
+		        	<li class = "s"><a href="../index.html">HOME</a></li>
+		        	<li class = "s"><a href="../about.html">ABOUT</a></li>
+		        	<li class = "s"><a href="../calendar.html">CALENDAR</a></li>
+		        	<li class = "s"><a href="../events.html">EVENTS</a></li>
+		        	<li class = "s"><a href="../conferences.html" style="border-right:1px solid black">CONFERENCES</a></li>
 	                <!-- <button class="login-button" id="loginform">LOG IN</button>
 	                <button class="signup-button" onclick="window.location='signup.html';">SIGN UP</button> -->
-				
-	             
-				<ul class="user-menu">
-					<li class="dropdown pull-right">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><span class ="user-name"> User </span><span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu" style ="margin-top:20px">
-							<li style ="padding-top:0"><a href="dashboard.html"><span class="glyphicon glyphicon-bookmark"></span> Dashboard</a></li>
-							<li style ="padding-top:0" ><a href="profile.html"><span class="glyphicon glyphicon-user"></span> Edit My Profile</a></li>
-							<li style ="padding-top:0"><a href="#" id="logout-button"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-							
-						</ul>
-						
-					</li>
-				</ul>
-				</ul>
-				
-			</div>
-							
-		</div><!-- /.container-fluid -->
+
+
+	                <ul class="user-menu">
+	                	<li class="dropdown pull-right">
+	                		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><span class ="user-name"> User </span><span class="caret"></span></a>
+	                		<ul class="dropdown-menu" role="menu" style ="margin-top:20px">
+	                			<li style ="padding-top:0"><a href="dashboard.html"><span class="glyphicon glyphicon-bookmark"></span> Dashboard</a></li>
+	                			<li style ="padding-top:0" ><a href="profile.html"><span class="glyphicon glyphicon-user"></span> Edit My Profile</a></li>
+	                			<li style ="padding-top:0"><a href="#" id="logout-button"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+
+	                		</ul>
+
+	                	</li>
+	                </ul>
+	            </ul>
+
+	        </div>
+
+	    </div><!-- /.container-fluid -->
 
 	</nav>
-<div id="" class="nav-menu" style="padding-top: 0px; display:none">
+	<div id="" class="nav-menu" style="padding-top: 0px; display:none">
 
 		
 		<ul class="nav menu" style = "text-align:center; background-color:whitesmoke;">
@@ -111,7 +142,7 @@
 			
 		</ul>
 	</div><!--/.sidebar-->
-		
+
 	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar" style="padding-top: 40px">
 		
 		<ul class="nav menu">
@@ -129,7 +160,7 @@
 			
 		</ul>
 	</div><!--/.sidebar-->
-		
+
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
 		<div class="row">
 			<ol class="breadcrumb">
@@ -148,7 +179,7 @@
 		
 
 
-			<div class="row a100" style ="width:71%; float:right; margin-right: 0;">
+		<div class="row a100" style ="width:71%; float:right; margin-right: 0;">
 			<div class="col-lg-12">
 				<div class="panel panel-default"  style ="float:right ;margin-right: 0px">
 
@@ -176,136 +207,136 @@
 						<h1 style="text-align:center"><em style="color:green;font-size:90%" class="glyphicon glyphicon-tint"></em> Mock Conference</h1> <!-- Title of Announcement -->
 						<h3 style="text-align:right">October 27, 2016</h3> <!-- Date of Announcement -->
 						<p> 	
-						The following timeslots stand to change based on how timing works out!:
-						<h4><strong><a target="_blank" href= "https://docs.google.com/spreadsheets/d/1joDo2vWFud3ypHOZ55xdQfrJtNQGDIepOt-rmSBAIvw/edit#gid=0">Timeslots</a></strong></h4>
+							The following timeslots stand to change based on how timing works out!:
+							<h4><strong><a target="_blank" href= "https://docs.google.com/spreadsheets/d/1joDo2vWFud3ypHOZ55xdQfrJtNQGDIepOt-rmSBAIvw/edit#gid=0">Timeslots</a></strong></h4>
 
-						Tests/Roleplay Senarios can be found in the following drive folder:
-						<h4><strong><a target="_blank" href= "https://drive.google.com/drive/folders/0B1BPD9D4wAzFV0kyOVo5OTJ1Rms?usp=sharing">Folder</a></strong></h4>
+							Tests/Roleplay Senarios can be found in the following drive folder:
+							<h4><strong><a target="_blank" href= "https://drive.google.com/drive/folders/0B1BPD9D4wAzFV0kyOVo5OTJ1Rms?usp=sharing">Folder</a></strong></h4>
 
-						<hr>
-
-
-						<h1 style="text-align:center"><em style="color:blue;font-size:80%" class="glyphicon glyphicon-search"></em> Sign Up for SVCDC </h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">November 10, 2016</h3> <!-- Date of Announcement -->
-						<p>
-							Our first competitive conference of the year is coming up! The <strong>Silicon Valley Career Development Conference (SVCDC) will be held in San Jose from January 6-8th, 2017</strong>. This is the opportunity for members to compete and win awards in the roleplay and written events we have been preparing for in the past few months!
-							<br>
-							<br>
-
-							Anyone interested in attending must have all of the indicated items and <strong>forms completed and turned in by Monday, November 13th</strong>. Due to the hecticness of registration, late forms will NOT be accepted. The cost of the conference this year is <strong>$210 for registration and hotel</strong>. Please reach out to our adviser Mr. Fulk if you will have any difficulty affording this fee but would still like to attend. 
-
-							<br>
-							<br>
-							As DECA is instituting the CTE requirement across all schools, members will be required to provide proof of having been in, or being currently enrolled in a CTE class. You can find and print out a copy of your class transcripts via Infinite Campus. 
-
-							<br>
-							<br>
-							This year, along with registration we will be requiring all interested attendees to write a short message to Santa! This is a part of Lynbrook DECA's participation in the Macy's Believe campaign, which donates $1 to the Make-a-Wish foundation for every letter sent. Completed letters will be turned in with the physical forms. 
-
-							<br>
-							<br>
-						If you have any questions, feel free to contact <a href = "mailto:vpoperations@lynbrookdeca.org">vpoperations@lynbrookdeca.org</a>.
-
-							<br>
+							<hr>
 
 
+							<h1 style="text-align:center"><em style="color:blue;font-size:80%" class="glyphicon glyphicon-search"></em> Sign Up for SVCDC </h1> <!-- Title of Announcement -->
+							<h3 style="text-align:right">November 10, 2016</h3> <!-- Date of Announcement -->
+							<p>
+								Our first competitive conference of the year is coming up! The <strong>Silicon Valley Career Development Conference (SVCDC) will be held in San Jose from January 6-8th, 2017</strong>. This is the opportunity for members to compete and win awards in the roleplay and written events we have been preparing for in the past few months!
+								<br>
+								<br>
 
-							<h4><strong>To-do list for interested attendees:</strong></h4><br>
+								Anyone interested in attending must have all of the indicated items and <strong>forms completed and turned in by Monday, November 13th</strong>. Due to the hecticness of registration, late forms will NOT be accepted. The cost of the conference this year is <strong>$210 for registration and hotel</strong>. Please reach out to our adviser Mr. Fulk if you will have any difficulty affording this fee but would still like to attend. 
 
+								<br>
+								<br>
+								As DECA is instituting the CTE requirement across all schools, members will be required to provide proof of having been in, or being currently enrolled in a CTE class. You can find and print out a copy of your class transcripts via Infinite Campus. 
 
-					
-						<ol>
-							<li>Fill out <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeI9LF03eNRYkm1aNgiRsnNjaOL-IoCxIzW2Sv8nIG7_GJ3Uw/viewform?c=0&w=1">google form</a> </li>
-							<li>Fill out event selection on <a target="_blank" href="profile.html">profile</a>
-</li>
-							<li>Bring signed hard copies of the <a target="_blank" href="https://drive.google.com/file/d/0B1BPD9D4wAzFQXVOMnZiaDEzOFE/view">DECA Medical Form</a> , <a target="_blank" href="https://drive.google.com/file/d/0B1BPD9D4wAzFbnNCOU1DVHdhN0U/view">Form D</a>, <a target = "_blank" href="https://drive.google.com/file/d/0B1BPD9D4wAzFazRNamk0YlZKR1E/view">Form E</a>, and the <a target = "_blank" href="https://drive.google.com/file/d/0B1BPD9D4wAzFMURsaHByektGXzA/view">FUHSD Release Permit</a> to any officer
-							<strong>(you need your 6th and 7th period teacher signatures for permission to skip class on Jan. 6th on Release Permit Form)</strong>
-						</li>
-							<li>Bring <strong>$210 check addressed to Lynbrook ASB</strong> (with your name and "Lynbrook DECA" in the memo line) to any officer</li>
-							<li>Inform their parents of the upcoming SVCDC Parent Meeting and Informational Night on Wednesday, November 16th in the Library.</li>
-							<li>Bring adorable <a target="_blank" href="https://drive.google.com/file/d/0B1BPD9D4wAzFSW1TSnhNcDZhZmM/view">letter to Santa</a> to any officer</li>
-							<li>Bring latest Progress Report to prove CTE course registration.</li>
-						</ol>
+								<br>
+								<br>
+								This year, along with registration we will be requiring all interested attendees to write a short message to Santa! This is a part of Lynbrook DECA's participation in the Macy's Believe campaign, which donates $1 to the Make-a-Wish foundation for every letter sent. Completed letters will be turned in with the physical forms. 
 
-						</p>
+								<br>
+								<br>
+								If you have any questions, feel free to contact <a href = "mailto:vpoperations@lynbrookdeca.org">vpoperations@lynbrookdeca.org</a>.
 
-						<hr>
+								<br>
 
 
 
-						<h1 style="text-align:center"><em style="color:green;font-size:90%" class="glyphicon glyphicon-tint"></em> Virtual Business Competition</h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">October 27, 2016</h3> <!-- Date of Announcement -->
-						<p> 
-							
-						If you would like to sign-up for the DECA Virtual Business Challenge (which does not count as either your written nor roleplay) 
-						head on over to this <a href="https://vb.knowledgematters.com/user/register/deca">link</a> and fill out the necessary information! 
-						Mr Fulk will approve your team, so once signed up, please drag your name onto a team consisting of one to three members!
-						<br>
-						If you have any further questions, feel free to contact Andrew or Michael at <strong>onlinecc@lynbrookdeca.org</strong>
-						</p> <!-- Message of Announcement -->
+								<h4><strong>To-do list for interested attendees:</strong></h4><br>
 
-						<hr>
-						
-					
 
-						<h1 style="text-align:center"><em style="color:blue;font-size:80%" class="glyphicon glyphicon-road"></em> Sign Up for LACE </h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">October 9, 2016</h3> <!-- Date of Announcement -->
-						<p>The first conference of the year, LACE, is finally here! It takes place during <strong>November 11-13</strong>, and is a purely <strong>NON-COMPETITIVE CONFERENCE</strong>. This means that the conference is for DECA members to learn about the club, attend valuable workshops, listen to world-renowned guest speakers, network with other DECA members, and get valuable tips about their own competitive events for future conferences. If you are interested in attending, please sign up on this <a target = "_blank" href = "https://docs.google.com/forms/d/e/1FAIpQLSdiPZy4RXC3srp36gefN0Px7RcyfLL5244w-fwBiWa4G1VHTg/viewform">form</a>. The <strong>cost of the conference is $180 (make check payable to lynbrook ASB)</strong>, and the <strong>deadline to sign up and turn in all forms is October 13th</strong>. If you have any questions, feel free to contact <a href = "mailto:vpoperations@lynbrookdeca.org">vpoperations@lynbrookdeca.org</a>.
-						<br>
-						<br>
-						<a target="_blank" href="formd.pdf">Form D: Medical Release Form</a> (Please print only the last page)
-						<br>
-						<a target="_blank" href="forme.pdf">Form E: DECA Dance Contract</a>
-						<br>
-						<a target="_blank" href="releaseform.pdf">FUHSD Release Form</a>
 
-						</p>
+								<ol>
+									<li>Fill out <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeI9LF03eNRYkm1aNgiRsnNjaOL-IoCxIzW2Sv8nIG7_GJ3Uw/viewform?c=0&w=1">google form</a> </li>
+									<li>Fill out event selection on <a target="_blank" href="profile.html">profile</a>
+									</li>
+									<li>Bring signed hard copies of the <a target="_blank" href="https://drive.google.com/file/d/0B1BPD9D4wAzFQXVOMnZiaDEzOFE/view">DECA Medical Form</a> , <a target="_blank" href="https://drive.google.com/file/d/0B1BPD9D4wAzFbnNCOU1DVHdhN0U/view">Form D</a>, <a target = "_blank" href="https://drive.google.com/file/d/0B1BPD9D4wAzFazRNamk0YlZKR1E/view">Form E</a>, and the <a target = "_blank" href="https://drive.google.com/file/d/0B1BPD9D4wAzFMURsaHByektGXzA/view">FUHSD Release Permit</a> to any officer
+										<strong>(you need your 6th and 7th period teacher signatures for permission to skip class on Jan. 6th on Release Permit Form)</strong>
+									</li>
+									<li>Bring <strong>$210 check addressed to Lynbrook ASB</strong> (with your name and "Lynbrook DECA" in the memo line) to any officer</li>
+									<li>Inform their parents of the upcoming SVCDC Parent Meeting and Informational Night on Wednesday, November 16th in the Library.</li>
+									<li>Bring adorable <a target="_blank" href="https://drive.google.com/file/d/0B1BPD9D4wAzFSW1TSnhNcDZhZmM/view">letter to Santa</a> to any officer</li>
+									<li>Bring latest Progress Report to prove CTE course registration.</li>
+								</ol>
 
-						<!-- Message of Announcement -->
+							</p>
 
-						<br>
+							<hr>
 
-						<hr>
 
-						<h1 style="text-align:center"><em style="color:green;font-size:90%" class="	glyphicon glyphicon-star"></em> Demo Day</h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">September 12, 2016</h3> <!-- Date of Announcement -->
-						<p> 
-							Make sure to come out to our DEMO DAY, this <strong>Wednesday (9/14) from 3-5:30pm</strong> in the cafeteria! We will be explaining the different types of competitive events that are available to our members at conferences. This is a great opportunity to get a feel for the competitive aspect of our club as well as meet our officer and cluster captain team!
+
+							<h1 style="text-align:center"><em style="color:green;font-size:90%" class="glyphicon glyphicon-tint"></em> Virtual Business Competition</h1> <!-- Title of Announcement -->
+							<h3 style="text-align:right">October 27, 2016</h3> <!-- Date of Announcement -->
+							<p> 
+
+								If you would like to sign-up for the DECA Virtual Business Challenge (which does not count as either your written nor roleplay) 
+								head on over to this <a href="https://vb.knowledgematters.com/user/register/deca">link</a> and fill out the necessary information! 
+								Mr Fulk will approve your team, so once signed up, please drag your name onto a team consisting of one to three members!
+								<br>
+								If you have any further questions, feel free to contact Andrew or Michael at <strong>onlinecc@lynbrookdeca.org</strong>
+							</p> <!-- Message of Announcement -->
+
+							<hr>
+
+
+
+							<h1 style="text-align:center"><em style="color:blue;font-size:80%" class="glyphicon glyphicon-road"></em> Sign Up for LACE </h1> <!-- Title of Announcement -->
+							<h3 style="text-align:right">October 9, 2016</h3> <!-- Date of Announcement -->
+							<p>The first conference of the year, LACE, is finally here! It takes place during <strong>November 11-13</strong>, and is a purely <strong>NON-COMPETITIVE CONFERENCE</strong>. This means that the conference is for DECA members to learn about the club, attend valuable workshops, listen to world-renowned guest speakers, network with other DECA members, and get valuable tips about their own competitive events for future conferences. If you are interested in attending, please sign up on this <a target = "_blank" href = "https://docs.google.com/forms/d/e/1FAIpQLSdiPZy4RXC3srp36gefN0Px7RcyfLL5244w-fwBiWa4G1VHTg/viewform">form</a>. The <strong>cost of the conference is $180 (make check payable to lynbrook ASB)</strong>, and the <strong>deadline to sign up and turn in all forms is October 13th</strong>. If you have any questions, feel free to contact <a href = "mailto:vpoperations@lynbrookdeca.org">vpoperations@lynbrookdeca.org</a>.
+								<br>
+								<br>
+								<a target="_blank" href="formd.pdf">Form D: Medical Release Form</a> (Please print only the last page)
+								<br>
+								<a target="_blank" href="forme.pdf">Form E: DECA Dance Contract</a>
+								<br>
+								<a target="_blank" href="releaseform.pdf">FUHSD Release Form</a>
+
+							</p>
+
+							<!-- Message of Announcement -->
+
 							<br>
 
-							This event is STRONGLY recommended for our new members, but will be beneficial to returning members as well in refreshing your memory and helping you choose your events for this upcoming year. We hope to see you all there!
+							<hr>
 
-						</p> <!-- Message of Announcement -->
+							<h1 style="text-align:center"><em style="color:green;font-size:90%" class="	glyphicon glyphicon-star"></em> Demo Day</h1> <!-- Title of Announcement -->
+							<h3 style="text-align:right">September 12, 2016</h3> <!-- Date of Announcement -->
+							<p> 
+								Make sure to come out to our DEMO DAY, this <strong>Wednesday (9/14) from 3-5:30pm</strong> in the cafeteria! We will be explaining the different types of competitive events that are available to our members at conferences. This is a great opportunity to get a feel for the competitive aspect of our club as well as meet our officer and cluster captain team!
+								<br>
 
-						<hr>
+								This event is STRONGLY recommended for our new members, but will be beneficial to returning members as well in refreshing your memory and helping you choose your events for this upcoming year. We hope to see you all there!
 
-						<h1 style="text-align:center"><em style="color:blue;font-size:90%" class="	glyphicon glyphicon-gift"></em> Stock Market Game</h1> <!-- Title of Announcement -->
-						<h3 style="text-align:right">September 9, 2016</h3> <!-- Date of Announcement -->
-						<p> 
-							Ever wanted to experience real-time trading of the stock market? This year's DECA Stock Market Game gives that exact opportunity; along with the chance to qualify to ICDC 2017 in Anaheim! Because this event does not count as your written nor your roleplay, you can still compete in two events at both SVCDC and States. <br>
-							This simulation finishes on December 16th, 2016, and the top 25 competitors of each of the four regions-Central, Southern, Western (Our division), and North-Atlantic-will be able to compete at ICDC in this event. Be sure to send an e-mail to <strong>onlinecc@lynbrookdeca.org</strong> if you're interested!
+							</p> <!-- Message of Announcement -->
 
-						</p> <!-- Message of Announcement -->
+							<hr>
 
-						<hr>
+							<h1 style="text-align:center"><em style="color:blue;font-size:90%" class="	glyphicon glyphicon-gift"></em> Stock Market Game</h1> <!-- Title of Announcement -->
+							<h3 style="text-align:right">September 9, 2016</h3> <!-- Date of Announcement -->
+							<p> 
+								Ever wanted to experience real-time trading of the stock market? This year's DECA Stock Market Game gives that exact opportunity; along with the chance to qualify to ICDC 2017 in Anaheim! Because this event does not count as your written nor your roleplay, you can still compete in two events at both SVCDC and States. <br>
+								This simulation finishes on December 16th, 2016, and the top 25 competitors of each of the four regions-Central, Southern, Western (Our division), and North-Atlantic-will be able to compete at ICDC in this event. Be sure to send an e-mail to <strong>onlinecc@lynbrookdeca.org</strong> if you're interested!
 
-						<h1 style="text-align:center"><em style="color:green;font-size:90%" class="glyphicon glyphicon-envelope"></em> Welcome to Lynbrook DECA!</h1>
-						<h3 style="text-align:right">September 8, 2016</h3> 
-						<p> 
-							Thank you for signing up for Lynbrook DECA! Make sure to acquaint yourself with the website because you will be visiting it a lot this year. If you have any questions make sure email one of the officers. We look forward to a great year!
-						</p> 
+							</p> <!-- Message of Announcement -->
+
+							<hr>
+
+							<h1 style="text-align:center"><em style="color:green;font-size:90%" class="glyphicon glyphicon-envelope"></em> Welcome to Lynbrook DECA!</h1>
+							<h3 style="text-align:right">September 8, 2016</h3> 
+							<p> 
+								Thank you for signing up for Lynbrook DECA! Make sure to acquaint yourself with the website because you will be visiting it a lot this year. If you have any questions make sure email one of the officers. We look forward to a great year!
+							</p> 
 
 
-			
 
-						
+
+
+						</div>
 					</div>
 				</div>
-			</div>
-		</div><!--/.row-->
+			</div><!--/.row-->
 
-		<div class="col-md-4" style= "float:left; width: 29%">
-			<div class="panel panel-teal panel-widget ">
+			<div class="col-md-4" style= "float:left; width: 29%">
+				<div class="panel panel-teal panel-widget ">
 					<div class="row no-padding">
 						<div class="col-sm-3 col-lg-4 widget-left">
 							<em class="glyphicon glyphicon-calendar glyphicon-l"></em>
@@ -321,65 +352,65 @@
 					<div class="panel-heading dark-overlay"><span class="glyphicon glyphicon-paperclip"></span>DECA To-Do List</div>
 					<div class="panel-body">
 						<ul class="todo-list">
-						<li class="todo-list-item">
+							<li class="todo-list-item">
 								<div class="checkbox">
 									<span class="glyphicon glyphicon-check"></span>
 									<label for="checkbox">SCDC Forms</strong></label>
 								</div>
 							</li>
-						<li class="todo-list-item">
+							<li class="todo-list-item">
 								<div class="checkbox">
 									<span class="glyphicon glyphicon-check"></span>
 									<label for="checkbox">SCDC Written Plan Due Date</strong></label>
 								</div>
 							</li>
 							
-						
+
 							
 						</ul>
 					</div>
 					
 				</div>
-								
+
 			</div><!--/.col-->
 
 
-		
 
 
 
-		
 
-		
-		
-		
-	</div>	<!--/.main-->
 
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src = "js/dashboard-parse.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/chart.min.js"></script>
-	<script src="js/chart-data.js"></script>
-	<script src="js/easypiechart.js"></script>
-	<script src="js/easypiechart-data.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
-	<script>
-		$('#calendar').datepicker({
-		});
 
-		!function ($) {
-		    $(document).on("click","ul.nav li.parent > a > span.icon", function(){          
-		        $(this).find('em:first').toggleClass("glyphicon-minus");      
-		    }); 
-		    $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
-		}(window.jQuery);
 
-		$(window).on('resize', function () {
-		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
-		})
-		$(window).on('resize', function () {
-		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
-		})
+
+
+		</div>	<!--/.main-->
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src = "js/dashboard-parse.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/chart.min.js"></script>
+		<script src="js/chart-data.js"></script>
+		<script src="js/easypiechart.js"></script>
+		<script src="js/easypiechart-data.js"></script>
+		<script src="js/bootstrap-datepicker.js"></script>
+		<script>
+			$('#calendar').datepicker({
+			});
+
+			!function ($) {
+				$(document).on("click","ul.nav li.parent > a > span.icon", function(){          
+					$(this).find('em:first').toggleClass("glyphicon-minus");      
+				}); 
+				$(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+			}(window.jQuery);
+
+			$(window).on('resize', function () {
+				if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+			})
+			$(window).on('resize', function () {
+				if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+			})
 	</script>	
 </body>
 
