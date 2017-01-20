@@ -178,7 +178,7 @@ if (currentUser) {
 
 
             $("#pointsbutton").click(function(){
-            var thepass = 'formsdue';                 						// CHANGE THIS
+            var thepass = 'mattaintsmall';                 						// CHANGE THIS
             // alert ($('#pointspass').val());
             if ($('#pointspass').val() == thepass)
             {
