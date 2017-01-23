@@ -145,12 +145,6 @@ $("#logout-button").click(function(){
   var currentUser = Parse.User.current();
 
   // alert("Logged out");
-
-  firebase.auth().signOut().then(function() {
-  // Sign-out successful.
-}, function(error) {
-  // An error happened.
-});
   location.reload();
 
   // window.location.href='index.html';
@@ -191,25 +185,7 @@ $('#loginbutton1').click(function(){
        // Do stuff after successful login.
        // window.alert("success logging in");
        // $("#login-error-message").html("success");
-       // firebase.auth().createUserWithEmailAndPassword(username, "DECA123").catch(function(error) {
-       //          // Handle Errors here.
-       //              var errorCode = error.code;
-       //              var errorMessage = error.message;
-       //              alert (errorMessage)
-       //      });
-       //      alert ("usermade");
-
-       // firebase.auth().signInWithEmailAndPassword(username, "DECA123").catch(function(error) {
-          // Handle Errors here.
-          
-// alert ("good work");
-//           var errorCode = error.code;
-//           var errorMessage = error.message;
-//           alert (errorMessage)
-//           // ...
-//       });
-      
-      window.location.href='dashboard/dashboard.html';
+       window.location.href='dashboard/dashboard.html';
 
      },
      error: function(user, error) {

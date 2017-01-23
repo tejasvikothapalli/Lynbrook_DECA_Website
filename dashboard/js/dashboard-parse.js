@@ -33,14 +33,8 @@ if (currentUser) {
 
 
 
-       
 
-
-
-
-
-
-$("#logout-button").click(function(){
+		$("#logout-button").click(function(){
 	// alert("working");
 
 	Parse.User.logOut();
@@ -48,11 +42,6 @@ $("#logout-button").click(function(){
 	var currentUser = Parse.User.current();
 
 	// alert("Logged out");
-    firebase.auth().signOut().then(function() {
-  // Sign-out successful.
-}, function(error) {
-  // An error happened.
-});
 
 	window.location.href='../index.html';
 
@@ -67,8 +56,8 @@ $("#logout-button").click(function(){
 
 
 
-var currentUser = Parse.User.current();
-var username = currentUser.get("username");
+		var currentUser = Parse.User.current();
+		var username = currentUser.get("username");
             // alert(username);
 
             var points = 0;
@@ -182,13 +171,13 @@ var username = currentUser.get("username");
     //         $("#pointspass").keyup(function(event){
     //         	$("#pointsbutton").click();
     //         	if(event.keyCode == 13){
-
+            		
 
     //         	}
     //         });
 
 
-    $("#pointsbutton").click(function(){
+            $("#pointsbutton").click(function(){
             var thepass = 'mattaintsmall';                 						// CHANGE THIS
             // alert ($('#pointspass').val());
             if ($('#pointspass').val() == thepass)
@@ -264,7 +253,7 @@ var username = currentUser.get("username");
 
 
 
-    $("#pointsbutton2").click(function(){
+            $("#pointsbutton2").click(function(){
             var thepass = 'supersecret';                             // CHANGE THIS
             // alert ($('#pointspass').val());
             if ($('#pointspass2').val() == thepass)
@@ -349,23 +338,23 @@ var username = currentUser.get("username");
 
     }); // end of points button actions
 
-    var isopen = false;
-    $("#icon-bar1").click(function()
-    {
+            var isopen = false;
+            $("#icon-bar1").click(function()
+            {
 
-       if (isopen)
-       {
-          $(".nav-menu").css("display", "none");
+            	if (isopen)
+            	{
+            		$(".nav-menu").css("display", "none");
 
-          isopen = !isopen;
-      }
-      else {
-          $(".nav-menu").css("display", "block");
+            		isopen = !isopen;
+            	}
+            	else {
+            		$(".nav-menu").css("display", "block");
 
-          isopen = !isopen;
-      }
+            		isopen = !isopen;
+            	}
 
-  });
+            });
 
 //Profile.html Java Script
 currentUser.fetch({
