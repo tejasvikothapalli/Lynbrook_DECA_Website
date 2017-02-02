@@ -53,10 +53,10 @@ firebase.database().ref('/DECAdiamonds/' + userId).once('value').then(function(s
     
     if (childSnapshot.key.includes("FM") || childSnapshot.key.includes("SS"))
     {
-        console.log(childSnapshot.key);
+        // console.log(childSnapshot.key);
         points = points + childSnapshot.val();
     }
-    console.log(points)
+    // console.log(points)
     
     
 });
@@ -237,7 +237,7 @@ $("#decaDiamondPointDisplay").html("Your DECA Diamond Point Total: " + points);
 
 
             $("#pointsbutton").click(function(){
-                var thepass = 'mattaintsmall';                                      // CHANGE THIS
+                var thepass = 'info';                                      // CHANGE THIS
             // alert ($('#pointspass').val());
             if ($('#pointspass').val() == thepass)
             {
@@ -249,7 +249,7 @@ $("#decaDiamondPointDisplay").html("Your DECA Diamond Point Total: " + points);
                 //     alert("null");
                 // }
 
-                storesRef.child('SS_013117').set(3);
+                storesRef.child('SS_020117').set(3);
                 alert("Success logging points!");
                 location.reload();
 
@@ -278,83 +278,45 @@ $("#decaDiamondPointDisplay").html("Your DECA Diamond Point Total: " + points);
             // alert ($('#pointspass').val());
             if ($('#pointspass2').val() == thepass)
             {
-            	var currentUser = Parse.User.current();
-            	var username = currentUser.get("username");
-            // alert(username);
+              var orig = 0;
+              firebase.database().ref('/DECAdiamonds/' + globarUserID).once('value').then(function(snapshot) {
+              var first = snapshot.val().FM_bucket;
+              console.log(first);
+              // alert(first);
+              if (first != null)
+              {
 
+                orig = first;
+                alert (orig);
+              }
 
-            var query = new Parse.Query("DECAdiamonds"); 
-            query.limit(1000);
+              var rootRef = firebase.database().ref();
+                var storesRef = rootRef.child('DECAdiamonds/'+ globarUserID);
+                // alert(storesRef);
+                // if (storesRef == null)
+                // {
+                //     alert("null");
+                // }
 
-            query.find( {
-            	success: function listOfObjects(results) {
-            		var decaDiamonds = null;
-            // alert("Error");
-            // console.log("Successfully retrieved " + results.length);
-            // Do something with the returned Parse.Object values
-            if ( results.length == 0 ) {
-
-            } 
-            for (var i = 0; i < results.length; i++) { 
-            	var object = results[i];
-            	console.log(object.id + ' - ' + object.get('column'));
-            	if(object.get('username') == username) {
-            		decaDiamonds = object;
-            		break;
-            	}
-            }
-            if (decaDiamonds == null) {
-
-            	var object = new Parse.Object("DECAdiamonds");
-            	object.set( 'username', username ) ;
-            	object.set( 'firstname', currentUser.get('firstname') ) ;
-            	object.set( 'lastname', currentUser.get('lastname') ) ;
-            	object.set( 'yearindeca', currentUser.get('yearindeca') ) ;
-          object.set( 'FM_bucket', parseInt($("#preparation").val(), 10) ) ;                   // CHANGE THIS
-          object.save(null, {
-          	success: function(object) {
-                // alert("Saved new user");
+                orig = orig + 3;
+                // alert (orig);
+                storesRef.child('FM_bucket').set(orig);
                 alert("Success logging points!");
                 location.reload();
-            },
-            error: function(object, error) {
-            	alert('error saving for new user:' + error.message);
+    
+    
+            });
+
+            	  
+
+               
+
             }
-        });
-                   // alert("fail");
-               } else {
-               	var val;
-               	if (decaDiamonds.get('FM_bucket') == null || decaDiamonds.get('FM_bucket') == undefined)
-               	{
-               		val = 0;
-               	}
-               	else
-               	{
-               		val = decaDiamonds.get('FM_bucket');
-               	}
-                decaDiamonds.set( 'FM_bucket', val + parseInt($("#preparation").val(), 10)) ;               // CHANGE THIS
-                decaDiamonds.save(null, {
-                	success: function(object) {
-                        // alert("Saved for existing user.");
-                        alert("Success logging points!" );
-                        location.reload();
-
-                    },
-                    error: function(object, error) {
-                    	alert('Error saving for existing user:' + error.message);
-                    }
-                });
+            else
+            {
+                alert("incorrect pass");
+                location.reload();
             }
-
-
-        },
-        error: function (error) {
-        	alert("Error")
-        }
-
-    })
-
-        }
 
     }); // end of points button actions
 
@@ -389,7 +351,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     // // alert(business);
 
     
-    console.log(user.email + " " + user.uid);
+    // console.log(user.email + " " + user.uid);
   } else {
     // No user is signed in.
     window.location.href='../index.html';
