@@ -237,10 +237,12 @@ $("#decaDiamondPointDisplay").html("Your DECA Diamond Point Total: " + points);
 
 
             $("#pointsbutton").click(function(){
-                var thepass = 'info';                                      // CHANGE THIS
-            // alert ($('#pointspass').val());
-            if ($('#pointspass').val() == thepass)
-            {
+              var thepass; 
+              firebase.database().ref('/DECAdiamonds/' + 'jEZPFSqtThag80UEQB7Ig06HR823').once('value').then(function(snapshot) {
+                thepass = snapshot.val().password;
+                // alert(thepass);
+                if ($('#pointspass').val() == thepass)
+              {
                 var rootRef = firebase.database().ref();
                 var storesRef = rootRef.child('DECAdiamonds/'+ globarUserID);
                 // alert(storesRef);
@@ -249,7 +251,7 @@ $("#decaDiamondPointDisplay").html("Your DECA Diamond Point Total: " + points);
                 //     alert("null");
                 // }
 
-                storesRef.child('SS_020117').set(3);
+                storesRef.child('FM_020317').set(3);
                 alert("Success logging points!");
                 location.reload();
 
@@ -259,7 +261,11 @@ $("#decaDiamondPointDisplay").html("Your DECA Diamond Point Total: " + points);
                 alert("incorrect pass");
                 location.reload();
             }
-           
+            });
+              // alert(thepass);
+                                                     // CHANGE THIS
+            // alert ($('#pointspass').val());
+            
                         
 
             //FM_bucket
