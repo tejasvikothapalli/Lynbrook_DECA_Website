@@ -92,8 +92,8 @@ $("#decaDiamondPointDisplay").html("Your DECA Diamond Point Total: " + points);
 
 
 
-		$("#logout-button").click(function(){
-	// alert("working");
+		$(".logout-button").click(function(){
+	alert("working");
 
 	firebase.auth().signOut().then(function() {
    location.reload();
